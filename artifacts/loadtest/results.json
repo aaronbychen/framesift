@@ -1,0 +1,203 @@
+{
+  "throughput_unit": "frames/s analyzed (1 frame per video-second sampled); also clips/min",
+  "before": {
+    "file": "artifacts/loadtest/before.json",
+    "server_config": {
+      "model": "Llama-3.2-11B-Vision-Instruct (bnb nf4, transformers)",
+      "serving_mode": "sequential",
+      "max_batch": 1,
+      "batch_window_ms": 25.0,
+      "stream_window": 1,
+      "model_max_side": 1120,
+      "max_image_tiles": 4,
+      "analyze_max_tokens": 256,
+      "preprocess_mode": "adaptive",
+      "process_power_hints": {
+        "ecoqos_off": true,
+        "above_normal_priority": true
+      }
+    },
+    "notes": "Original serving path: SERVING_MODE=sequential, one frame per model call, each request's frames strictly in order. Llama-3.2-11B-Vision-Instruct bnb nf4 in-process (transformers 4.51.3, sdpa), greedy, max 256 new tokens, frames resized to <=1120 px. Process opted out of Windows power throttling.",
+    "generated_at": "2026-11-14T23:33:22-06:00"
+  },
+  "after": {
+    "file": "artifacts/loadtest/after.json",
+    "server_config": {
+      "model": "Llama-3.2-11B-Vision-Instruct (bnb nf4, transformers)",
+      "serving_mode": "batched",
+      "max_batch": 2,
+      "batch_window_ms": 25.0,
+      "stream_window": 4,
+      "model_max_side": 1120,
+      "max_image_tiles": 4,
+      "analyze_max_tokens": 256,
+      "preprocess_mode": "adaptive",
+      "process_power_hints": {
+        "ecoqos_off": true,
+        "above_normal_priority": true
+      }
+    },
+    "notes": "Batched serving path: SERVING_MODE=batched, BatchDispatcher max batch 2 (largest that fits in VRAM), 25 ms batch window, up to 4 frames per request in flight. Same model, prompt, decoding and frames as before.json.",
+    "generated_at": "2026-11-14T23:47:49-06:00"
+  },
+  "hardware": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.3",
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU, 566.07, 12282 MiB",
+    "cpu": "13th Gen Intel(R) Core(TM) i9-13980HX",
+    "ram_gb": 15.6,
+    "note": "Load generator, FastAPI app, and model server all run on this one machine."
+  },
+  "comparison": [
+    {
+      "concurrency": 1,
+      "before": {
+        "concurrency": 1,
+        "scans": 1,
+        "frames": 14,
+        "frames_with_inference_error": 0,
+        "wall_seconds": 78.377,
+        "frames_per_second": 0.1786,
+        "clips_per_minute": 0.7655,
+        "scan_latency_seconds": {
+          "p50": 78.376,
+          "p95": 78.376,
+          "p99": 78.376
+        },
+        "time_to_first_frame_seconds": {
+          "p50": 5.5,
+          "p95": 5.5,
+          "p99": 5.5
+        },
+        "frame_inference_seconds": null,
+        "mean_batch_size": 1.0,
+        "generate_calls": 14
+      },
+      "after": {
+        "concurrency": 1,
+        "scans": 1,
+        "frames": 14,
+        "frames_with_inference_error": 0,
+        "wall_seconds": 122.434,
+        "frames_per_second": 0.1143,
+        "clips_per_minute": 0.4901,
+        "scan_latency_seconds": {
+          "p50": 122.434,
+          "p95": 122.434,
+          "p99": 122.434
+        },
+        "time_to_first_frame_seconds": {
+          "p50": 6.329,
+          "p95": 6.329,
+          "p99": 6.329
+        },
+        "frame_inference_seconds": null,
+        "mean_batch_size": 1.75,
+        "generate_calls": 8
+      },
+      "throughput_ratio_after_over_before": 0.64,
+      "scan_p50_ratio_after_over_before": 1.562,
+      "scan_p99_ratio_after_over_before": 1.562
+    },
+    {
+      "concurrency": 2,
+      "before": {
+        "concurrency": 2,
+        "scans": 2,
+        "frames": 28,
+        "frames_with_inference_error": 0,
+        "wall_seconds": 160.127,
+        "frames_per_second": 0.1749,
+        "clips_per_minute": 0.7494,
+        "scan_latency_seconds": {
+          "p50": 157.196,
+          "p95": 159.833,
+          "p99": 160.067
+        },
+        "time_to_first_frame_seconds": {
+          "p50": 8.591,
+          "p95": 11.013,
+          "p99": 11.229
+        },
+        "frame_inference_seconds": null,
+        "mean_batch_size": 1.0,
+        "generate_calls": 28
+      },
+      "after": {
+        "concurrency": 2,
+        "scans": 2,
+        "frames": 28,
+        "frames_with_inference_error": 0,
+        "wall_seconds": 200.811,
+        "frames_per_second": 0.1394,
+        "clips_per_minute": 0.5976,
+        "scan_latency_seconds": {
+          "p50": 200.811,
+          "p95": 200.811,
+          "p99": 200.811
+        },
+        "time_to_first_frame_seconds": {
+          "p50": 14.153,
+          "p95": 14.153,
+          "p99": 14.153
+        },
+        "frame_inference_seconds": null,
+        "mean_batch_size": 2.0,
+        "generate_calls": 14
+      },
+      "throughput_ratio_after_over_before": 0.797,
+      "scan_p50_ratio_after_over_before": 1.277,
+      "scan_p99_ratio_after_over_before": 1.255
+    },
+    {
+      "concurrency": 4,
+      "before": {
+        "concurrency": 4,
+        "scans": 4,
+        "frames": 56,
+        "frames_with_inference_error": 0,
+        "wall_seconds": 323.273,
+        "frames_per_second": 0.1732,
+        "clips_per_minute": 0.7424,
+        "scan_latency_seconds": {
+          "p50": 314.614,
+          "p95": 322.405,
+          "p99": 323.098
+        },
+        "time_to_first_frame_seconds": {
+          "p50": 15.364,
+          "p95": 22.594,
+          "p99": 23.236
+        },
+        "frame_inference_seconds": null,
+        "mean_batch_size": 1.0,
+        "generate_calls": 56
+      },
+      "after": {
+        "concurrency": 4,
+        "scans": 4,
+        "frames": 56,
+        "frames_with_inference_error": 0,
+        "wall_seconds": 398.072,
+        "frames_per_second": 0.1407,
+        "clips_per_minute": 0.6029,
+        "scan_latency_seconds": {
+          "p50": 390.857,
+          "p95": 398.07,
+          "p99": 398.07
+        },
+        "time_to_first_frame_seconds": {
+          "p50": 20.709,
+          "p95": 27.536,
+          "p99": 27.536
+        },
+        "frame_inference_seconds": null,
+        "mean_batch_size": 2.0,
+        "generate_calls": 28
+      },
+      "throughput_ratio_after_over_before": 0.812,
+      "scan_p50_ratio_after_over_before": 1.242,
+      "scan_p99_ratio_after_over_before": 1.232
+    }
+  ]
+}

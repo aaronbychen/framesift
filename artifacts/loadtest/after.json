@@ -1,0 +1,1316 @@
+{
+  "label": "after",
+  "generated_at": "2026-11-14T23:47:49-06:00",
+  "command_args": {
+    "url": "http://127.0.0.1:8000",
+    "video": "uploads/test.mp4",
+    "query": "yellow taxi cab",
+    "concurrency": [
+      1,
+      2,
+      4
+    ],
+    "scans_per_stream": 1,
+    "warmup_scans": 1,
+    "vllm_metrics": null,
+    "label": "after",
+    "notes": "Batched serving path: SERVING_MODE=batched, BatchDispatcher max batch 2 (largest that fits in VRAM), 25 ms batch window, up to 4 frames per request in flight. Same model, prompt, decoding and frames as before.json.",
+    "out": "artifacts/loadtest/after.json"
+  },
+  "server_config": {
+    "model": "Llama-3.2-11B-Vision-Instruct (bnb nf4, transformers)",
+    "serving_mode": "batched",
+    "max_batch": 2,
+    "batch_window_ms": 25.0,
+    "stream_window": 4,
+    "model_max_side": 1120,
+    "max_image_tiles": 4,
+    "analyze_max_tokens": 256,
+    "preprocess_mode": "adaptive",
+    "process_power_hints": {
+      "ecoqos_off": true,
+      "above_normal_priority": true
+    }
+  },
+  "hardware": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.3",
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU, 566.07, 12282 MiB",
+    "cpu": "13th Gen Intel(R) Core(TM) i9-13980HX",
+    "ram_gb": 15.6,
+    "note": "Load generator, FastAPI app, and model server all run on this one machine."
+  },
+  "video": {
+    "path": "uploads\\test.mp4",
+    "bytes": 7380833
+  },
+  "query": "yellow taxi cab",
+  "notes": "Batched serving path: SERVING_MODE=batched, BatchDispatcher max batch 2 (largest that fits in VRAM), 25 ms batch window, up to 4 frames per request in flight. Same model, prompt, decoding and frames as before.json.",
+  "levels": [
+    {
+      "concurrency": 1,
+      "streams": 1,
+      "scans_per_stream": 1,
+      "scans": 1,
+      "scans_with_http_error": 0,
+      "frames": 14,
+      "frames_with_inference_error": 0,
+      "wall_seconds": 122.434,
+      "throughput": {
+        "frames_per_second": 0.1143,
+        "clips_per_minute": 0.4901
+      },
+      "scan_latency_seconds": {
+        "n": 1,
+        "p50": 122.434,
+        "p95": 122.434,
+        "p99": 122.434,
+        "mean": 122.434,
+        "max": 122.434
+      },
+      "time_to_first_frame_seconds": {
+        "n": 1,
+        "p50": 6.329,
+        "p95": 6.329,
+        "p99": 6.329,
+        "mean": 6.329,
+        "max": 6.329
+      },
+      "frame_inference_seconds": null,
+      "prompt_tokens_per_frame": [
+        99
+      ],
+      "model_batches": {
+        "generate_calls": 8,
+        "items": 14,
+        "mean_batch_size": 1.75,
+        "calls_by_batch_size": {
+          "<=1.0": 2,
+          "<=2.0": 6,
+          "<=3.0": 0,
+          "<=4.0": 0,
+          "<=5.0": 0,
+          "<=6.0": 0,
+          "<=8.0": 0,
+          "<=12.0": 0,
+          "<=16.0": 0,
+          "<=24.0": 0,
+          "<=32.0": 0,
+          "<=+Inf": 0
+        }
+      },
+      "vllm_batch_size_num_requests_running": null,
+      "app_inflight_model_calls": {
+        "samples": 1134,
+        "sample_interval_seconds": 0.1,
+        "mean_when_busy": 3.65,
+        "p50_when_busy": 4.0,
+        "max": 4.0,
+        "histogram": {
+          "0": 3,
+          "1": 58,
+          "2": 2,
+          "3": 216,
+          "4": 855
+        }
+      },
+      "raw": {
+        "scans": [
+          {
+            "stream": 0,
+            "start_offset_seconds": 0.0,
+            "latency_seconds": 122.434,
+            "ttff_seconds": 6.329,
+            "http_error": null,
+            "frames": [
+              {
+                "second": 0,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 73,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned in the center of the image, with its headlights shining brightly. It appears to be driving through an intersection, with its front end facing towards the left side of the image. The cab's bright lights are illuminating the surrounding area, making it stand out against the darker background.\nConfidence: 8"
+              },
+              {
+                "second": 1,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 35,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street with people walking across the crosswalk, but there is no yellow taxi cab visible.\nConfidence: 10"
+              },
+              {
+                "second": 2,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 85,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, situated in the background. It appears to be a standard yellow cab with a black roof and a distinctive yellow color. The cab is partially visible, with only its rear end and part of its side visible. It seems to be driving away from the camera, heading towards the right side of the image.\nConfidence: 8"
+              },
+              {
+                "second": 3,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab in the image, positioned on the left side of the street, with its front end facing towards the right. It appears to be stopped at a crosswalk, with its headlights illuminated. The taxi is partially obscured by the pedestrians crossing the street, but its bright yellow color and distinctive shape are still visible.\nConfidence: 8"
+              },
+              {
+                "second": 4,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 79,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, situated in the background. It appears to be a standard yellow cab with a black roof, and it is facing towards the left side of the image. The cab is partially obscured by the pedestrians crossing the street, but its presence is evident due to its bright yellow color.\nConfidence: 8"
+              },
+              {
+                "second": 5,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 45,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street at night with people walking and cars driving. There are no yellow taxi cabs visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 6,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 43,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street at night, with people walking across the road and cars driving by. There is no yellow taxi cab visible in the image.\nConfidence: 10"
+              },
+              {
+                "second": 7,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 42,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street with people walking and cars driving. There is no yellow taxi cab visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 8,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: A yellow taxi cab is visible on the right side of the image, positioned behind the pedestrians and in front of the buildings. It appears to be driving away from the camera, with its headlights shining brightly.\nConfidence: 8\n\nThe taxi cab's presence adds a sense of urban activity and movement to the scene, highlighting the bustling nature of the city."
+              },
+              {
+                "second": 9,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 37,
+                "raw_response": "Answer: NO\nDescription: There is no yellow taxi cab in the image. Instead, there is a blue car and a silver car visible in the background.\nConfidence: 10"
+              },
+              {
+                "second": 10,
+                "is_match": true,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, facing right. It has a distinctive yellow color with black trim and features a large, rectangular sign on its roof. The sign is illuminated, indicating that the taxi is in operation. The taxi is situated in the middle of the street, with a crosswalk painted in white lines in front of it. A pedestrian is seen crossing the street, walking towards the taxi. In the background, other vehicles and buildings are visible, although they are out of focus.\n\nConfidence: 10"
+              },
+              {
+                "second": 11,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: There are two yellow taxi cabs in the image. The first one is positioned on the left side of the image, facing right, with its front end slightly out of focus. It has a distinctive black stripe running along its side and a red taillight visible on its rear. The second taxi cab is located on the right side of the image, facing left, with its front end also slightly out of focus. It has a similar design to the first taxi cab, with a black stripe and red taillight.\nConfidence: 8"
+              },
+              {
+                "second": 12,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 71,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, facing left. It has a distinctive black logo on its side and is situated in the middle of the road, with its headlights shining brightly. The taxi appears to be moving forward, as indicated by the blurred motion of its wheels.\nConfidence: 8"
+              },
+              {
+                "second": 13,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 81,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab on the right side of the image, positioned behind the black car and in front of the yellow SUV. It appears to be driving away from the camera, with its headlights and taillights visible. The taxi cab is facing towards the left side of the image, and its yellow color stands out against the dark background.\nConfidence: 8"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "concurrency": 2,
+      "streams": 2,
+      "scans_per_stream": 1,
+      "scans": 2,
+      "scans_with_http_error": 0,
+      "frames": 28,
+      "frames_with_inference_error": 0,
+      "wall_seconds": 200.811,
+      "throughput": {
+        "frames_per_second": 0.1394,
+        "clips_per_minute": 0.5976
+      },
+      "scan_latency_seconds": {
+        "n": 2,
+        "p50": 200.811,
+        "p95": 200.811,
+        "p99": 200.811,
+        "mean": 200.811,
+        "max": 200.811
+      },
+      "time_to_first_frame_seconds": {
+        "n": 2,
+        "p50": 14.153,
+        "p95": 14.153,
+        "p99": 14.153,
+        "mean": 14.153,
+        "max": 14.153
+      },
+      "frame_inference_seconds": null,
+      "prompt_tokens_per_frame": [
+        99
+      ],
+      "model_batches": {
+        "generate_calls": 14,
+        "items": 28,
+        "mean_batch_size": 2.0,
+        "calls_by_batch_size": {
+          "<=1.0": 0,
+          "<=2.0": 14,
+          "<=3.0": 0,
+          "<=4.0": 0,
+          "<=5.0": 0,
+          "<=6.0": 0,
+          "<=8.0": 0,
+          "<=12.0": 0,
+          "<=16.0": 0,
+          "<=24.0": 0,
+          "<=32.0": 0,
+          "<=+Inf": 0
+        }
+      },
+      "vllm_batch_size_num_requests_running": null,
+      "app_inflight_model_calls": {
+        "samples": 1869,
+        "sample_interval_seconds": 0.1,
+        "mean_when_busy": 7.04,
+        "p50_when_busy": 8.0,
+        "max": 8.0,
+        "histogram": {
+          "0": 2,
+          "2": 136,
+          "4": 138,
+          "6": 211,
+          "7": 1,
+          "8": 1381
+        }
+      },
+      "raw": {
+        "scans": [
+          {
+            "stream": 0,
+            "start_offset_seconds": 0.0,
+            "latency_seconds": 200.811,
+            "ttff_seconds": 14.153,
+            "http_error": null,
+            "frames": [
+              {
+                "second": 0,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 65,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned in the center of the image, situated on the left side of the street. It appears to be moving forward, with its headlights illuminated. The taxi is partially obscured by a pedestrian crossing the street, making it difficult to discern further details.\nConfidence: 8"
+              },
+              {
+                "second": 1,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 35,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street with people walking across the crosswalk, but there is no yellow taxi cab visible.\nConfidence: 10"
+              },
+              {
+                "second": 2,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 85,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, situated in the background. It appears to be a standard yellow cab with a black roof and a distinctive yellow color. The cab is partially visible, with only its rear end and part of its side visible. It seems to be driving away from the camera, heading towards the right side of the image.\nConfidence: 8"
+              },
+              {
+                "second": 3,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab in the image, positioned on the left side of the street, with its front end facing towards the right. It appears to be stopped at a crosswalk, with its headlights illuminated. The taxi is partially obscured by the pedestrians crossing the street, but its bright yellow color and distinctive shape are still visible.\nConfidence: 8"
+              },
+              {
+                "second": 4,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 79,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, situated in the background. It appears to be a standard yellow cab with a black roof, and it is facing towards the left side of the image. The cab is partially obscured by the pedestrians crossing the street, but its presence is evident due to its bright yellow color.\nConfidence: 8"
+              },
+              {
+                "second": 5,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 45,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street at night with people walking and cars driving. There are no yellow taxi cabs visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 6,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 43,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street at night, with people walking across the road and cars driving by. There is no yellow taxi cab visible in the image.\nConfidence: 10"
+              },
+              {
+                "second": 7,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 42,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street with people walking and cars driving. There is no yellow taxi cab visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 8,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: A yellow taxi cab is visible on the right side of the image, positioned behind the pedestrians and in front of the buildings. It appears to be driving away from the camera, with its headlights shining brightly.\nConfidence: 8\n\nThe taxi cab's presence adds a sense of urban activity and movement to the scene, highlighting the bustling nature of the city."
+              },
+              {
+                "second": 9,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 37,
+                "raw_response": "Answer: NO\nDescription: There is no yellow taxi cab in the image. Instead, there is a blue car and a silver car visible in the background.\nConfidence: 10"
+              },
+              {
+                "second": 10,
+                "is_match": true,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, facing right. It has a distinctive yellow color with black trim and features a large, rectangular sign on its roof. The sign is illuminated, indicating that the taxi is in operation. The taxi is situated in the middle of the street, with a crosswalk painted in white lines in front of it. A pedestrian is seen crossing the street, walking towards the taxi. In the background, other vehicles and buildings are visible, although they are out of focus.\n\nConfidence: 10"
+              },
+              {
+                "second": 11,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: There are two yellow taxi cabs in the image. The first one is positioned on the left side of the image, facing right, with its front end slightly out of focus. It has a distinctive black stripe running along its side and a red taillight visible on its rear. The second taxi cab is located on the right side of the image, facing left, with its front end also slightly out of focus. It has a similar design to the first taxi cab, with a black stripe and red taillight.\nConfidence: 8"
+              },
+              {
+                "second": 12,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 71,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, facing left. It has a distinctive black logo on its side and is situated in the middle of the road, with its headlights shining brightly. The taxi appears to be moving forward, as indicated by the blurred motion of its wheels.\nConfidence: 8"
+              },
+              {
+                "second": 13,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 70,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab on the right side of the image, positioned behind the black car and in front of the yellow SUV. It appears to be driving away from the camera, with its headlights and taillights visible. The taxi cab is facing towards the left side of the image.\nConfidence: 8"
+              }
+            ]
+          },
+          {
+            "stream": 1,
+            "start_offset_seconds": 0.0,
+            "latency_seconds": 200.811,
+            "ttff_seconds": 14.153,
+            "http_error": null,
+            "frames": [
+              {
+                "second": 0,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 65,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned in the center of the image, situated on the left side of the street. It appears to be moving forward, with its headlights illuminated. The taxi is partially obscured by a pedestrian crossing the street, making it difficult to discern further details.\nConfidence: 8"
+              },
+              {
+                "second": 1,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 35,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street with people walking across the crosswalk, but there is no yellow taxi cab visible.\nConfidence: 10"
+              },
+              {
+                "second": 2,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 85,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, situated in the background. It appears to be a standard yellow cab with a black roof and a distinctive yellow color. The cab is partially visible, with only its rear end and part of its side visible. It seems to be driving away from the camera, heading towards the right side of the image.\nConfidence: 8"
+              },
+              {
+                "second": 3,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab in the image, positioned on the left side of the street, with its front end facing towards the right. It appears to be stopped at a crosswalk, with its headlights illuminated. The taxi is partially obscured by the pedestrians crossing the street, but its bright yellow color and distinctive shape are still visible.\nConfidence: 8"
+              },
+              {
+                "second": 4,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 79,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, situated in the background. It appears to be a standard yellow cab with a black roof, and it is facing towards the left side of the image. The cab is partially obscured by the pedestrians crossing the street, but its presence is evident due to its bright yellow color.\nConfidence: 8"
+              },
+              {
+                "second": 5,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 45,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street at night with people walking and cars driving. There are no yellow taxi cabs visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 6,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 43,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street at night, with people walking across the road and cars driving by. There is no yellow taxi cab visible in the image.\nConfidence: 10"
+              },
+              {
+                "second": 7,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 42,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street with people walking and cars driving. There is no yellow taxi cab visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 8,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: A yellow taxi cab is visible on the right side of the image, positioned behind the pedestrians and in front of the buildings. It appears to be driving away from the camera, with its headlights shining brightly.\nConfidence: 8\n\nThe taxi cab's presence adds a sense of urban activity and movement to the scene, highlighting the bustling nature of the city."
+              },
+              {
+                "second": 9,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 37,
+                "raw_response": "Answer: NO\nDescription: There is no yellow taxi cab in the image. Instead, there is a blue car and a silver car visible in the background.\nConfidence: 10"
+              },
+              {
+                "second": 10,
+                "is_match": true,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, facing right. It has a distinctive yellow color with black trim and features a large, rectangular sign on its roof. The sign is illuminated, indicating that the taxi is in operation. The taxi is situated in the middle of the street, with a crosswalk painted in white lines in front of it. A pedestrian is seen crossing the street, walking towards the taxi. In the background, other vehicles and buildings are visible, although they are out of focus.\n\nConfidence: 10"
+              },
+              {
+                "second": 11,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: There are two yellow taxi cabs in the image. The first one is positioned on the left side of the image, facing right, with its front end slightly out of focus. It has a distinctive black stripe running along its side and a red taillight visible on its rear. The second taxi cab is located on the right side of the image, facing left, with its front end also slightly out of focus. It has a similar design to the first taxi cab, with a black stripe and red taillight.\nConfidence: 8"
+              },
+              {
+                "second": 12,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 71,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, facing left. It has a distinctive black logo on its side and is situated in the middle of the road, with its headlights shining brightly. The taxi appears to be moving forward, as indicated by the blurred motion of its wheels.\nConfidence: 8"
+              },
+              {
+                "second": 13,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 70,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab on the right side of the image, positioned behind the black car and in front of the yellow SUV. It appears to be driving away from the camera, with its headlights and taillights visible. The taxi cab is facing towards the left side of the image.\nConfidence: 8"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "concurrency": 4,
+      "streams": 4,
+      "scans_per_stream": 1,
+      "scans": 4,
+      "scans_with_http_error": 0,
+      "frames": 56,
+      "frames_with_inference_error": 0,
+      "wall_seconds": 398.072,
+      "throughput": {
+        "frames_per_second": 0.1407,
+        "clips_per_minute": 0.6029
+      },
+      "scan_latency_seconds": {
+        "n": 4,
+        "p50": 390.857,
+        "p95": 398.07,
+        "p99": 398.07,
+        "mean": 390.857,
+        "max": 398.07
+      },
+      "time_to_first_frame_seconds": {
+        "n": 4,
+        "p50": 20.709,
+        "p95": 27.536,
+        "p99": 27.536,
+        "mean": 20.709,
+        "max": 27.536
+      },
+      "frame_inference_seconds": null,
+      "prompt_tokens_per_frame": [
+        99
+      ],
+      "model_batches": {
+        "generate_calls": 28,
+        "items": 56,
+        "mean_batch_size": 2.0,
+        "calls_by_batch_size": {
+          "<=1.0": 0,
+          "<=2.0": 28,
+          "<=3.0": 0,
+          "<=4.0": 0,
+          "<=5.0": 0,
+          "<=6.0": 0,
+          "<=8.0": 0,
+          "<=12.0": 0,
+          "<=16.0": 0,
+          "<=24.0": 0,
+          "<=32.0": 0,
+          "<=+Inf": 0
+        }
+      },
+      "vllm_batch_size_num_requests_running": null,
+      "app_inflight_model_calls": {
+        "samples": 3706,
+        "sample_interval_seconds": 0.1,
+        "mean_when_busy": 13.69,
+        "p50_when_busy": 16.0,
+        "max": 16.0,
+        "histogram": {
+          "0": 3,
+          "2": 135,
+          "4": 137,
+          "6": 136,
+          "8": 138,
+          "10": 212,
+          "12": 212,
+          "14": 212,
+          "15": 1,
+          "16": 2520
+        }
+      },
+      "raw": {
+        "scans": [
+          {
+            "stream": 0,
+            "start_offset_seconds": 0.001,
+            "latency_seconds": 383.644,
+            "ttff_seconds": 13.883,
+            "http_error": null,
+            "frames": [
+              {
+                "second": 0,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 65,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned in the center of the image, situated on the left side of the street. It appears to be moving forward, with its headlights illuminated. The taxi is partially obscured by a pedestrian crossing the street, making it difficult to discern further details.\nConfidence: 8"
+              },
+              {
+                "second": 1,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 35,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street with people walking across the crosswalk, but there is no yellow taxi cab visible.\nConfidence: 10"
+              },
+              {
+                "second": 2,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 85,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, situated in the background. It appears to be a standard yellow cab with a black roof and a distinctive yellow color. The cab is partially visible, with only its rear end and part of its side visible. It seems to be driving away from the camera, heading towards the right side of the image.\nConfidence: 8"
+              },
+              {
+                "second": 3,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab in the image, positioned on the left side of the street, with its front end facing towards the right. It appears to be stopped at a crosswalk, with its headlights illuminated. The taxi is partially obscured by the pedestrians crossing the street, but its bright yellow color and distinctive shape are still visible.\nConfidence: 8"
+              },
+              {
+                "second": 4,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 79,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, situated in the background. It appears to be a standard yellow cab with a black roof, and it is facing towards the left side of the image. The cab is partially obscured by the pedestrians crossing the street, but its presence is evident due to its bright yellow color.\nConfidence: 8"
+              },
+              {
+                "second": 5,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 45,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street at night with people walking and cars driving. There are no yellow taxi cabs visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 6,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 43,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street at night, with people walking across the road and cars driving by. There is no yellow taxi cab visible in the image.\nConfidence: 10"
+              },
+              {
+                "second": 7,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 42,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street with people walking and cars driving. There is no yellow taxi cab visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 8,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: A yellow taxi cab is visible on the right side of the image, positioned behind the pedestrians and in front of the buildings. It appears to be driving away from the camera, with its headlights shining brightly.\nConfidence: 8\n\nThe taxi cab's presence adds a sense of urban activity and movement to the scene, highlighting the bustling nature of the city."
+              },
+              {
+                "second": 9,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 37,
+                "raw_response": "Answer: NO\nDescription: There is no yellow taxi cab in the image. Instead, there is a blue car and a silver car visible in the background.\nConfidence: 10"
+              },
+              {
+                "second": 10,
+                "is_match": true,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, facing right. It has a distinctive yellow color with black trim and features a large, rectangular sign on its roof. The sign is illuminated, indicating that the taxi is in operation. The taxi is situated in the middle of the street, with a crosswalk painted in white lines in front of it. A pedestrian is seen crossing the street, walking towards the taxi. In the background, other vehicles and buildings are visible, although they are out of focus.\n\nConfidence: 10"
+              },
+              {
+                "second": 11,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: There are two yellow taxi cabs in the image. The first one is positioned on the left side of the image, facing right, with its front end slightly out of focus. It has a distinctive black stripe running along its side and a red taillight visible on its rear. The second taxi cab is located on the right side of the image, facing left, with its front end also slightly out of focus. It has a similar design to the first taxi cab, with a black stripe and red taillight.\nConfidence: 8"
+              },
+              {
+                "second": 12,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 71,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, facing left. It has a distinctive black logo on its side and is situated in the middle of the road, with its headlights shining brightly. The taxi appears to be moving forward, as indicated by the blurred motion of its wheels.\nConfidence: 8"
+              },
+              {
+                "second": 13,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 70,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab on the right side of the image, positioned behind the black car and in front of the yellow SUV. It appears to be driving away from the camera, with its headlights and taillights visible. The taxi cab is facing towards the left side of the image.\nConfidence: 8"
+              }
+            ]
+          },
+          {
+            "stream": 1,
+            "start_offset_seconds": 0.001,
+            "latency_seconds": 398.07,
+            "ttff_seconds": 27.536,
+            "http_error": null,
+            "frames": [
+              {
+                "second": 0,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 65,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned in the center of the image, situated on the left side of the street. It appears to be moving forward, with its headlights illuminated. The taxi is partially obscured by a pedestrian crossing the street, making it difficult to discern further details.\nConfidence: 8"
+              },
+              {
+                "second": 1,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 35,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street with people walking across the crosswalk, but there is no yellow taxi cab visible.\nConfidence: 10"
+              },
+              {
+                "second": 2,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 85,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, situated in the background. It appears to be a standard yellow cab with a black roof and a distinctive yellow color. The cab is partially visible, with only its rear end and part of its side visible. It seems to be driving away from the camera, heading towards the right side of the image.\nConfidence: 8"
+              },
+              {
+                "second": 3,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab in the image, positioned on the left side of the street, with its front end facing towards the right. It appears to be stopped at a crosswalk, with its headlights illuminated. The taxi is partially obscured by the pedestrians crossing the street, but its bright yellow color and distinctive shape are still visible.\nConfidence: 8"
+              },
+              {
+                "second": 4,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 79,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, situated in the background. It appears to be a standard yellow cab with a black roof, and it is facing towards the left side of the image. The cab is partially obscured by the pedestrians crossing the street, but its presence is evident due to its bright yellow color.\nConfidence: 8"
+              },
+              {
+                "second": 5,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 45,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street at night with people walking and cars driving. There are no yellow taxi cabs visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 6,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 43,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street at night, with people walking across the road and cars driving by. There is no yellow taxi cab visible in the image.\nConfidence: 10"
+              },
+              {
+                "second": 7,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 42,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street with people walking and cars driving. There is no yellow taxi cab visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 8,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: A yellow taxi cab is visible on the right side of the image, positioned behind the pedestrians and in front of the buildings. It appears to be driving away from the camera, with its headlights shining brightly.\nConfidence: 8\n\nThe taxi cab's presence adds a sense of urban activity and movement to the scene, highlighting the bustling nature of the city."
+              },
+              {
+                "second": 9,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 37,
+                "raw_response": "Answer: NO\nDescription: There is no yellow taxi cab in the image. Instead, there is a blue car and a silver car visible in the background.\nConfidence: 10"
+              },
+              {
+                "second": 10,
+                "is_match": true,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, facing right. It has a distinctive yellow color with black trim and features a large, rectangular sign on its roof. The sign is illuminated, indicating that the taxi is in operation. The taxi is situated in the middle of the street, with a crosswalk painted in white lines in front of it. A pedestrian is seen crossing the street, walking towards the taxi. In the background, other vehicles and buildings are visible, although they are out of focus.\n\nConfidence: 10"
+              },
+              {
+                "second": 11,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: There are two yellow taxi cabs in the image. The first one is positioned on the left side of the image, facing right, with its front end slightly out of focus. It has a distinctive black stripe running along its side and a red taillight visible on its rear. The second taxi cab is located on the right side of the image, facing left, with its front end also slightly out of focus. It has a similar design to the first taxi cab, with a black stripe and red taillight.\nConfidence: 8"
+              },
+              {
+                "second": 12,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 71,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, facing left. It has a distinctive black logo on its side and is situated in the middle of the road, with its headlights shining brightly. The taxi appears to be moving forward, as indicated by the blurred motion of its wheels.\nConfidence: 8"
+              },
+              {
+                "second": 13,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 70,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab on the right side of the image, positioned behind the black car and in front of the yellow SUV. It appears to be driving away from the camera, with its headlights and taillights visible. The taxi cab is facing towards the left side of the image.\nConfidence: 8"
+              }
+            ]
+          },
+          {
+            "stream": 2,
+            "start_offset_seconds": 0.002,
+            "latency_seconds": 398.07,
+            "ttff_seconds": 27.535,
+            "http_error": null,
+            "frames": [
+              {
+                "second": 0,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 65,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned in the center of the image, situated on the left side of the street. It appears to be moving forward, with its headlights illuminated. The taxi is partially obscured by a pedestrian crossing the street, making it difficult to discern further details.\nConfidence: 8"
+              },
+              {
+                "second": 1,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 35,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street with people walking across the crosswalk, but there is no yellow taxi cab visible.\nConfidence: 10"
+              },
+              {
+                "second": 2,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 85,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, situated in the background. It appears to be a standard yellow cab with a black roof and a distinctive yellow color. The cab is partially visible, with only its rear end and part of its side visible. It seems to be driving away from the camera, heading towards the right side of the image.\nConfidence: 8"
+              },
+              {
+                "second": 3,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab in the image, positioned on the left side of the street, with its front end facing towards the right. It appears to be stopped at a crosswalk, with its headlights illuminated. The taxi is partially obscured by the pedestrians crossing the street, but its bright yellow color and distinctive shape are still visible.\nConfidence: 8"
+              },
+              {
+                "second": 4,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 79,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, situated in the background. It appears to be a standard yellow cab with a black roof, and it is facing towards the left side of the image. The cab is partially obscured by the pedestrians crossing the street, but its presence is evident due to its bright yellow color.\nConfidence: 8"
+              },
+              {
+                "second": 5,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 45,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street at night with people walking and cars driving. There are no yellow taxi cabs visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 6,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 43,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street at night, with people walking across the road and cars driving by. There is no yellow taxi cab visible in the image.\nConfidence: 10"
+              },
+              {
+                "second": 7,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 42,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street with people walking and cars driving. There is no yellow taxi cab visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 8,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: A yellow taxi cab is visible on the right side of the image, positioned behind the pedestrians and in front of the buildings. It appears to be driving away from the camera, with its headlights shining brightly.\nConfidence: 8\n\nThe taxi cab's presence adds a sense of urban activity and movement to the scene, highlighting the bustling nature of the city."
+              },
+              {
+                "second": 9,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 37,
+                "raw_response": "Answer: NO\nDescription: There is no yellow taxi cab in the image. Instead, there is a blue car and a silver car visible in the background.\nConfidence: 10"
+              },
+              {
+                "second": 10,
+                "is_match": true,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, facing right. It has a distinctive yellow color with black trim and features a large, rectangular sign on its roof. The sign is illuminated, indicating that the taxi is in operation. The taxi is situated in the middle of the street, with a crosswalk painted in white lines in front of it. A pedestrian is seen crossing the street, walking towards the taxi. In the background, other vehicles and buildings are visible, although they are out of focus.\n\nConfidence: 10"
+              },
+              {
+                "second": 11,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: There are two yellow taxi cabs in the image. The first one is positioned on the left side of the image, facing right, with its front end slightly out of focus. It has a distinctive black stripe running along its side and a red taillight visible on its rear. The second taxi cab is located on the right side of the image, facing left, with its front end also slightly out of focus. It has a similar design to the first taxi cab, with a black stripe and red taillight.\nConfidence: 8"
+              },
+              {
+                "second": 12,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 71,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, facing left. It has a distinctive black logo on its side and is situated in the middle of the road, with its headlights shining brightly. The taxi appears to be moving forward, as indicated by the blurred motion of its wheels.\nConfidence: 8"
+              },
+              {
+                "second": 13,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 70,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab on the right side of the image, positioned behind the black car and in front of the yellow SUV. It appears to be driving away from the camera, with its headlights and taillights visible. The taxi cab is facing towards the left side of the image.\nConfidence: 8"
+              }
+            ]
+          },
+          {
+            "stream": 3,
+            "start_offset_seconds": 0.002,
+            "latency_seconds": 383.642,
+            "ttff_seconds": 13.883,
+            "http_error": null,
+            "frames": [
+              {
+                "second": 0,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 65,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned in the center of the image, situated on the left side of the street. It appears to be moving forward, with its headlights illuminated. The taxi is partially obscured by a pedestrian crossing the street, making it difficult to discern further details.\nConfidence: 8"
+              },
+              {
+                "second": 1,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 35,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street with people walking across the crosswalk, but there is no yellow taxi cab visible.\nConfidence: 10"
+              },
+              {
+                "second": 2,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 85,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, situated in the background. It appears to be a standard yellow cab with a black roof and a distinctive yellow color. The cab is partially visible, with only its rear end and part of its side visible. It seems to be driving away from the camera, heading towards the right side of the image.\nConfidence: 8"
+              },
+              {
+                "second": 3,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab in the image, positioned on the left side of the street, with its front end facing towards the right. It appears to be stopped at a crosswalk, with its headlights illuminated. The taxi is partially obscured by the pedestrians crossing the street, but its bright yellow color and distinctive shape are still visible.\nConfidence: 8"
+              },
+              {
+                "second": 4,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 79,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, situated in the background. It appears to be a standard yellow cab with a black roof, and it is facing towards the left side of the image. The cab is partially obscured by the pedestrians crossing the street, but its presence is evident due to its bright yellow color.\nConfidence: 8"
+              },
+              {
+                "second": 5,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 45,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street at night with people walking and cars driving. There are no yellow taxi cabs visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 6,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 43,
+                "raw_response": "Answer: NO\nDescription: The image shows a busy city street at night, with people walking across the road and cars driving by. There is no yellow taxi cab visible in the image.\nConfidence: 10"
+              },
+              {
+                "second": 7,
+                "is_match": false,
+                "confidence": 6,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 42,
+                "raw_response": "Answer: NO\nDescription: The image is blurry, but it appears to be a city street with people walking and cars driving. There is no yellow taxi cab visible in the image.\nConfidence: 6"
+              },
+              {
+                "second": 8,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 78,
+                "raw_response": "Answer: YES\nDescription: A yellow taxi cab is visible on the right side of the image, positioned behind the pedestrians and in front of the buildings. It appears to be driving away from the camera, with its headlights shining brightly.\nConfidence: 8\n\nThe taxi cab's presence adds a sense of urban activity and movement to the scene, highlighting the bustling nature of the city."
+              },
+              {
+                "second": 9,
+                "is_match": false,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 37,
+                "raw_response": "Answer: NO\nDescription: There is no yellow taxi cab in the image. Instead, there is a blue car and a silver car visible in the background.\nConfidence: 10"
+              },
+              {
+                "second": 10,
+                "is_match": true,
+                "confidence": 10,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the left side of the image, facing right. It has a distinctive yellow color with black trim and features a large, rectangular sign on its roof. The sign is illuminated, indicating that the taxi is in operation. The taxi is situated in the middle of the street, with a crosswalk painted in white lines in front of it. A pedestrian is seen crossing the street, walking towards the taxi. In the background, other vehicles and buildings are visible, although they are out of focus.\n\nConfidence: 10"
+              },
+              {
+                "second": 11,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 116,
+                "raw_response": "Answer: YES\nDescription: There are two yellow taxi cabs in the image. The first one is positioned on the left side of the image, facing right, with its front end slightly out of focus. It has a distinctive black stripe running along its side and a red taillight visible on its rear. The second taxi cab is located on the right side of the image, facing left, with its front end also slightly out of focus. It has a similar design to the first taxi cab, with a black stripe and red taillight.\nConfidence: 8"
+              },
+              {
+                "second": 12,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 71,
+                "raw_response": "Answer: YES\nDescription: The yellow taxi cab is positioned on the right side of the image, facing left. It has a distinctive black logo on its side and is situated in the middle of the road, with its headlights shining brightly. The taxi appears to be moving forward, as indicated by the blurred motion of its wheels.\nConfidence: 8"
+              },
+              {
+                "second": 13,
+                "is_match": true,
+                "confidence": 8,
+                "error": false,
+                "inference_seconds": null,
+                "prompt_tokens": 99,
+                "completion_tokens": 70,
+                "raw_response": "Answer: YES\nDescription: There is a yellow taxi cab on the right side of the image, positioned behind the black car and in front of the yellow SUV. It appears to be driving away from the camera, with its headlights and taillights visible. The taxi cab is facing towards the left side of the image.\nConfidence: 8"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -21,14 +21,15 @@ def summary(level):
         "clips_per_minute": level["throughput"]["clips_per_minute"],
         "scan_latency_seconds": {k: level["scan_latency_seconds"][k] for k in ("p50", "p95", "p99")},
         "time_to_first_frame_seconds": {k: level["time_to_first_frame_seconds"][k] for k in ("p50", "p95", "p99")},
-        "frame_inference_seconds": {k: level["frame_inference_seconds"][k] for k in ("p50", "p95", "p99")},
+        "frame_inference_seconds": ({k: level["frame_inference_seconds"][k] for k in ("p50", "p95", "p99")}
+                                    if level.get("frame_inference_seconds") else None),
         "mean_batch_size": batch["mean_batch_size"] if batch else None,
         "generate_calls": batch["generate_calls"] if batch else None,
     }
 
 
 def print_file(path, data):
-    print(f"{path}  label={data['label']}  backend={data['server_config']['backend']}  "
+    print(f"{path}  label={data['label']}  mode={data['server_config'].get('serving_mode', data['server_config'].get('backend'))}  "
           f"model={data['server_config']['model']}  gpu={data['hardware'].get('gpu')}")
     for level in data["levels"]:
         s = summary(level)
@@ -63,6 +64,8 @@ def main():
                 "before": b,
                 "after": a,
                 "throughput_ratio_after_over_before": round(a["frames_per_second"] / b["frames_per_second"], 3),
+                "scan_p50_ratio_after_over_before": round(
+                    a["scan_latency_seconds"]["p50"] / b["scan_latency_seconds"]["p50"], 3),
                 "scan_p99_ratio_after_over_before": round(
                     a["scan_latency_seconds"]["p99"] / b["scan_latency_seconds"]["p99"], 3),
             })
