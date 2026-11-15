@@ -1,0 +1,736 @@
+{
+ "meta": {
+  "source": "MSR-VTT (friedrichor/MSR-VTT on Hugging Face)",
+  "seed": 0,
+  "thresholds": {
+   "LOW_LIGHT_LUMA": 50.0,
+   "HIGH_CONTRAST_CLIP_FRAC": 0.05,
+   "DENOISE_SIGMA": 4.0,
+   "difficult_rule": ">=50% of 1-FPS frames low-light or high-contrast"
+  },
+  "low_light_luma": 50.0,
+  "high_contrast_clip_frac": 0.05
+ },
+ "clips": [
+  {
+   "video_id": "video1020",
+   "path": ".data\\msrvtt\\videos\\video\\video1020.mp4",
+   "query": "a man giving a room tour",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 15
+  },
+  {
+   "video_id": "video1031",
+   "path": ".data\\msrvtt\\videos\\video\\video1031.mp4",
+   "query": "there is a man moving a car with control",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 15
+  },
+  {
+   "video_id": "video1131",
+   "path": ".data\\msrvtt\\videos\\video\\video1131.mp4",
+   "query": "a person is describing the treatment",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video1208",
+   "path": ".data\\msrvtt\\videos\\video\\video1208.mp4",
+   "query": "a man is trying to kill another player in a block building game to see if he drops all of his loot",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 15
+  },
+  {
+   "video_id": "video1318",
+   "path": ".data\\msrvtt\\videos\\video\\video1318.mp4",
+   "query": "someone is demonstrating a plastic bell pepper that is part of a fake food set",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video1471",
+   "path": ".data\\msrvtt\\videos\\video\\video1471.mp4",
+   "query": "a girl in pink a pencil in her hand brush for make up beauty facial look applying lipstick displaying on screen",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 25
+  },
+  {
+   "video_id": "video1494",
+   "path": ".data\\msrvtt\\videos\\video\\video1494.mp4",
+   "query": "a person is shown petting a bird and playing with another one",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video1501",
+   "path": ".data\\msrvtt\\videos\\video\\video1501.mp4",
+   "query": "the spongebob crew helps teaches the alphabets in song",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.143,
+   "frames_1fps": 14
+  },
+  {
+   "video_id": "video1528",
+   "path": ".data\\msrvtt\\videos\\video\\video1528.mp4",
+   "query": "frying pan kept on the stove and some water splashed to it the water evaporated",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 11
+  },
+  {
+   "video_id": "video1553",
+   "path": ".data\\msrvtt\\videos\\video\\video1553.mp4",
+   "query": "an lady artist with beautiful curly brown hair singing a song in her bedroom",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video1618",
+   "path": ".data\\msrvtt\\videos\\video\\video1618.mp4",
+   "query": "someone is playing a game",
+   "difficult": false,
+   "low_light_frac": 0.077,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video1649",
+   "path": ".data\\msrvtt\\videos\\video\\video1649.mp4",
+   "query": "lil kim doing her music video",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video1786",
+   "path": ".data\\msrvtt\\videos\\video\\video1786.mp4",
+   "query": "a woman singing with cutaways to people commuting on a subway",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 11
+  },
+  {
+   "video_id": "video18",
+   "path": ".data\\msrvtt\\videos\\video\\video18.mp4",
+   "query": "a man speaking to another man",
+   "difficult": true,
+   "low_light_frac": 0.667,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 15
+  },
+  {
+   "video_id": "video2044",
+   "path": ".data\\msrvtt\\videos\\video\\video2044.mp4",
+   "query": "shania twain is interviewed about her life",
+   "difficult": true,
+   "low_light_frac": 0.6,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 15
+  },
+  {
+   "video_id": "video2133",
+   "path": ".data\\msrvtt\\videos\\video\\video2133.mp4",
+   "query": "two lions chase down an animal",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 14
+  },
+  {
+   "video_id": "video2281",
+   "path": ".data\\msrvtt\\videos\\video\\video2281.mp4",
+   "query": "a man plays guitar outside",
+   "difficult": true,
+   "low_light_frac": 1.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 15
+  },
+  {
+   "video_id": "video2289",
+   "path": ".data\\msrvtt\\videos\\video\\video2289.mp4",
+   "query": "all persons are talking each other infront of a big house",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 11
+  },
+  {
+   "video_id": "video230",
+   "path": ".data\\msrvtt\\videos\\video\\video230.mp4",
+   "query": "a woman pushing around a stroller",
+   "difficult": false,
+   "low_light_frac": 0.083,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video2334",
+   "path": ".data\\msrvtt\\videos\\video\\video2334.mp4",
+   "query": "video game footage from the spider man game is being shown off",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 20
+  },
+  {
+   "video_id": "video2407",
+   "path": ".data\\msrvtt\\videos\\video\\video2407.mp4",
+   "query": "fashion week runway show hosted by mercedes-benz showing a woman in a bown skirt and top as a woman in a purple dress is walking away",
+   "difficult": false,
+   "low_light_frac": 0.182,
+   "high_contrast_frac": 0.091,
+   "frames_1fps": 11
+  },
+  {
+   "video_id": "video3012",
+   "path": ".data\\msrvtt\\videos\\video\\video3012.mp4",
+   "query": "muppets on the big screen",
+   "difficult": true,
+   "low_light_frac": 0.6,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 20
+  },
+  {
+   "video_id": "video3059",
+   "path": ".data\\msrvtt\\videos\\video\\video3059.mp4",
+   "query": "the two men were playing a game of ping pong",
+   "difficult": false,
+   "low_light_frac": 0.167,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 24
+  },
+  {
+   "video_id": "video3102",
+   "path": ".data\\msrvtt\\videos\\video\\video3102.mp4",
+   "query": "lego men are doing a synchronized dance in stop motion animation",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video3130",
+   "path": ".data\\msrvtt\\videos\\video\\video3130.mp4",
+   "query": "a woman is talking to ellen",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video3329",
+   "path": ".data\\msrvtt\\videos\\video\\video3329.mp4",
+   "query": "two families led by two stupid dads finally meet",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 21
+  },
+  {
+   "video_id": "video3350",
+   "path": ".data\\msrvtt\\videos\\video\\video3350.mp4",
+   "query": "a chef stirs some food up in a pan",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video3578",
+   "path": ".data\\msrvtt\\videos\\video\\video3578.mp4",
+   "query": "male workers working on making mobile smart phones at an assembly line while shots of completed phones are also being shown",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 16
+  },
+  {
+   "video_id": "video3632",
+   "path": ".data\\msrvtt\\videos\\video\\video3632.mp4",
+   "query": "a news report is about a mall",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video3909",
+   "path": ".data\\msrvtt\\videos\\video\\video3909.mp4",
+   "query": "a movie trailer of pirates of the caribbean the disney movie",
+   "difficult": true,
+   "low_light_frac": 0.818,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 11
+  },
+  {
+   "video_id": "video3966",
+   "path": ".data\\msrvtt\\videos\\video\\video3966.mp4",
+   "query": "a large workout area with blue carpeted floors and multiple pieces of workout equipment being described by a female narrator",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 22
+  },
+  {
+   "video_id": "video3996",
+   "path": ".data\\msrvtt\\videos\\video\\video3996.mp4",
+   "query": "the mole pops out of the earth and then burrows a tunnel to where the gardner is working",
+   "difficult": false,
+   "low_light_frac": 0.043,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 23
+  },
+  {
+   "video_id": "video4104",
+   "path": ".data\\msrvtt\\videos\\video\\video4104.mp4",
+   "query": "the hand wipes down the screen",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 25
+  },
+  {
+   "video_id": "video4242",
+   "path": ".data\\msrvtt\\videos\\video\\video4242.mp4",
+   "query": "its an advertisement about burger king",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.059,
+   "frames_1fps": 17
+  },
+  {
+   "video_id": "video4260",
+   "path": ".data\\msrvtt\\videos\\video\\video4260.mp4",
+   "query": "a gospel singer performs outside",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video4267",
+   "path": ".data\\msrvtt\\videos\\video\\video4267.mp4",
+   "query": "a band performs on stage while a man sings",
+   "difficult": true,
+   "low_light_frac": 0.688,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 16
+  },
+  {
+   "video_id": "video4617",
+   "path": ".data\\msrvtt\\videos\\video\\video4617.mp4",
+   "query": "a person assembles a rubix cube",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 31
+  },
+  {
+   "video_id": "video4712",
+   "path": ".data\\msrvtt\\videos\\video\\video4712.mp4",
+   "query": "a superb demonstration of origami in which paper is cut in planned way to get these astonishing snowflake shapes",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.034,
+   "frames_1fps": 29
+  },
+  {
+   "video_id": "video4756",
+   "path": ".data\\msrvtt\\videos\\video\\video4756.mp4",
+   "query": "a person wearing a eagle dresses in a open area",
+   "difficult": true,
+   "low_light_frac": 0.647,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 17
+  },
+  {
+   "video_id": "video4769",
+   "path": ".data\\msrvtt\\videos\\video\\video4769.mp4",
+   "query": "some people are playing badminton on a red court",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 22
+  },
+  {
+   "video_id": "video4938",
+   "path": ".data\\msrvtt\\videos\\video\\video4938.mp4",
+   "query": "a store employee is flattening a box",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 11
+  },
+  {
+   "video_id": "video4969",
+   "path": ".data\\msrvtt\\videos\\video\\video4969.mp4",
+   "query": "a man showcases a paper airplane",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 17
+  },
+  {
+   "video_id": "video5081",
+   "path": ".data\\msrvtt\\videos\\video\\video5081.mp4",
+   "query": "a girl talking on the phone",
+   "difficult": false,
+   "low_light_frac": 0.167,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video5180",
+   "path": ".data\\msrvtt\\videos\\video\\video5180.mp4",
+   "query": "a group of people are clapping at nasa then a woman is talking about pluto and space",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 18
+  },
+  {
+   "video_id": "video5194",
+   "path": ".data\\msrvtt\\videos\\video\\video5194.mp4",
+   "query": "two men are talking as they walk through a tunnel",
+   "difficult": true,
+   "low_light_frac": 0.571,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 14
+  },
+  {
+   "video_id": "video5243",
+   "path": ".data\\msrvtt\\videos\\video\\video5243.mp4",
+   "query": "a man searches for something on his computer",
+   "difficult": false,
+   "low_light_frac": 0.083,
+   "high_contrast_frac": 0.333,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video5328",
+   "path": ".data\\msrvtt\\videos\\video\\video5328.mp4",
+   "query": "zooming in on a plate of lightly seasoned meat",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 21
+  },
+  {
+   "video_id": "video540",
+   "path": ".data\\msrvtt\\videos\\video\\video540.mp4",
+   "query": "the murky water is going to the intro to the show lost",
+   "difficult": false,
+   "low_light_frac": 0.304,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 23
+  },
+  {
+   "video_id": "video5409",
+   "path": ".data\\msrvtt\\videos\\video\\video5409.mp4",
+   "query": "someone cook the filling and saute the onion on the pan",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.053,
+   "frames_1fps": 19
+  },
+  {
+   "video_id": "video5451",
+   "path": ".data\\msrvtt\\videos\\video\\video5451.mp4",
+   "query": "a woman showing how to use make up",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video5458",
+   "path": ".data\\msrvtt\\videos\\video\\video5458.mp4",
+   "query": "a man is talking about a nelly music video",
+   "difficult": true,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.636,
+   "frames_1fps": 11
+  },
+  {
+   "video_id": "video5796",
+   "path": ".data\\msrvtt\\videos\\video\\video5796.mp4",
+   "query": "asians playing video game is picky about chicken",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video5866",
+   "path": ".data\\msrvtt\\videos\\video\\video5866.mp4",
+   "query": "a white car is displayed from several views",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.438,
+   "frames_1fps": 16
+  },
+  {
+   "video_id": "video6306",
+   "path": ".data\\msrvtt\\videos\\video\\video6306.mp4",
+   "query": "a cartoonish looking person standing in a boxing ring",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 14
+  },
+  {
+   "video_id": "video6311",
+   "path": ".data\\msrvtt\\videos\\video\\video6311.mp4",
+   "query": "there are many birds body parts drawn on a tan parchment background",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 11
+  },
+  {
+   "video_id": "video6534",
+   "path": ".data\\msrvtt\\videos\\video\\video6534.mp4",
+   "query": "a brown horse is jumping over some hurdles",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 14
+  },
+  {
+   "video_id": "video663",
+   "path": ".data\\msrvtt\\videos\\video\\video663.mp4",
+   "query": "a blue sports car that is rare is shown driving down the street",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 16
+  },
+  {
+   "video_id": "video6634",
+   "path": ".data\\msrvtt\\videos\\video\\video6634.mp4",
+   "query": "a man with black dressing is talking about the movie hulk with small videos",
+   "difficult": false,
+   "low_light_frac": 0.381,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 21
+  },
+  {
+   "video_id": "video6890",
+   "path": ".data\\msrvtt\\videos\\video\\video6890.mp4",
+   "query": "a man is taking out parts to fix a car",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 15
+  },
+  {
+   "video_id": "video7167",
+   "path": ".data\\msrvtt\\videos\\video\\video7167.mp4",
+   "query": "the man was arguing with the other man",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 17
+  },
+  {
+   "video_id": "video7390",
+   "path": ".data\\msrvtt\\videos\\video\\video7390.mp4",
+   "query": "a man playing a soccer video game",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video7439",
+   "path": ".data\\msrvtt\\videos\\video\\video7439.mp4",
+   "query": "a man is playing a violin",
+   "difficult": true,
+   "low_light_frac": 0.765,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 17
+  },
+  {
+   "video_id": "video7499",
+   "path": ".data\\msrvtt\\videos\\video\\video7499.mp4",
+   "query": "a band is performing a concert",
+   "difficult": false,
+   "low_light_frac": 0.077,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video8106",
+   "path": ".data\\msrvtt\\videos\\video\\video8106.mp4",
+   "query": "the wood stood high",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 31
+  },
+  {
+   "video_id": "video8192",
+   "path": ".data\\msrvtt\\videos\\video\\video8192.mp4",
+   "query": "one man in a cowboy outfit and another in a football uniform stand back to back",
+   "difficult": false,
+   "low_light_frac": 0.083,
+   "high_contrast_frac": 0.25,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video8193",
+   "path": ".data\\msrvtt\\videos\\video\\video8193.mp4",
+   "query": "a man with a mustache is hugging his wife on a couch",
+   "difficult": true,
+   "low_light_frac": 0.533,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 15
+  },
+  {
+   "video_id": "video8200",
+   "path": ".data\\msrvtt\\videos\\video\\video8200.mp4",
+   "query": "a band is playing music",
+   "difficult": true,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.5,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video8430",
+   "path": ".data\\msrvtt\\videos\\video\\video8430.mp4",
+   "query": "a man is sitting in a car",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 17
+  },
+  {
+   "video_id": "video8536",
+   "path": ".data\\msrvtt\\videos\\video\\video8536.mp4",
+   "query": "a group of rabbits eating and sleeping and following people",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video8614",
+   "path": ".data\\msrvtt\\videos\\video\\video8614.mp4",
+   "query": "a child jumping off a pier and walking up stairs",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.077,
+   "frames_1fps": 26
+  },
+  {
+   "video_id": "video8956",
+   "path": ".data\\msrvtt\\videos\\video\\video8956.mp4",
+   "query": "a band is sitting down and performing a song with acoustic instruments",
+   "difficult": true,
+   "low_light_frac": 0.867,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 15
+  },
+  {
+   "video_id": "video9045",
+   "path": ".data\\msrvtt\\videos\\video\\video9045.mp4",
+   "query": "a video showing the walkthrough of a car",
+   "difficult": false,
+   "low_light_frac": 0.111,
+   "high_contrast_frac": 0.167,
+   "frames_1fps": 18
+  },
+  {
+   "video_id": "video9100",
+   "path": ".data\\msrvtt\\videos\\video\\video9100.mp4",
+   "query": "an horrible man is on the forest with a woman",
+   "difficult": false,
+   "low_light_frac": 0.083,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video9370",
+   "path": ".data\\msrvtt\\videos\\video\\video9370.mp4",
+   "query": "pokemon characters talk to each other",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 12
+  },
+  {
+   "video_id": "video9611",
+   "path": ".data\\msrvtt\\videos\\video\\video9611.mp4",
+   "query": "a few different people are giving their opinions towards a video",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 20
+  },
+  {
+   "video_id": "video9796",
+   "path": ".data\\msrvtt\\videos\\video\\video9796.mp4",
+   "query": "a man hooks some wires up to apple slices",
+   "difficult": false,
+   "low_light_frac": 0.385,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video9889",
+   "path": ".data\\msrvtt\\videos\\video\\video9889.mp4",
+   "query": "opening sequense to disney movie featuring castle and fireworks",
+   "difficult": false,
+   "low_light_frac": 0.389,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 18
+  },
+  {
+   "video_id": "video9963",
+   "path": ".data\\msrvtt\\videos\\video\\video9963.mp4",
+   "query": "a machine equipment explaning the internal part technology on topic discusing machine displaying on screen",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 16
+  },
+  {
+   "video_id": "video9967",
+   "path": ".data\\msrvtt\\videos\\video\\video9967.mp4",
+   "query": "a man drives a convertible through a crowd at an auto show",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 13
+  },
+  {
+   "video_id": "video9989",
+   "path": ".data\\msrvtt\\videos\\video\\video9989.mp4",
+   "query": "a car is racing down the road",
+   "difficult": false,
+   "low_light_frac": 0.0,
+   "high_contrast_frac": 0.0,
+   "frames_1fps": 11
+  }
+ ]
+}
