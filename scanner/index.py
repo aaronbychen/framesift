@@ -31,12 +31,14 @@ from redisvl.schema import IndexSchema
 from scanner import config
 
 EMBED_DIMS = int(os.getenv("EMBED_DIMS", "768"))
-# Fusion settings, tuned on the MSR-VTT train-split dev set only (see eval/README.md).
+# Fusion weights frozen from the dev-set grid (artifacts/eval/dev80_fusion_grid.json, MSR-VTT train
+# clips only): best dev Hit@5 was dense frame retrieval alone (0.900); the best fused config scored
+# 0.8875. Clip-level and BM25 retrievers stay available through W_CLIP / W_BM25.
 FUSION = {
     "rrf_k": float(os.getenv("RRF_K", "60")),
     "w_frame": float(os.getenv("W_FRAME", "1.0")),
-    "w_clip": float(os.getenv("W_CLIP", "1.0")),
-    "w_bm25": float(os.getenv("W_BM25", "1.0")),
+    "w_clip": float(os.getenv("W_CLIP", "0.0")),
+    "w_bm25": float(os.getenv("W_BM25", "0.0")),
     "candidates": int(os.getenv("FUSION_CANDIDATES", "50")),
     "frame_candidates": int(os.getenv("FRAME_CANDIDATES", "200")),
 }
