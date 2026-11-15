@@ -1,0 +1,9 @@
+.venv
+.data
+.git
+.loadtest_data
+artifacts
+frames
+uploads
+__pycache__
+**/__pycache__
