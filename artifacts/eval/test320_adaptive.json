@@ -1,0 +1,4562 @@
+{
+ "generated_at": "2026-11-15T14:33:05-06:00",
+ "set": "eval/sets/test320.json",
+ "captions": ".data/captions/test320_adaptive.jsonl",
+ "index_name": "eval_test320_adaptive",
+ "fusion": {
+  "rrf_k": 60.0,
+  "w_frame": 1.0,
+  "w_clip": 0.0,
+  "w_bm25": 0.0,
+  "candidates": 50,
+  "frame_candidates": 200
+ },
+ "notes": "preprocess adaptive (reuse off captions for unenhanced frames); fusion frozen from dev80 grid; CPU embeddings",
+ "corpus": {
+  "clips": 320,
+  "frames_1fps": 5123,
+  "frames_enhanced": 1944,
+  "frames_caption_error": 0
+ },
+ "all": {
+  "n_queries": 320,
+  "hit@1": 0.3906,
+  "hit@5": 0.6844,
+  "hit@10": 0.7719,
+  "mrr@100": 0.5145
+ },
+ "difficult": {
+  "n_queries": 147,
+  "hit@1": 0.3333,
+  "hit@5": 0.6259,
+  "hit@10": 0.7279,
+  "mrr@100": 0.4544
+ },
+ "not_difficult": {
+  "n_queries": 173,
+  "hit@1": 0.4393,
+  "hit@5": 0.7341,
+  "hit@10": 0.8092,
+  "mrr@100": 0.5656
+ },
+ "query_latency_ms": {
+  "embed_ms": {
+   "n": 320,
+   "p50": 28.311,
+   "p95": 32.624,
+   "p99": 35.17,
+   "mean": 28.869,
+   "max": 62.652
+  },
+  "vector_ms": {
+   "n": 320,
+   "p50": 8.555,
+   "p95": 10.205,
+   "p99": 13.373,
+   "mean": 8.816,
+   "max": 14.806
+  },
+  "bm25_ms": {
+   "n": 320,
+   "p50": 0.0,
+   "p95": 0.0,
+   "p99": 0.001,
+   "mean": 0.0,
+   "max": 0.001
+  },
+  "total_ms": {
+   "n": 320,
+   "p50": 37.023,
+   "p95": 42.467,
+   "p99": 46.22,
+   "mean": 37.7,
+   "max": 72.138
+  }
+ },
+ "platform": {
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.3"
+ },
+ "per_query": [
+  {
+   "video_id": "video7021",
+   "query": "baseball player hits ball",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video9021",
+    "video8049",
+    "video7021",
+    "video7787",
+    "video7556"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video7027",
+   "query": "the man in the video is showing a brief viewing of how the movie is starting",
+   "difficult": true,
+   "rank": 15,
+   "top5": [
+    "video7576",
+    "video8909",
+    "video7215",
+    "video7368",
+    "video9522"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video7028",
+   "query": "a man is singing and standing in the road",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video9348",
+    "video8445",
+    "video7028",
+    "video7576",
+    "video7733"
+   ],
+   "best_t": 20
+  },
+  {
+   "video_id": "video7064",
+   "query": "a guy wearing a black shirt talks and shows a chart on the tv screen",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video7064",
+    "video7215",
+    "video9522",
+    "video7412",
+    "video8305"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video7114",
+   "query": "a girl and a man are talking to each other",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video7163",
+    "video8790",
+    "video8813",
+    "video8922",
+    "video8786"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7115",
+   "query": "a man is showing off a new vehicle",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video7115",
+    "video7567",
+    "video8246",
+    "video7965",
+    "video9683"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video7117",
+   "query": "people are singing on the beach",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7117",
+    "video8818",
+    "video7791",
+    "video8241",
+    "video9303"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video7141",
+   "query": "a cartoon that is blurryb on a tv screen of a fashion run way",
+   "difficult": true,
+   "rank": 6,
+   "top5": [
+    "video7438",
+    "video7576",
+    "video7558",
+    "video7593",
+    "video7730"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video7144",
+   "query": "a group of women are rubbing oil and milk all over a woman",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7144",
+    "video9037",
+    "video8305",
+    "video8489",
+    "video8246"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video7149",
+   "query": "a trailer for a film with words over the top",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video8340",
+    "video8475",
+    "video8618",
+    "video9224",
+    "video7355"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7151",
+   "query": "a man is sitting on a chair",
+   "difficult": false,
+   "rank": 10,
+   "top5": [
+    "video7733",
+    "video8792",
+    "video9778",
+    "video8120",
+    "video9517"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video7154",
+   "query": "demonstration on how to prepare something using a microwave",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video7154",
+    "video9689",
+    "video7213",
+    "video9335",
+    "video7572"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video7158",
+   "query": "fox news presidential debate recapping the gop debate with donald trump and ted cruz",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8464",
+    "video7158",
+    "video7215",
+    "video8120",
+    "video8922"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video7160",
+   "query": "a cartoon character falls asleep on a couch",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7160",
+    "video7831",
+    "video9808",
+    "video9814",
+    "video9537"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video7162",
+   "query": "woman talking to a man in an interview",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video8316",
+    "video7162",
+    "video8813",
+    "video8453",
+    "video8650"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video7163",
+   "query": "a young man is touching a young girls back",
+   "difficult": true,
+   "rank": 4,
+   "top5": [
+    "video7528",
+    "video7782",
+    "video7970",
+    "video7163",
+    "video8790"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video7168",
+   "query": "he is playing with ball",
+   "difficult": true,
+   "rank": 16,
+   "top5": [
+    "video8979",
+    "video7839",
+    "video8253",
+    "video9018",
+    "video7699"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video7170",
+   "query": "a girl practising her boy and arrow tricks",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7170",
+    "video9685",
+    "video7693",
+    "video7732",
+    "video9308"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video7200",
+   "query": "a female soccer player accepts a reward while being cheered on by the crowd",
+   "difficult": true,
+   "rank": 5,
+   "top5": [
+    "video8979",
+    "video7839",
+    "video9308",
+    "video8445",
+    "video7200"
+   ],
+   "best_t": 27
+  },
+  {
+   "video_id": "video7203",
+   "query": "there is no sound while the screen shows a person playing a computer game",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video8626",
+    "video8255",
+    "video7203",
+    "video9334",
+    "video7782"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video7205",
+   "query": "hands rubbing together in the dark and band members singing and playing the guitar",
+   "difficult": true,
+   "rank": 7,
+   "top5": [
+    "video7596",
+    "video9872",
+    "video7461",
+    "video8305",
+    "video9243"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video7211",
+   "query": "people share their thoughts on a boxing match",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video7211",
+    "video7979",
+    "video9018",
+    "video9304",
+    "video7359"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video7213",
+   "query": "a woman is making lasagna",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video7572",
+    "video7213",
+    "video9693",
+    "video8074",
+    "video8247"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video7214",
+   "query": "race cars of different colors lined up on a dark track",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7214",
+    "video9691",
+    "video7506",
+    "video7115",
+    "video9975"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video7215",
+   "query": "person playing a game",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video9029",
+    "video7699",
+    "video8913",
+    "video7757",
+    "video7203"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7222",
+   "query": "a cartoon man dances for his girl",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video9242",
+    "video7831",
+    "video7222",
+    "video9686",
+    "video7782"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video7223",
+   "query": "the small and large needles moving fast in a clock",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video7154",
+    "video7223",
+    "video8247",
+    "video9428",
+    "video7732"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video7227",
+   "query": "a man is singing",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video7367",
+    "video8466",
+    "video9254",
+    "video8445",
+    "video9522"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7232",
+   "query": "the sky roads game on the computer",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video7506",
+    "video7723",
+    "video8689",
+    "video8626",
+    "video7203"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7233",
+   "query": "views of two persons working on the super computer with the head phones on",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video7685",
+    "video7233",
+    "video7793",
+    "video7969",
+    "video7371"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video7234",
+   "query": "a woman flanked by two men are with a discussion",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7234",
+    "video9322",
+    "video9793",
+    "video7114",
+    "video9791"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video7342",
+   "query": "opening of a nest a rate is coming out and searching something it eats something on a human hand",
+   "difficult": true,
+   "rank": 7,
+   "top5": [
+    "video8056",
+    "video9657",
+    "video8495",
+    "video9684",
+    "video7561"
+   ],
+   "best_t": 16
+  },
+  {
+   "video_id": "video7343",
+   "query": "a guy fixing up another car",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7343",
+    "video7567",
+    "video7367",
+    "video7969",
+    "video7354"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video7346",
+   "query": "some people video conferencing as they watch a movie",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7346",
+    "video7576",
+    "video9322",
+    "video8475",
+    "video8909"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video7349",
+   "query": "a grey haired man interviews someone else",
+   "difficult": true,
+   "rank": 4,
+   "top5": [
+    "video9885",
+    "video8905",
+    "video7215",
+    "video7349",
+    "video7375"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video7352",
+   "query": "a movie scene starring morgan freeman and men in armor running",
+   "difficult": true,
+   "rank": 24,
+   "top5": [
+    "video8829",
+    "video8948",
+    "video9784",
+    "video9450",
+    "video9255"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video7354",
+   "query": "a man is showing the interior of a car",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video7969",
+    "video7965",
+    "video7354",
+    "video8022",
+    "video7115"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video7355",
+   "query": "a hand print is outlined within the silhouette of a green dinosaur shape for a movie promotion",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video7355",
+    "video8909",
+    "video8618",
+    "video7223",
+    "video9838"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video7357",
+   "query": "tennis players are involved in matches in large stadiums in front of large crowds",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7357",
+    "video8913",
+    "video7461",
+    "video8253",
+    "video8930"
+   ],
+   "best_t": 17
+  },
+  {
+   "video_id": "video7359",
+   "query": "two people are preparing for sports",
+   "difficult": false,
+   "rank": 17,
+   "top5": [
+    "video9018",
+    "video8913",
+    "video8253",
+    "video9029",
+    "video8316"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video7361",
+   "query": "a woman with a camel",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7361",
+    "video8572",
+    "video9248",
+    "video8241",
+    "video8790"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video7363",
+   "query": "a man loads a clip into a pistol",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8027",
+    "video7363",
+    "video9784",
+    "video8780",
+    "video9255"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video7367",
+   "query": "this is a rock band music video",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video8482",
+    "video7528",
+    "video7596",
+    "video8978",
+    "video7461"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7368",
+   "query": "a martial arts cartoon",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video9524",
+    "video9242",
+    "video8128",
+    "video8334",
+    "video7232"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7369",
+   "query": "a man is talking about opening a laptop case",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7369",
+    "video8830",
+    "video8684",
+    "video8908",
+    "video8626"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video7371",
+   "query": "a tv shows review program hosts discuss about the performance and staying on air of star trek",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8482",
+    "video7371",
+    "video8813",
+    "video7027",
+    "video7834"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video7375",
+   "query": "a man talks about the school system",
+   "difficult": true,
+   "rank": 21,
+   "top5": [
+    "video8257",
+    "video8445",
+    "video8331",
+    "video7979",
+    "video9021"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video7411",
+   "query": "jolly good music troop delivering a program and the lady is in good spirit",
+   "difficult": false,
+   "rank": 40,
+   "top5": [
+    "video8241",
+    "video9304",
+    "video8445",
+    "video9222",
+    "video8978"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video7412",
+   "query": "a man talks about visiting visiting a specific place to buy some things",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video8265",
+    "video9249",
+    "video9517",
+    "video7215",
+    "video9337"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7432",
+   "query": "a person on the computer looking at data",
+   "difficult": false,
+   "rank": 22,
+   "top5": [
+    "video9820",
+    "video8305",
+    "video8626",
+    "video7369",
+    "video7916"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video7436",
+   "query": "a man gets shot in the face",
+   "difficult": true,
+   "rank": 7,
+   "top5": [
+    "video8453",
+    "video7576",
+    "video7704",
+    "video7363",
+    "video7732"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video7438",
+   "query": "the articles of a shop is being shown",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7438",
+    "video8246",
+    "video9131",
+    "video9063",
+    "video8495"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video7461",
+   "query": "a man playing video games",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video7593",
+    "video9021",
+    "video9334",
+    "video9035",
+    "video9224"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7466",
+   "query": "a group of men carry a body covered in a sheet",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video9450",
+    "video9885",
+    "video7466",
+    "video8305",
+    "video8348"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video7469",
+   "query": "a video of a young man in a white shirt inviting his colleagues to join him",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video7346",
+    "video7200",
+    "video7469",
+    "video8930",
+    "video8453"
+   ],
+   "best_t": 13
+  },
+  {
+   "video_id": "video7506",
+   "query": "a video game car is driving recklessly",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7506",
+    "video9035",
+    "video9691",
+    "video7965",
+    "video7972"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video7528",
+   "query": "a girl singing a song and her group were playing music",
+   "difficult": true,
+   "rank": 16,
+   "top5": [
+    "video9222",
+    "video7791",
+    "video8447",
+    "video9793",
+    "video8810"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video7547",
+   "query": "there is a woman in her roomshe is a net idol show her new vedio",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video7576",
+    "video8482",
+    "video7730",
+    "video8912",
+    "video9518"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7554",
+   "query": "a person pointing to food on a plate",
+   "difficult": false,
+   "rank": 7,
+   "top5": [
+    "video7559",
+    "video8056",
+    "video9537",
+    "video8247",
+    "video8900"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video7556",
+   "query": "people are playing baseball",
+   "difficult": true,
+   "rank": 5,
+   "top5": [
+    "video9021",
+    "video8913",
+    "video7787",
+    "video7021",
+    "video7556"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video7558",
+   "query": "two boys introducing a young lady who plays the cups and sings",
+   "difficult": true,
+   "rank": 17,
+   "top5": [
+    "video9222",
+    "video9303",
+    "video7791",
+    "video8818",
+    "video8792"
+   ],
+   "best_t": 29
+  },
+  {
+   "video_id": "video7559",
+   "query": "a man is trying some sushi",
+   "difficult": false,
+   "rank": 18,
+   "top5": [
+    "video7213",
+    "video9689",
+    "video8056",
+    "video9537",
+    "video7898"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video7561",
+   "query": "playing with toy kitchen accessories",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7561",
+    "video8774",
+    "video7438",
+    "video9231",
+    "video9693"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video7562",
+   "query": "article about nasa s johnson space center being broadcasted on news",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video7562",
+    "video8864",
+    "video9204",
+    "video8311",
+    "video8727"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video7566",
+   "query": "a man explain why he uses edible blooms for gifts",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7566",
+    "video8774",
+    "video8495",
+    "video8900",
+    "video7554"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video7567",
+   "query": "a man checks out detail on a car",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7567",
+    "video7969",
+    "video9530",
+    "video9252",
+    "video8246"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video7569",
+   "query": "a woman is singing",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video8447",
+    "video7569",
+    "video9827",
+    "video9243",
+    "video8482"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video7571",
+   "query": "a woman in black puts on blush while looking in a mirror",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video7571",
+    "video9131",
+    "video8447",
+    "video9827",
+    "video8074"
+   ],
+   "best_t": 13
+  },
+  {
+   "video_id": "video7572",
+   "query": "foreign language cooking show",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7572",
+    "video9335",
+    "video9689",
+    "video7213",
+    "video9517"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video7576",
+   "query": "men are being filmed in the darkness",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video9450",
+    "video8305",
+    "video9063",
+    "video7200",
+    "video8903"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7593",
+   "query": "a group of friends are in a room talking with each other",
+   "difficult": true,
+   "rank": 32,
+   "top5": [
+    "video7028",
+    "video8348",
+    "video8129",
+    "video9222",
+    "video7346"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video7596",
+   "query": "a man and a woman are singing a song in a stage",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video7596",
+    "video9243",
+    "video9348",
+    "video7461",
+    "video8482"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video7610",
+   "query": "the olympics wight lifting photo is illustrated to explain gravitational force",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7610",
+    "video7732",
+    "video7724",
+    "video8807",
+    "video8790"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video7632",
+   "query": "a man walks between two brick buildings a dusk",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video7632",
+    "video8798",
+    "video9012",
+    "video9878",
+    "video8485"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video7685",
+   "query": "couples describing the logic behind movie scenes",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video7163",
+    "video7528",
+    "video8475",
+    "video8485",
+    "video8305"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7686",
+   "query": "a man looks up towards a cathedrals organ pipes and talks to a priest in a confessional",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video7686",
+    "video8922",
+    "video8829",
+    "video7346",
+    "video8813"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video7693",
+   "query": "this is a jigsaw puzzle video",
+   "difficult": false,
+   "rank": 4,
+   "top5": [
+    "video7558",
+    "video8909",
+    "video9354",
+    "video7693",
+    "video8488"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video7699",
+   "query": "a man with head band is demonstrating how to play ping pong",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7699",
+    "video7205",
+    "video9522",
+    "video8671",
+    "video8978"
+   ],
+   "best_t": 13
+  },
+  {
+   "video_id": "video7704",
+   "query": "a man with a very red nose",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7704",
+    "video7838",
+    "video9021",
+    "video7160",
+    "video8932"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video7710",
+   "query": "a man playing video games",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video7593",
+    "video9021",
+    "video9334",
+    "video9035",
+    "video9224"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7723",
+   "query": "a man plays an online multiplayer game and talks about how the game works",
+   "difficult": true,
+   "rank": 8,
+   "top5": [
+    "video7203",
+    "video9021",
+    "video9035",
+    "video7838",
+    "video7757"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video7724",
+   "query": "a lady describes about workout and exercises for women",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video9037",
+    "video7724",
+    "video7144",
+    "video8305",
+    "video9827"
+   ],
+   "best_t": 27
+  },
+  {
+   "video_id": "video7730",
+   "query": "different women in colorful clothing are walking down a runway for a fashion show",
+   "difficult": true,
+   "rank": 4,
+   "top5": [
+    "video9063",
+    "video9308",
+    "video9277",
+    "video7730",
+    "video9348"
+   ],
+   "best_t": 16
+  },
+  {
+   "video_id": "video7732",
+   "query": "colored lights and pictures of people fade in and out of view",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video8305",
+    "video7732",
+    "video8334",
+    "video8786",
+    "video9322"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video7733",
+   "query": "a child is singing on stage",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video9222",
+    "video7733",
+    "video7791",
+    "video9778",
+    "video9303"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video7754",
+   "query": "this is a video of a live tv show",
+   "difficult": true,
+   "rank": 16,
+   "top5": [
+    "video8482",
+    "video9233",
+    "video8311",
+    "video8464",
+    "video9018"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video7757",
+   "query": "a figure in camouflage clothing walks with bent knees through large cement rooms toward a door as people are being shot",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7757",
+    "video9326",
+    "video8256",
+    "video7576",
+    "video7528"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video7763",
+   "query": "people are playing basketball",
+   "difficult": false,
+   "rank": 6,
+   "top5": [
+    "video8979",
+    "video8253",
+    "video9029",
+    "video7710",
+    "video9018"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video7782",
+   "query": "a girl talking to her dead mom",
+   "difficult": true,
+   "rank": 35,
+   "top5": [
+    "video7466",
+    "video7786",
+    "video8027",
+    "video9686",
+    "video9919"
+   ],
+   "best_t": 14
+  },
+  {
+   "video_id": "video7786",
+   "query": "a song with skeletons dancing",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video7786",
+    "video8903",
+    "video8978",
+    "video9063",
+    "video7411"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video7787",
+   "query": "various sports clips with music are shown",
+   "difficult": false,
+   "rank": 4,
+   "top5": [
+    "video7839",
+    "video9018",
+    "video8979",
+    "video7787",
+    "video8475"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video7790",
+   "query": "a guy with glasses is standing next to some signs",
+   "difficult": false,
+   "rank": 39,
+   "top5": [
+    "video7732",
+    "video9348",
+    "video8657",
+    "video7915",
+    "video8265"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video7791",
+   "query": "three kids are performing a song",
+   "difficult": true,
+   "rank": 4,
+   "top5": [
+    "video8818",
+    "video8447",
+    "video9303",
+    "video7791",
+    "video8792"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video7792",
+   "query": "screen cast of mine craft oneline",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7792",
+    "video8077",
+    "video9334",
+    "video7972",
+    "video8475"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video7793",
+   "query": "flight is shaken and the pilots trying to land the flight while they opened the air",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8688",
+    "video7793",
+    "video9623",
+    "video7795",
+    "video9680"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video7795",
+   "query": "a documentary on how to windsurf and in particular recover from a wipeout",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7795",
+    "video9321",
+    "video8307",
+    "video8079",
+    "video9021"
+   ],
+   "best_t": 16
+  },
+  {
+   "video_id": "video7831",
+   "query": "a young girl is abusing a young man",
+   "difficult": false,
+   "rank": 32,
+   "top5": [
+    "video8027",
+    "video7170",
+    "video9623",
+    "video7970",
+    "video8807"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video7834",
+   "query": "a man in striped collared shirt discusses jobs in news room of bloomberg",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7834",
+    "video7215",
+    "video7469",
+    "video9021",
+    "video7234"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video7837",
+   "query": "a person walks down a staircase surrounded by greenery and other foliage",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7837",
+    "video7730",
+    "video8256",
+    "video7412",
+    "video7021"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video7838",
+   "query": "a guy is talking over loud music at the end of a youtube video",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video7375",
+    "video7346",
+    "video7838",
+    "video7787",
+    "video7839"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video7839",
+   "query": "this is a vine sports compilation",
+   "difficult": false,
+   "rank": 5,
+   "top5": [
+    "video9018",
+    "video7787",
+    "video8253",
+    "video8979",
+    "video7839"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video7898",
+   "query": "a salad in a bowl is being filmed on a table",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video7898",
+    "video7559",
+    "video7213",
+    "video9689",
+    "video7554"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video7915",
+   "query": "a man in sunglasses and a blue shirt beat boxes",
+   "difficult": false,
+   "rank": 4,
+   "top5": [
+    "video9489",
+    "video8265",
+    "video7367",
+    "video7915",
+    "video8671"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video7916",
+   "query": "girl is checking twitter",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video7791",
+    "video8618",
+    "video7576",
+    "video8011",
+    "video9607"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video7965",
+   "query": "man driving in a car an talking about the car",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video7969",
+    "video7354",
+    "video7965",
+    "video7115",
+    "video8864"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video7969",
+   "query": "person driving in car",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video7965",
+    "video7354",
+    "video7969",
+    "video9252",
+    "video7343"
+   ],
+   "best_t": 13
+  },
+  {
+   "video_id": "video7970",
+   "query": "two child playing in the house",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video7561",
+    "video7970",
+    "video9685",
+    "video9231",
+    "video8478"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video7972",
+   "query": "a man shows how a video game works",
+   "difficult": false,
+   "rank": 11,
+   "top5": [
+    "video9334",
+    "video7757",
+    "video9021",
+    "video9035",
+    "video8027"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video7976",
+   "query": "a young boy rocks out on a guitar",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video9222",
+    "video7976",
+    "video9872",
+    "video7205",
+    "video7733"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video7979",
+   "query": "people talking about a fight",
+   "difficult": true,
+   "rank": 4,
+   "top5": [
+    "video7211",
+    "video8464",
+    "video9018",
+    "video7979",
+    "video8305"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8011",
+   "query": "a girl talks about photos and her life",
+   "difficult": false,
+   "rank": 11,
+   "top5": [
+    "video7547",
+    "video9518",
+    "video9503",
+    "video8912",
+    "video8814"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video8022",
+   "query": "the intro to world news focus on africa plays and we are greeted by the bbc reporter based in johannesburg south africa",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8022",
+    "video8906",
+    "video9205",
+    "video7790",
+    "video8311"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8027",
+   "query": "a video game is played",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video7757",
+    "video9035",
+    "video8027",
+    "video9334",
+    "video8256"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8048",
+   "query": "george lopez s family sits down for dinner",
+   "difficult": true,
+   "rank": 6,
+   "top5": [
+    "video8349",
+    "video8912",
+    "video8074",
+    "video7355",
+    "video7222"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8049",
+   "query": "a guy is spinning around with a bat",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8049",
+    "video7168",
+    "video7556",
+    "video7368",
+    "video9308"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8056",
+   "query": "fried potatoes are being eaten",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8056",
+    "video7898",
+    "video7554",
+    "video9689",
+    "video9335"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video8069",
+   "query": "an astronaut is looking at a flag",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8069",
+    "video7027",
+    "video7793",
+    "video7371",
+    "video7562"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video8072",
+   "query": "a man talking about human relationships",
+   "difficult": true,
+   "rank": 7,
+   "top5": [
+    "video7215",
+    "video8445",
+    "video7979",
+    "video8265",
+    "video8340"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8074",
+   "query": "a girl sitting in a restaurant",
+   "difficult": true,
+   "rank": 5,
+   "top5": [
+    "video9537",
+    "video8048",
+    "video7558",
+    "video8330",
+    "video8074"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video8077",
+   "query": "a man playing a video game",
+   "difficult": false,
+   "rank": 24,
+   "top5": [
+    "video7593",
+    "video9021",
+    "video9334",
+    "video9035",
+    "video9224"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video8079",
+   "query": "several groups of people are kayaking on a waterway",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8079",
+    "video8903",
+    "video8349",
+    "video9321",
+    "video7795"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video8120",
+   "query": "a guest is speaking with a television show host",
+   "difficult": false,
+   "rank": 5,
+   "top5": [
+    "video8930",
+    "video8813",
+    "video9222",
+    "video7215",
+    "video8120"
+   ],
+   "best_t": 20
+  },
+  {
+   "video_id": "video8128",
+   "query": "a cartoon character prepares to ride a bicycle",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8128",
+    "video9814",
+    "video8674",
+    "video9489",
+    "video9537"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video8129",
+   "query": "behind the scenes in a professional kitchen as the chefs work and the waiters run food can be a very noisy experience",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8129",
+    "video7572",
+    "video7213",
+    "video9689",
+    "video9684"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video8241",
+   "query": "several women in pink outfits and various other styles are standing and smiling",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video7791",
+    "video8241",
+    "video8445",
+    "video7162",
+    "video9791"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video8246",
+   "query": "there is a man working on a car",
+   "difficult": false,
+   "rank": 9,
+   "top5": [
+    "video7343",
+    "video7567",
+    "video7354",
+    "video7969",
+    "video7367"
+   ],
+   "best_t": 19
+  },
+  {
+   "video_id": "video8247",
+   "query": "a man is talking about cooking and presenting a thermometer and way of preparation",
+   "difficult": false,
+   "rank": 5,
+   "top5": [
+    "video8834",
+    "video9335",
+    "video9038",
+    "video7566",
+    "video8247"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video8249",
+   "query": "batman is beating up bane in a scene from a batman movie",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8249",
+    "video9623",
+    "video9814",
+    "video7211",
+    "video8305"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video8253",
+   "query": "vest of sports vines",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video7787",
+    "video8253",
+    "video9018",
+    "video7839",
+    "video7732"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video8255",
+   "query": "a man is playing piano",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8466",
+    "video8255",
+    "video7205",
+    "video9686",
+    "video8978"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video8256",
+   "query": "someone playing the game dark souls",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8256",
+    "video7723",
+    "video7972",
+    "video9035",
+    "video8027"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video8257",
+   "query": "a man is discussing some functions for a science expirement",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video9249",
+    "video8257",
+    "video8908",
+    "video8830",
+    "video8265"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video8259",
+   "query": "an interview is conducted",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video9885",
+    "video8316",
+    "video8120",
+    "video7793",
+    "video9520"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video8265",
+   "query": "someone plays a guitar and sings on stage of a tv show",
+   "difficult": true,
+   "rank": 5,
+   "top5": [
+    "video9222",
+    "video8482",
+    "video8810",
+    "video7791",
+    "video8265"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video8305",
+   "query": "in a music video a man is laying with women while singing",
+   "difficult": true,
+   "rank": 28,
+   "top5": [
+    "video7528",
+    "video8818",
+    "video8482",
+    "video7367",
+    "video7596"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video8307",
+   "query": "calm pond with lush green hills lining the background is shown",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8307",
+    "video9511",
+    "video7021",
+    "video8463",
+    "video8817"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video8311",
+   "query": "a man is filming as he and a woman watch the news where it shows an area filled with smoke",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8311",
+    "video9354",
+    "video9037",
+    "video8789",
+    "video8864"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video8314",
+   "query": "a woman dances around for a music video",
+   "difficult": false,
+   "rank": 38,
+   "top5": [
+    "video7528",
+    "video9489",
+    "video9827",
+    "video9685",
+    "video8453"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video8315",
+   "query": "three men were discussing the national football league",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video7234",
+    "video8316",
+    "video8315",
+    "video8253",
+    "video7349"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video8316",
+   "query": "a man is talking to an athlete",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8316",
+    "video9018",
+    "video8259",
+    "video7200",
+    "video8913"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video8319",
+   "query": "there is a man in black is walking in to the bridge",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video7028",
+    "video7837",
+    "video9348",
+    "video8657",
+    "video7233"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video8330",
+   "query": "a man and a woman are talking at a bus stop",
+   "difficult": false,
+   "rank": 5,
+   "top5": [
+    "video8022",
+    "video8790",
+    "video8813",
+    "video8786",
+    "video8330"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video8331",
+   "query": "a man teaching students in class",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8257",
+    "video8331",
+    "video7163",
+    "video7354",
+    "video9021"
+   ],
+   "best_t": 16
+  },
+  {
+   "video_id": "video8334",
+   "query": "a cartoon of a dog running and howling",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8334",
+    "video8671",
+    "video9524",
+    "video9014",
+    "video8903"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video8340",
+   "query": "a man and a woman stand in a bedroom",
+   "difficult": true,
+   "rank": 46,
+   "top5": [
+    "video9815",
+    "video8790",
+    "video9238",
+    "video9517",
+    "video9682"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video8348",
+   "query": "a woman looks after abandoned children for free in her home",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8348",
+    "video8305",
+    "video9878",
+    "video9686",
+    "video7466"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video8349",
+   "query": "friends enjoy eating",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8349",
+    "video8056",
+    "video7831",
+    "video8445",
+    "video7436"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8440",
+   "query": "a man hits another man while wrestling",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8440",
+    "video9020",
+    "video8482",
+    "video7979",
+    "video7211"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video8445",
+   "query": "people enjoy the performance of singer",
+   "difficult": true,
+   "rank": 13,
+   "top5": [
+    "video7791",
+    "video9222",
+    "video8482",
+    "video8818",
+    "video8447"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video8447",
+   "query": "a woman singing on the voice",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8447",
+    "video7569",
+    "video8792",
+    "video9243",
+    "video9303"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video8453",
+   "query": "a man points a gun at another persons face",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8453",
+    "video9784",
+    "video8780",
+    "video7363",
+    "video7757"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video8463",
+   "query": "the beautiful scene on the screen",
+   "difficult": false,
+   "rank": 25,
+   "top5": [
+    "video7027",
+    "video9243",
+    "video7233",
+    "video9252",
+    "video8334"
+   ],
+   "best_t": 13
+  },
+  {
+   "video_id": "video8464",
+   "query": "the ground rules of the republican presidential debate are introduced",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8464",
+    "video7158",
+    "video8789",
+    "video9242",
+    "video9680"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video8466",
+   "query": "men are playing instruments in a band",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video8978",
+    "video8466",
+    "video9243",
+    "video7461",
+    "video7205"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video8475",
+   "query": "scrolling the the menu of movieclips with different movie trailers",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8475",
+    "video8909",
+    "video7795",
+    "video7223",
+    "video8618"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video8478",
+   "query": "a cat is licking a baby",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8478",
+    "video9520",
+    "video7154",
+    "video9472",
+    "video8790"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video8482",
+   "query": "late night sneak peek preview",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8482",
+    "video7754",
+    "video9252",
+    "video7757",
+    "video8340"
+   ],
+   "best_t": 26
+  },
+  {
+   "video_id": "video8485",
+   "query": "foreign language music video",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video7576",
+    "video9827",
+    "video7368",
+    "video8319",
+    "video8241"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video8488",
+   "query": "a woman is talking about facial care products",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video7144",
+    "video8488",
+    "video7571",
+    "video8305",
+    "video8912"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video8489",
+   "query": "a tv channel named how to cook great foodcom is telling how to prepare a dish",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video9689",
+    "video7572",
+    "video8489",
+    "video9335",
+    "video7213"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video8495",
+   "query": "food in a refrigerator is displayed on shelves in containers and on a lazy suzan",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8495",
+    "video7438",
+    "video7572",
+    "video7566",
+    "video9537"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video8572",
+   "query": "a man grabs at snakes and throws them around the room",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8572",
+    "video9537",
+    "video7837",
+    "video8027",
+    "video9623"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8618",
+   "query": "an exploration about the title of professional video advertisement",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8618",
+    "video7795",
+    "video8909",
+    "video7368",
+    "video9354"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video8626",
+   "query": "numbers are displayed on the screen",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8626",
+    "video8247",
+    "video9549",
+    "video9820",
+    "video7970"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video8650",
+   "query": "a news convention is held",
+   "difficult": false,
+   "rank": 5,
+   "top5": [
+    "video8464",
+    "video9233",
+    "video8864",
+    "video7114",
+    "video8650"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video8653",
+   "query": "a man and woman are talking in a car",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video8879",
+    "video8653",
+    "video7969",
+    "video8813",
+    "video7567"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video8654",
+   "query": "a woman cooking an orange substance",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8654",
+    "video9693",
+    "video8774",
+    "video8247",
+    "video9689"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video8657",
+   "query": "a man rides his motorcycle to a building",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8657",
+    "video9809",
+    "video8120",
+    "video7028",
+    "video9489"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video8671",
+   "query": "a man is yelling on the phone",
+   "difficult": true,
+   "rank": 4,
+   "top5": [
+    "video9623",
+    "video9816",
+    "video7556",
+    "video8671",
+    "video9337"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8674",
+   "query": "space explorers in red and silver suits float about in a black abyss filled with blue crystals",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8674",
+    "video7027",
+    "video7795",
+    "video7371",
+    "video7200"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8680",
+   "query": "a woman talking to a man in a hood",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8680",
+    "video7782",
+    "video8453",
+    "video7567",
+    "video8650"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video8684",
+   "query": "a person points out certain figures on a paper",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8011",
+    "video8684",
+    "video9304",
+    "video7547",
+    "video8688"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video8688",
+   "query": "a person folds a paper airplane",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8688",
+    "video7154",
+    "video9304",
+    "video7547",
+    "video8011"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video8689",
+   "query": "a multiplayer game of mario party is played",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8689",
+    "video9035",
+    "video9224",
+    "video8027",
+    "video9334"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video8727",
+   "query": "a picture of what could be the moon or mars is on the screen",
+   "difficult": true,
+   "rank": 5,
+   "top5": [
+    "video7027",
+    "video7205",
+    "video8334",
+    "video8069",
+    "video8727"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video8774",
+   "query": "there is a guy filling a toy with cotton to play with it",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8774",
+    "video7561",
+    "video7154",
+    "video9693",
+    "video8257"
+   ],
+   "best_t": 26
+  },
+  {
+   "video_id": "video8780",
+   "query": "some people are shooting outside",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8780",
+    "video9784",
+    "video7732",
+    "video7363",
+    "video8680"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video8781",
+   "query": "a song from the movie beauty and the beast",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8781",
+    "video8978",
+    "video7205",
+    "video9827",
+    "video9472"
+   ],
+   "best_t": 13
+  },
+  {
+   "video_id": "video8786",
+   "query": "a group of people talking about stuff",
+   "difficult": false,
+   "rank": 27,
+   "top5": [
+    "video7234",
+    "video7028",
+    "video8129",
+    "video8022",
+    "video7346"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video8789",
+   "query": "a girl in blue color dress wearing siting speaking and television screen with black shirt man beside still image displaying on screen",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video7027",
+    "video9223",
+    "video8789",
+    "video7593",
+    "video9517"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video8790",
+   "query": "two women are embracing",
+   "difficult": true,
+   "rank": 17,
+   "top5": [
+    "video9518",
+    "video9686",
+    "video8305",
+    "video9682",
+    "video7782"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video8791",
+   "query": "a woman is demonstrating a nail painting technique",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video9025",
+    "video8791",
+    "video7571",
+    "video8488",
+    "video9878"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video8792",
+   "query": "a girl is on the voice",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video9303",
+    "video8810",
+    "video8792",
+    "video7791",
+    "video7569"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video8798",
+   "query": "the lighting work is going on the building",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video9012",
+    "video7732",
+    "video8798",
+    "video7686",
+    "video9784"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video8807",
+   "query": "a couple dancing doing salsa",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8807",
+    "video8453",
+    "video8903",
+    "video9063",
+    "video9827"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video8810",
+   "query": "a woman plays guitar and sings for a televised competition",
+   "difficult": true,
+   "rank": 8,
+   "top5": [
+    "video8482",
+    "video8792",
+    "video7569",
+    "video9791",
+    "video9589"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video8813",
+   "query": "a woman is interviewed on a tv talk show",
+   "difficult": true,
+   "rank": 6,
+   "top5": [
+    "video9222",
+    "video8792",
+    "video8814",
+    "video7162",
+    "video8789"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video8814",
+   "query": "the judges make a decision",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video8265",
+    "video9222",
+    "video7357",
+    "video7979",
+    "video8440"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video8817",
+   "query": "a football video game is shown",
+   "difficult": true,
+   "rank": 8,
+   "top5": [
+    "video7787",
+    "video8913",
+    "video9035",
+    "video7757",
+    "video7972"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video8818",
+   "query": "several young girls are singing on stage",
+   "difficult": false,
+   "rank": 5,
+   "top5": [
+    "video7791",
+    "video9326",
+    "video9222",
+    "video9303",
+    "video8818"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8828",
+   "query": "tv show presenters speak about will smith and other actors and their respective characters",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8828",
+    "video8930",
+    "video7215",
+    "video8792",
+    "video8340"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video8829",
+   "query": "two men talk about stealing land and the bible",
+   "difficult": false,
+   "rank": 23,
+   "top5": [
+    "video8932",
+    "video8917",
+    "video8922",
+    "video7349",
+    "video8072"
+   ],
+   "best_t": 21
+  },
+  {
+   "video_id": "video8830",
+   "query": "this is a video of a confrence",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video8909",
+    "video7576",
+    "video9322",
+    "video7528",
+    "video7558"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video8834",
+   "query": "a man is cooking in the kitchen he states he will return later to add to the dish",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video9038",
+    "video7572",
+    "video8834",
+    "video7566",
+    "video9689"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video8862",
+   "query": "a woman s background voice describes a virtual scene where a dog enters a bathroom",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8862",
+    "video8027",
+    "video8792",
+    "video8572",
+    "video7141"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video8864",
+   "query": "a clip from fox news on the shelby north carolina shooting",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8864",
+    "video9204",
+    "video8311",
+    "video7168",
+    "video9233"
+   ],
+   "best_t": 13
+  },
+  {
+   "video_id": "video8879",
+   "query": "a tamil movie scene is being shown they travel through a auto riksha and speak about the importance of work",
+   "difficult": false,
+   "rank": 8,
+   "top5": [
+    "video7222",
+    "video7965",
+    "video9691",
+    "video9489",
+    "video7567"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video8900",
+   "query": "a woman bakes and decorates a cake",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8900",
+    "video7566",
+    "video9693",
+    "video9684",
+    "video7213"
+   ],
+   "best_t": 17
+  },
+  {
+   "video_id": "video8903",
+   "query": "there are crocodiles about to eat the group of people walking across the water",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8903",
+    "video8349",
+    "video7915",
+    "video9524",
+    "video9321"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video8905",
+   "query": "two man s are talking to each other",
+   "difficult": true,
+   "rank": 4,
+   "top5": [
+    "video8922",
+    "video8829",
+    "video8120",
+    "video8905",
+    "video7371"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video8906",
+   "query": "bbc news story about military crackdown in an unknown asian country",
+   "difficult": false,
+   "rank": 5,
+   "top5": [
+    "video8311",
+    "video8022",
+    "video9205",
+    "video8241",
+    "video8906"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video8907",
+   "query": "scene of thor from the avengers",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8907",
+    "video8319",
+    "video9784",
+    "video7163",
+    "video8305"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video8908",
+   "query": "a white man in a suit talking in front of a tv about logic and law",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8908",
+    "video8830",
+    "video8120",
+    "video9520",
+    "video7115"
+   ],
+   "best_t": 20
+  },
+  {
+   "video_id": "video8909",
+   "query": "list of people s involved in making the documentary",
+   "difficult": false,
+   "rank": 4,
+   "top5": [
+    "video8475",
+    "video7346",
+    "video9791",
+    "video8909",
+    "video9489"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video8912",
+   "query": "a family is having coversation",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video8348",
+    "video8349",
+    "video8814",
+    "video9623",
+    "video8249"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video8913",
+   "query": "a video about different sports",
+   "difficult": false,
+   "rank": 15,
+   "top5": [
+    "video7787",
+    "video7839",
+    "video8979",
+    "video9018",
+    "video9029"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video8917",
+   "query": "two men discuss social issues",
+   "difficult": true,
+   "rank": 8,
+   "top5": [
+    "video8905",
+    "video8922",
+    "video8120",
+    "video7371",
+    "video7349"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video8922",
+   "query": "an old man shakes hands with another man and then they hug each other",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8922",
+    "video7200",
+    "video7782",
+    "video8305",
+    "video7528"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video8930",
+   "query": "a man speaks on a a news panel",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video9021",
+    "video7469",
+    "video8864",
+    "video7790",
+    "video8464"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video8932",
+   "query": "a man is giving an interview in a tv show",
+   "difficult": true,
+   "rank": 4,
+   "top5": [
+    "video9021",
+    "video9885",
+    "video8265",
+    "video8932",
+    "video7790"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video8938",
+   "query": "a man is dodging bombs",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video7979",
+    "video9450",
+    "video8256",
+    "video7790",
+    "video7795"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video8948",
+   "query": "there is a man is talking with a commando",
+   "difficult": false,
+   "rank": 8,
+   "top5": [
+    "video9255",
+    "video7793",
+    "video8829",
+    "video9450",
+    "video7349"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video8978",
+   "query": "band performing a hard rock song about diamonds in the sky",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video8978",
+    "video7596",
+    "video7205",
+    "video8482",
+    "video7461"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video8979",
+   "query": "sports vine clips of basketball",
+   "difficult": true,
+   "rank": 6,
+   "top5": [
+    "video8253",
+    "video7787",
+    "video7839",
+    "video9018",
+    "video7710"
+   ],
+   "best_t": 17
+  },
+  {
+   "video_id": "video8999",
+   "query": "showing anushka sharma bollywood actress",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video8999",
+    "video9308",
+    "video7730",
+    "video8475",
+    "video8330"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video9012",
+   "query": "a trailer for a movie with a girl knocking on the wall",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video7223",
+    "video8485",
+    "video7170",
+    "video7686",
+    "video9816"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video9014",
+   "query": "a cartoon plane picking up fruit and putting it in trucks",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9014",
+    "video8495",
+    "video8688",
+    "video9826",
+    "video9242"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video9018",
+   "query": "people scoring in sports videos",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8979",
+    "video9018",
+    "video7839",
+    "video9029",
+    "video7787"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video9020",
+   "query": "a person is looking at a camera during a wrestling event",
+   "difficult": false,
+   "rank": 6,
+   "top5": [
+    "video8482",
+    "video8440",
+    "video7730",
+    "video7233",
+    "video9018"
+   ],
+   "best_t": 13
+  },
+  {
+   "video_id": "video9021",
+   "query": "a pitcher throws a fastball",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video7787",
+    "video7556",
+    "video9021",
+    "video8049",
+    "video7021"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video9025",
+   "query": "an instructional video on painting your nails",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9025",
+    "video8791",
+    "video8488",
+    "video7686",
+    "video7352"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video9029",
+   "query": "a player is putting a basket ball into the basket from distance",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video9018",
+    "video7839",
+    "video9029",
+    "video8979",
+    "video8253"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9030",
+   "query": "animated pirates sing on a ship",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9030",
+    "video9303",
+    "video7027",
+    "video7371",
+    "video9827"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video9035",
+   "query": "a fatality from mortal kombat is shown",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9035",
+    "video9224",
+    "video8256",
+    "video9623",
+    "video9334"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9037",
+   "query": "a women is sitting with her baby and two people talking about that",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9037",
+    "video8348",
+    "video7234",
+    "video9697",
+    "video8464"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video9038",
+   "query": "a person is preparing some food",
+   "difficult": false,
+   "rank": 6,
+   "top5": [
+    "video8247",
+    "video9693",
+    "video7154",
+    "video8489",
+    "video7554"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video9063",
+   "query": "people on stage performing",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video7791",
+    "video9243",
+    "video9063",
+    "video7596",
+    "video7558"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video9119",
+   "query": "a man talks about molecules and certain types of antibodies",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9119",
+    "video7215",
+    "video9021",
+    "video8265",
+    "video9249"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video9131",
+   "query": "two people wear and touch their masks made to resemble a camera cube with centered black lens one of which is covered in colorful flowers",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video7571",
+    "video8305",
+    "video9131",
+    "video8786",
+    "video9815"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video9204",
+   "query": "a news reporter talks about a shooting",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9204",
+    "video8864",
+    "video9885",
+    "video8311",
+    "video8650"
+   ],
+   "best_t": 13
+  },
+  {
+   "video_id": "video9205",
+   "query": "a woman interviewing about her part in a protest happening in brazil",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9205",
+    "video8453",
+    "video7162",
+    "video8650",
+    "video9503"
+   ],
+   "best_t": 16
+  },
+  {
+   "video_id": "video9206",
+   "query": "a man punches a faucet to show how much better bottled water is",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9206",
+    "video9699",
+    "video9035",
+    "video7211",
+    "video8246"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video9222",
+   "query": "a boy is trying out for a part on the voice kids",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video9303",
+    "video9778",
+    "video9222",
+    "video7733",
+    "video8792"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video9223",
+   "query": "a man and a woman are sitting in front of a television and addressing and audience",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8813",
+    "video9223",
+    "video9037",
+    "video8932",
+    "video7162"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video9224",
+   "query": "someone is playing a game",
+   "difficult": true,
+   "rank": 9,
+   "top5": [
+    "video9029",
+    "video8913",
+    "video7699",
+    "video7723",
+    "video7203"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video9231",
+   "query": "few barbie dolls are playing one doll puts shoe to other barbie these are used to play by a kid",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9231",
+    "video7438",
+    "video7561",
+    "video7215",
+    "video8774"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9233",
+   "query": "a man is giving a speech",
+   "difficult": true,
+   "rank": 5,
+   "top5": [
+    "video8072",
+    "video9821",
+    "video8445",
+    "video8830",
+    "video9233"
+   ],
+   "best_t": 18
+  },
+  {
+   "video_id": "video9237",
+   "query": "preview for the movie insidious",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9237",
+    "video8249",
+    "video8909",
+    "video9517",
+    "video7786"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video9238",
+   "query": "a man is singing and dancing in an elevator while people watch",
+   "difficult": false,
+   "rank": 4,
+   "top5": [
+    "video9522",
+    "video8482",
+    "video7205",
+    "video9238",
+    "video9821"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video9242",
+   "query": "a person drawling people on a canvas",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video7352",
+    "video8790",
+    "video9242",
+    "video9012",
+    "video8011"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9243",
+   "query": "they are singing a song and playing a guitar in the stage",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video7596",
+    "video9243",
+    "video7528",
+    "video7461",
+    "video8482"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video9248",
+   "query": "people are riding horses in grassland",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8979",
+    "video9248",
+    "video7141",
+    "video8978",
+    "video9520"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video9249",
+   "query": "a man is discussing oxiders in bulk form",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video7349",
+    "video9821",
+    "video8445",
+    "video7215",
+    "video8265"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video9252",
+   "query": "garage opening for a old bug to pull out to drive away",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9252",
+    "video9530",
+    "video8246",
+    "video7965",
+    "video9826"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video9254",
+   "query": "band playing music and people dancing",
+   "difficult": true,
+   "rank": 27,
+   "top5": [
+    "video8978",
+    "video9063",
+    "video8482",
+    "video7596",
+    "video7411"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9255",
+   "query": "a soldier is laying down",
+   "difficult": true,
+   "rank": 4,
+   "top5": [
+    "video7757",
+    "video8938",
+    "video9623",
+    "video9255",
+    "video9686"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video9277",
+   "query": "models are walking the runway as part of a fashion show",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video7730",
+    "video9063",
+    "video9277",
+    "video9308",
+    "video9348"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video9303",
+   "query": "children singing a song as a group on a stage",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9303",
+    "video7791",
+    "video8818",
+    "video9222",
+    "video8792"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9304",
+   "query": "three young people sing on stage",
+   "difficult": true,
+   "rank": 7,
+   "top5": [
+    "video8818",
+    "video8447",
+    "video7791",
+    "video9303",
+    "video8792"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video9308",
+   "query": "the models walk the catwalk",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video9277",
+    "video7730",
+    "video9308",
+    "video9348",
+    "video9063"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video9321",
+   "query": "penguins wander around on ice",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9321",
+    "video9814",
+    "video9524",
+    "video9029",
+    "video9255"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video9322",
+   "query": "a woman gets trapped in a burning trailer",
+   "difficult": true,
+   "rank": 37,
+   "top5": [
+    "video9354",
+    "video8311",
+    "video8790",
+    "video7528",
+    "video8305"
+   ],
+   "best_t": 17
+  },
+  {
+   "video_id": "video9326",
+   "query": "two boys sneak up to a girls performing choir",
+   "difficult": false,
+   "rank": 4,
+   "top5": [
+    "video8818",
+    "video7791",
+    "video9222",
+    "video9326",
+    "video9243"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video9334",
+   "query": "in game footage of a mine craft character walking up stairs",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8256",
+    "video9334",
+    "video7792",
+    "video8689",
+    "video7972"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video9335",
+   "query": "the person is frying the prawns and fish",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9335",
+    "video8489",
+    "video7154",
+    "video8056",
+    "video9693"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video9337",
+   "query": "some people are inside of a room",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video8348",
+    "video7028",
+    "video9254",
+    "video7793",
+    "video7593"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video9347",
+   "query": "a woman in red dress explaining about cushion seat",
+   "difficult": false,
+   "rank": 11,
+   "top5": [
+    "video9778",
+    "video8912",
+    "video9222",
+    "video9827",
+    "video8453"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video9348",
+   "query": "women walking on the stage with different styles of dressing in a fashion show",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9348",
+    "video9308",
+    "video9063",
+    "video9277",
+    "video7730"
+   ],
+   "best_t": 19
+  },
+  {
+   "video_id": "video9350",
+   "query": "screen showing some people talking",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video9304",
+    "video7346",
+    "video7028",
+    "video9243",
+    "video7215"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video9353",
+   "query": "two women are outside and are discussing something in a foreign language",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video8330",
+    "video9353",
+    "video7724",
+    "video9503",
+    "video7547"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9354",
+   "query": "a red truck is burning while three men talk about a car",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9354",
+    "video7567",
+    "video9511",
+    "video9243",
+    "video9691"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video9428",
+   "query": "presentation of the machine and its functions while working",
+   "difficult": false,
+   "rank": 6,
+   "top5": [
+    "video8246",
+    "video9530",
+    "video9820",
+    "video7343",
+    "video8626"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video9450",
+   "query": "a foreign military themed show",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9450",
+    "video8912",
+    "video7027",
+    "video9255",
+    "video7466"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video9452",
+   "query": "an animated grey shark in the middle of a blue water simulation background rotating in a circle on the screen of a monitor",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9452",
+    "video8909",
+    "video8128",
+    "video7234",
+    "video7352"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video9472",
+   "query": "a girl wearing a dress stands to the side of the screen while lyrics to a song playing in the background appear on the other side",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video8789",
+    "video9805",
+    "video9472",
+    "video7144",
+    "video9827"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video9489",
+   "query": "a man with brown hair is singing a song",
+   "difficult": false,
+   "rank": 46,
+   "top5": [
+    "video9222",
+    "video9254",
+    "video8818",
+    "video7569",
+    "video7576"
+   ],
+   "best_t": 16
+  },
+  {
+   "video_id": "video9503",
+   "query": "a woman is talking about how jeans with patches or rips is trendy",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9503",
+    "video7170",
+    "video9304",
+    "video9037",
+    "video7162"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video9511",
+   "query": "a person is riding red car on road",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9511",
+    "video9691",
+    "video8657",
+    "video7506",
+    "video7021"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video9517",
+   "query": "a news program about overweight people",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video7754",
+    "video9037",
+    "video8864",
+    "video7834",
+    "video8316"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video9518",
+   "query": "people perform on the voice",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video8818",
+    "video7791",
+    "video9303",
+    "video9222",
+    "video9243"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video9520",
+   "query": "a fat guy with a tie is looking at a man",
+   "difficult": true,
+   "rank": 13,
+   "top5": [
+    "video8829",
+    "video8315",
+    "video7114",
+    "video8316",
+    "video8572"
+   ],
+   "best_t": 17
+  },
+  {
+   "video_id": "video9522",
+   "query": "a man is giving a presentation on stage",
+   "difficult": true,
+   "rank": 3,
+   "top5": [
+    "video9821",
+    "video8830",
+    "video9522",
+    "video8445",
+    "video7528"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video9524",
+   "query": "a bunch of cartoon faces are chomping their teeth and making eating gestures",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9524",
+    "video8056",
+    "video9537",
+    "video9030",
+    "video8674"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video9530",
+   "query": "jeremy is describing a car",
+   "difficult": false,
+   "rank": 22,
+   "top5": [
+    "video7969",
+    "video9252",
+    "video9691",
+    "video7567",
+    "video7965"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video9537",
+   "query": "animated comic scene of guy cutting up food for dinner",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9537",
+    "video7222",
+    "video8056",
+    "video9684",
+    "video7554"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video9549",
+   "query": "video of a computer program while someone navigates through its menus",
+   "difficult": false,
+   "rank": 6,
+   "top5": [
+    "video7576",
+    "video7203",
+    "video8909",
+    "video9820",
+    "video7154"
+   ],
+   "best_t": 26
+  },
+  {
+   "video_id": "video9577",
+   "query": "cartoon one women in horse and speak to that calmly",
+   "difficult": false,
+   "rank": 10,
+   "top5": [
+    "video9839",
+    "video9537",
+    "video9248",
+    "video9242",
+    "video8671"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video9579",
+   "query": "two men talk with children s voices",
+   "difficult": false,
+   "rank": 26,
+   "top5": [
+    "video8905",
+    "video8828",
+    "video7349",
+    "video8917",
+    "video8922"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9589",
+   "query": "a woman plays instruments in a field",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9589",
+    "video9812",
+    "video9805",
+    "video8255",
+    "video7547"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video9607",
+   "query": "a commercial for the website called eharmony",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9607",
+    "video8618",
+    "video7566",
+    "video8909",
+    "video7346"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video9623",
+   "query": "a man is on a cell phone while people are fighting",
+   "difficult": true,
+   "rank": 20,
+   "top5": [
+    "video9816",
+    "video8798",
+    "video9337",
+    "video7211",
+    "video7979"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video9625",
+   "query": "its a cooking recipe show with chicken vegetables",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9625",
+    "video7572",
+    "video7898",
+    "video9689",
+    "video7213"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video9657",
+   "query": "a monkey and a man feeding monkey with hand displaying on screen",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9657",
+    "video8978",
+    "video7163",
+    "video8056",
+    "video9037"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9680",
+   "query": "on google earth is a man who is talking about the flights",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9680",
+    "video7793",
+    "video9821",
+    "video7790",
+    "video7562"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video9682",
+   "query": "a girl being surprised with a stuffed animal by male friend",
+   "difficult": false,
+   "rank": 27,
+   "top5": [
+    "video7558",
+    "video8774",
+    "video7438",
+    "video9231",
+    "video7170"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video9683",
+   "query": "a man and woman performing in front of judes",
+   "difficult": false,
+   "rank": 18,
+   "top5": [
+    "video8482",
+    "video7596",
+    "video9243",
+    "video9348",
+    "video8786"
+   ],
+   "best_t": 15
+  },
+  {
+   "video_id": "video9684",
+   "query": "somebody slices white onion with sharp knife on the table",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9684",
+    "video8654",
+    "video7554",
+    "video8900",
+    "video7898"
+   ],
+   "best_t": 15
+  },
+  {
+   "video_id": "video9685",
+   "query": "people practising marshal arts",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9685",
+    "video9131",
+    "video7359",
+    "video9254",
+    "video7346"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video9686",
+   "query": "a woman in lots of pain",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9686",
+    "video8340",
+    "video8305",
+    "video7724",
+    "video8671"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video9689",
+   "query": "spices being combined in a stainless steel bowl",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9689",
+    "video7213",
+    "video7554",
+    "video8489",
+    "video9625"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video9691",
+   "query": "a commercial for the mazda 3 the card sliding around a corner",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video7795",
+    "video9691",
+    "video8618",
+    "video7567",
+    "video8909"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video9693",
+   "query": "the chef adds fish sauce and fish paste to a large stainless steel cooking pot",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video9689",
+    "video9335",
+    "video9693",
+    "video9625",
+    "video8489"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9695",
+   "query": "text explains about a pokemon expisode that caused seizures",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9695",
+    "video8978",
+    "video7792",
+    "video7723",
+    "video9452"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video9697",
+   "query": "the woman has a baby monitor",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9697",
+    "video9037",
+    "video8348",
+    "video7916",
+    "video8311"
+   ],
+   "best_t": 1
+  },
+  {
+   "video_id": "video9698",
+   "query": "a women is talking about the books she likes and the second favourite one is the amc the walking dead",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9698",
+    "video9816",
+    "video8482",
+    "video7724",
+    "video8684"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9699",
+   "query": "a man explains how to do a experiment",
+   "difficult": false,
+   "rank": 27,
+   "top5": [
+    "video8257",
+    "video9249",
+    "video7693",
+    "video8626",
+    "video7064"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9778",
+   "query": "a little boy singing in front of judges and crowd",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video9303",
+    "video9778",
+    "video7733",
+    "video9222",
+    "video9522"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video9779",
+   "query": "fireworks are being lit and exploding in a night sky",
+   "difficult": true,
+   "rank": 2,
+   "top5": [
+    "video8798",
+    "video9779",
+    "video8334",
+    "video7028",
+    "video8680"
+   ],
+   "best_t": 10
+  },
+  {
+   "video_id": "video9784",
+   "query": "sygornie weaver pointing a gun and then running",
+   "difficult": false,
+   "rank": 4,
+   "top5": [
+    "video7363",
+    "video7757",
+    "video7576",
+    "video9784",
+    "video8780"
+   ],
+   "best_t": 4
+  },
+  {
+   "video_id": "video9791",
+   "query": "a woman talking about different pictures next to her",
+   "difficult": false,
+   "rank": 9,
+   "top5": [
+    "video8912",
+    "video9503",
+    "video7547",
+    "video8814",
+    "video8349"
+   ],
+   "best_t": 14
+  },
+  {
+   "video_id": "video9793",
+   "query": "interview with artist shanai twain",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video7162",
+    "video8912",
+    "video9793",
+    "video8453",
+    "video9698"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video9805",
+   "query": "characters from video games are dancing to old mc donald had a farm",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9805",
+    "video8689",
+    "video9334",
+    "video9224",
+    "video8027"
+   ],
+   "best_t": 2
+  },
+  {
+   "video_id": "video9808",
+   "query": "a man playing video games",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video7593",
+    "video9021",
+    "video9334",
+    "video9035",
+    "video9224"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video9809",
+   "query": "man talks in front of a green bicycle",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9809",
+    "video7168",
+    "video8072",
+    "video7838",
+    "video9821"
+   ],
+   "best_t": 6
+  },
+  {
+   "video_id": "video9812",
+   "query": "a woman giving a photoshop tutorial",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video7571",
+    "video8011",
+    "video9304",
+    "video8074",
+    "video9347"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video9814",
+   "query": "a scene from spongebob squarepants where the townspeople are carrying torches and chasing a giant squidward",
+   "difficult": false,
+   "rank": 3,
+   "top5": [
+    "video9808",
+    "video8128",
+    "video9814",
+    "video8798",
+    "video7117"
+   ],
+   "best_t": 11
+  },
+  {
+   "video_id": "video9815",
+   "query": "a mashup of music videos is being played",
+   "difficult": false,
+   "rank": 8,
+   "top5": [
+    "video7839",
+    "video7528",
+    "video8482",
+    "video7787",
+    "video8909"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video9816",
+   "query": "a little girl talking to her and is scared",
+   "difficult": true,
+   "rank": 44,
+   "top5": [
+    "video8027",
+    "video7558",
+    "video9686",
+    "video8305",
+    "video8340"
+   ],
+   "best_t": 8
+  },
+  {
+   "video_id": "video9820",
+   "query": "a girl playing the game the sims",
+   "difficult": false,
+   "rank": null,
+   "top5": [
+    "video8862",
+    "video8027",
+    "video9334",
+    "video7757",
+    "video9231"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video9821",
+   "query": "a man giving a presentation and showing the planet earth",
+   "difficult": false,
+   "rank": 4,
+   "top5": [
+    "video7027",
+    "video8830",
+    "video8072",
+    "video9821",
+    "video7412"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video9826",
+   "query": "an animated micky is driving a car",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9826",
+    "video7965",
+    "video9252",
+    "video7506",
+    "video9014"
+   ],
+   "best_t": 3
+  },
+  {
+   "video_id": "video9827",
+   "query": "lady gaga sings in a music video",
+   "difficult": true,
+   "rank": 8,
+   "top5": [
+    "video7528",
+    "video8447",
+    "video8482",
+    "video7569",
+    "video7791"
+   ],
+   "best_t": 9
+  },
+  {
+   "video_id": "video9829",
+   "query": "rusty houser talks about how hitler is loved from his results",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9829",
+    "video7838",
+    "video8340",
+    "video9450",
+    "video9334"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video9838",
+   "query": "a cartoon clip of pokemon dancing",
+   "difficult": false,
+   "rank": 2,
+   "top5": [
+    "video9695",
+    "video9838",
+    "video7839",
+    "video7117",
+    "video8909"
+   ],
+   "best_t": 12
+  },
+  {
+   "video_id": "video9839",
+   "query": "an animated horse is in a barn and the maker asks for comments",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9839",
+    "video7233",
+    "video7141",
+    "video8256",
+    "video8249"
+   ],
+   "best_t": 7
+  },
+  {
+   "video_id": "video9872",
+   "query": "someone is playing a first person shooter game and is making jokes",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video7757",
+    "video9035",
+    "video9334",
+    "video7363",
+    "video8027"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video9878",
+   "query": "some peole are sitting in hall",
+   "difficult": true,
+   "rank": 45,
+   "top5": [
+    "video7028",
+    "video8129",
+    "video7375",
+    "video7346",
+    "video8348"
+   ],
+   "best_t": 0
+  },
+  {
+   "video_id": "video9885",
+   "query": "a movie director talking to the media men in press conference regarding his movie and hero also",
+   "difficult": true,
+   "rank": 1,
+   "top5": [
+    "video9885",
+    "video7215",
+    "video7349",
+    "video8830",
+    "video7790"
+   ],
+   "best_t": 5
+  },
+  {
+   "video_id": "video9919",
+   "query": "a man walks towards a woman and the woman breaks a bottle to defend her belongings",
+   "difficult": true,
+   "rank": null,
+   "top5": [
+    "video8807",
+    "video8488",
+    "video9623",
+    "video9682",
+    "video8485"
+   ],
+   "best_t": null
+  },
+  {
+   "video_id": "video9975",
+   "query": "a yellow sports car with a guy speaking about the car",
+   "difficult": false,
+   "rank": 1,
+   "top5": [
+    "video9975",
+    "video7506",
+    "video8022",
+    "video9206",
+    "video7567"
+   ],
+   "best_t": 12
+  }
+ ]
+}
