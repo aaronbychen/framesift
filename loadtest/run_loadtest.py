@@ -291,8 +291,8 @@ async def main():
         print(f"[{args.label}]   wall={level['wall_seconds']}s frames/s={level['throughput']['frames_per_second']} "
               f"scan p50/p95/p99={lat['p50']}/{lat['p95']}/{lat['p99']}s "
               f"errors={level['frames_with_inference_error']} "
-              f"batch_mean_busy={batch['mean_when_busy'] if batch else 'n/a'} "
-              f"batch_max={batch['max'] if batch else 'n/a'}", flush=True)
+              f"mean_batch={batch['mean_batch_size'] if batch else 'n/a'} "
+              f"calls={batch['generate_calls'] if batch else 'n/a'}", flush=True)
 
     result = {
         "label": args.label,
