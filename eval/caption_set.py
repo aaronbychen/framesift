@@ -15,6 +15,7 @@ import time
 from pathlib import Path
 
 from scanner import config
+from scanner.winperf import disable_power_throttling
 from scanner.frames import encode_jpeg, preprocess, resize_for_model, sample_1fps
 from scanner.pipeline import CAPTION_PROMPT, caption_clip
 
@@ -61,6 +62,7 @@ async def main():
     ap.add_argument("--max-batch", type=int, default=config.BATCH_MAX_SIZE)
     ap.add_argument("--limit", type=int, default=None)
     args = ap.parse_args()
+    print("process power hints:", disable_power_throttling(), flush=True)
 
     from scanner.vlm import BatchDispatcher, VisionEngine
     clips = json.loads(Path(args.set).read_text())["clips"][:args.limit]

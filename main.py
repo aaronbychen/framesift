@@ -26,6 +26,7 @@ from fastapi.templating import Jinja2Templates
 from prometheus_client import Counter, Gauge, Histogram, make_asgi_app
 
 from scanner import config
+from scanner.winperf import disable_power_throttling
 from scanner.pipeline import CAPTION_PROMPT, analyze_prompt, parse_analysis, run_frames
 
 UPLOAD_DIR = Path(os.getenv("UPLOAD_DIR", "uploads"))
@@ -63,6 +64,7 @@ def build_dispatcher():
 
 @asynccontextmanager
 async def lifespan(_app):
+    state["power"] = disable_power_throttling()
     state["dispatcher"], state["model"] = build_dispatcher()
     yield
 
@@ -117,6 +119,7 @@ async def health():
         "max_image_tiles": int(os.getenv("VLM_MAX_TILES", "4")),
         "analyze_max_tokens": config.ANALYZE_MAX_TOKENS,
         "preprocess_mode": config.PREPROCESS_MODE,
+        "process_power_hints": state.get("power"),
     }
 
 

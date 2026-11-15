@@ -10,6 +10,7 @@ import time
 from pathlib import Path
 
 from scanner import config
+from scanner.winperf import disable_power_throttling
 from scanner.frames import encode_jpeg, preprocess, resize_for_model, sample_1fps
 from scanner.pipeline import CAPTION_PROMPT
 
@@ -21,6 +22,7 @@ def main():
     ap.add_argument("--batch-sizes", type=int, nargs="+", default=[1, 2, 4, 8])
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
+    print("process power hints:", disable_power_throttling(), flush=True)
 
     import torch
     from scanner.vlm import VisionEngine
