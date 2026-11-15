@@ -37,8 +37,8 @@ def print_file(path, data):
               f"fps={s['frames_per_second']:.4f} clips/min={s['clips_per_minute']:.3f} "
               f"scan p50/p95/p99={s['scan_latency_seconds']['p50']}/{s['scan_latency_seconds']['p95']}/"
               f"{s['scan_latency_seconds']['p99']} ttff p50/p99={s['time_to_first_frame_seconds']['p50']}/"
-              f"{s['time_to_first_frame_seconds']['p99']} batch mean/max={s['vllm_batch_mean_when_busy']}/"
-              f"{s['vllm_batch_max']}")
+              f"{s['time_to_first_frame_seconds']['p99']} mean batch={s['mean_batch_size']} "
+              f"calls={s['generate_calls']}")
 
 
 def main():

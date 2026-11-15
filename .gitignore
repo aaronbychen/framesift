@@ -1,1 +1,3 @@
 __pycache__
+.loadtest_data/
+.data/
