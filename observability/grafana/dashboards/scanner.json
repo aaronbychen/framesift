@@ -122,6 +122,62 @@
           "datasource": null
         }
       ]
+    },
+    {
+      "id": 5,
+      "type": "timeseries",
+      "title": "Search latency (/search) P50 / P95 / P99",
+      "gridPos": {
+        "x": 0,
+        "y": 16,
+        "w": 12,
+        "h": 8
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.5, sum by (le) (rate(scanner_search_seconds_bucket[1m])))",
+          "legendFormat": "p50",
+          "refId": "A",
+          "datasource": null
+        },
+        {
+          "expr": "histogram_quantile(0.95, sum by (le) (rate(scanner_search_seconds_bucket[1m])))",
+          "legendFormat": "p95",
+          "refId": "B",
+          "datasource": null
+        },
+        {
+          "expr": "histogram_quantile(0.99, sum by (le) (rate(scanner_search_seconds_bucket[1m])))",
+          "legendFormat": "p99",
+          "refId": "C",
+          "datasource": null
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "timeseries",
+      "title": "Search rate (queries/s)",
+      "gridPos": {
+        "x": 12,
+        "y": 16,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "rate(scanner_search_seconds_count[30s])",
+          "legendFormat": "queries/s",
+          "refId": "A",
+          "datasource": null
+        }
+      ]
     }
   ]
 }
