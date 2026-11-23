@@ -1,4 +1,4 @@
-"""Load test for the video scanner: N concurrent streams, each POSTing a clip to /analyze.
+"""Load test for FrameSift: N concurrent streams, each POSTing a clip to /analyze.
 
 Every number written to the output file comes from this run. Raw per-scan and per-frame
 samples are saved next to the summary stats so the percentiles can be recomputed.
