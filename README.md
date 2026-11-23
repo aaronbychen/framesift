@@ -1,14 +1,22 @@
 # FrameSift
 
-https://github.com/user-attachments/assets/5fcbcf55-62c6-4fbf-be97-146a08d976bd
+Sift through video, frame by frame, in plain English. FrameSift is a fully local natural-language video scanner: nothing leaves the machine at runtime.
 
-Sift through video, frame by frame, in plain English. FrameSift is a fully local natural-language video scanner.
 - **Sampling:** video is sampled at exactly 1 FPS with OpenCV.
 - **Preprocessing:** difficult frames (low light, blown highlights) can be enhanced first.
 - **Vision model:** Llama 3.2 11B Vision answers questions about each frame or captions it for search.
 - **Search:** captions go into a LlamaIndex retrieval layer backed by a local Redis Stack (NoSQL) instance, so you can search a clip library in plain English and get back the best-matching clips with timestamps.
 
-Nothing leaves the machine at runtime.
+## Where it started
+
+https://github.com/user-attachments/assets/5fcbcf55-62c6-4fbf-be97-146a08d976bd
+
+The video shows the original prototype, built for a Llama Stack hackathon: upload a clip, name an object, and the model checks every second of footage for it. That object finder is still here: the web UI and `/analyze`.
+
+Since then the project has grown in three directions:
+- **Search:** a clip library you can search in plain English. Per-second captions are indexed in LlamaIndex + Redis (`/index`, `/search`, `/clips/{id}/frames`).
+- **Evaluation:** a held-out evaluation on MSR-VTT with confidence intervals and paired significance tests. It is written up in [`docs/report.md`](docs/report.md), including the ideas that did not pan out.
+- **Serving:** in-process model serving with a batching dispatcher, load tests, and a Prometheus + Grafana dashboard.
 
 ## Architecture
 
@@ -21,7 +29,7 @@ upload ──> 1-FPS sampler ──> adaptive preprocessing ──> BatchDispatc
              /analyze  <── NDJSON stream of per-frame answers ───┤
                                                                  │ captions
              /search   <── LlamaIndex: dense frame (default) / dense clip / BM25, weighted RRF ──┐
-             /clips/{id}/frames <── frame/time index                                            │
+             /clips/{id}/frames <── frame/time index                                             │
                                                        Redis Stack: HNSW vectors, clip/frame hashes,
                                                        per-clip time-sorted frame index
 ```
