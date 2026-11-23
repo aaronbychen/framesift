@@ -9,7 +9,7 @@ Sift through video, frame by frame, in plain English. FrameSift is a fully local
 
 ## Where it started
 
-https://github.com/user-attachments/assets/5fcbcf55-62c6-4fbf-be97-146a08d976bd
+https://github.com/user-attachments/assets/169077b9-def4-4864-88fd-dc9d940ad0fd
 
 The video shows the original prototype, built for a Llama Stack hackathon: upload a clip, name an object, and the model checks every second of footage for it. That object finder is still here: the web UI and `/analyze`.
 
