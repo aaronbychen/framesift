@@ -52,7 +52,10 @@ state = {}
 
 
 def build_dispatcher():
-    if os.getenv("INFERENCE_BACKEND", "llama-vision") == "ollama":
+    backend = os.getenv("INFERENCE_BACKEND", "llama-vision")
+    if backend == "none":  # search-only: /search and /clips work, no model is loaded
+        return None, "none"
+    if backend == "ollama":
         from scanner.ollama_backend import OllamaSubmit
         return OllamaSubmit(), "ollama:" + config.OLLAMA_MODEL
     from scanner.vlm import BatchDispatcher, VisionEngine
@@ -60,6 +63,10 @@ def build_dispatcher():
     d = BatchDispatcher(engine, MAX_BATCH, config.BATCH_WINDOW_MS)
     d.start()
     return d, engine.model_name
+
+
+def no_model():
+    return JSONResponse(status_code=503, content={"error": "no model loaded (INFERENCE_BACKEND=none)"})
 
 
 @asynccontextmanager
@@ -125,6 +132,8 @@ async def health():
 
 @app.post("/analyze")
 async def analyze_video(video: UploadFile = File(...), object_str: str = Form(...)):
+    if state["dispatcher"] is None:
+        return no_model()
     request_start = time.perf_counter()
     task_id = f"{int(time.time())}_{uuid.uuid4().hex[:8]}"
     video_path = await save_upload(video, task_id)
@@ -156,6 +165,8 @@ async def analyze_video(video: UploadFile = File(...), object_str: str = Form(..
 
 @app.post("/index")
 async def index_video(video: UploadFile = File(...), clip_id: str = Form(None)):
+    if state["dispatcher"] is None:
+        return no_model()
     task_id = f"{int(time.time())}_{uuid.uuid4().hex[:8]}"
     video_path = await save_upload(video, task_id)
     clip_id = clip_id or Path(video.filename or task_id).stem
