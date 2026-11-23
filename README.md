@@ -1,8 +1,8 @@
-# AI Video Scanner
+# FrameSift
 
 https://github.com/user-attachments/assets/5fcbcf55-62c6-4fbf-be97-146a08d976bd
 
-A fully local natural-language video scanner.
+Sift through video, frame by frame, in plain English. FrameSift is a fully local natural-language video scanner.
 - **Sampling:** video is sampled at exactly 1 FPS with OpenCV.
 - **Preprocessing:** difficult frames (low light, blown highlights) can be enhanced first.
 - **Vision model:** Llama 3.2 11B Vision answers questions about each frame or captions it for search.
@@ -174,7 +174,7 @@ docker compose up -d prometheus grafana
 
 | URL | What |
 |---|---|
-| http://localhost:3000/d/video-scanner/video-scanner-serving | Grafana dashboard (anonymous access) |
+| http://localhost:3000/d/framesift/framesift-serving | Grafana dashboard (anonymous access) |
 | http://localhost:9090/targets | Prometheus scrape status. `host.docker.internal:8000` should be `up`; `app:8000` is only up when the full compose stack runs |
 | http://localhost:8000/metrics/ | Raw metrics from the server |
 

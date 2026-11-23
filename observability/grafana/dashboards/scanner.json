@@ -1,6 +1,6 @@
 {
-  "uid": "video-scanner",
-  "title": "Video Scanner Serving",
+  "uid": "framesift",
+  "title": "FrameSift Serving",
   "schemaVersion": 39,
   "time": {
     "from": "now-30m",

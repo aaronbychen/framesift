@@ -1,4 +1,4 @@
-"""NL Video Scanner API.
+"""FrameSift API.
 
 POST /analyze   stream a 1-FPS scan of an uploaded video for a free-text query (NDJSON)
 POST /index     caption an uploaded clip at 1 FPS and add it to the local retrieval index

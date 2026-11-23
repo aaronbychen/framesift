@@ -1,6 +1,6 @@
 # Does low-light preprocessing help a vision-language video search engine? A held-out evaluation
 
-**Project:** NL Video Scanner. This is a fully local natural-language video search system built from Llama 3.2 11B Vision, LlamaIndex and Redis.
+**Project:** FrameSift. This is a fully local natural-language video search system built from Llama 3.2 11B Vision, LlamaIndex and Redis.
 **Data:** MSR-VTT (public YouTube clips with human captions).
 **Hardware:** one laptop: RTX 4080 Laptop GPU (12 GB), i9-13980HX, 16 GB RAM.
 Every number in this report comes from a JSON file under `artifacts/`. The commands that regenerate those files are in the README.

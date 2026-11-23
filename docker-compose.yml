@@ -1,10 +1,12 @@
 # Full local stack: scanner API (GPU) + Redis Stack (caption/frame index) + Prometheus + Grafana.
 #   docker compose up -d --build
 # Needs the model folders under .data/models (see README). Nothing leaves the machine at runtime.
+name: framesift
+
 services:
   app:
     build: .
-    image: nl-video-scanner:latest
+    image: framesift:latest
     ports:
       - "8000:8000"
     environment:
