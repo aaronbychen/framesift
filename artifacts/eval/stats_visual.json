@@ -198,5 +198,22 @@
    }
   }
  },
+ "hit5_reweighted_to_1kA_mix": {
+  "difficult_share": 0.147,
+  "caption_only": {
+   "hit@5": 0.7231,
+   "ci95": [
+    0.6658,
+    0.7792
+   ]
+  },
+  "selected": {
+   "hit@5": 0.7647,
+   "ci95": [
+    0.7094,
+    0.818
+   ]
+  }
+ },
  "multiple_comparisons": "Holm over 8 tests (4 metrics x {all, difficult}); Hit@5/all is also the pre-specified primary test"
 }

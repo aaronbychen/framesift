@@ -205,7 +205,14 @@ Fusion did not beat the best single retriever on dev Hit@5. Under the pre-specif
 On Hit@5, the two retrievers each find clips the other misses: fusion recovers 31 queries the caption system missed and loses 13.
 
 Notes:
-- **Visual only on test.** CLIP alone reaches Hit@5 73.4% (descriptive only, not selected). CLIP is strong on its own here, and most of the fusion gain comes from it.
+- **Where the idea came from.** The hypothesis behind v2 (captions are the bottleneck) came from error analysis of the v1 *test* results. Selection and protocol stayed on dev, but the choice of experiment was informed by the test set. That is a softer form of test-set reuse, and it is one reason for the independent check in 3.7.
+- **Fusion vs CLIP alone was not tested.** CLIP alone reaches Hit@5 73.4%, Hit@1 46.9%, MRR 0.577 on test, against 74.4% / 51.3% / 0.618 for fusion. These are descriptive numbers: the pre-specified test compares fusion with caption only. Most of the gain comes from CLIP, and with 320 queries the extra benefit of fusion over CLIP alone cannot be established. On dev, fusion led clearly (Hit@5 93.8 vs 87.5, MRR 0.844 vs 0.778), but dev has only 80 queries.
+- **Indexing cost.** This makes the cost question concrete.
+  - CLIP indexing: 0.19 s per frame on the CPU (5,123 frames in 951 s, including video decoding).
+  - Llama captions: about 2.0 s per frame on the GPU with vLLM, and 3.4 s per frame in-process.
+
+  A CLIP-only index is therefore roughly 10× cheaper and needs no GPU. Captions still provide the human-readable "best frame" text and the `/analyze` feature.
+- **Natural difficulty mix.** Reweighted to 1k-A's 14.7% difficult share, Hit@5 is 72.3% [66.6, 77.9] for caption only and 76.5% [70.9, 81.8] for fusion.
 - **The gain is larger on difficult clips.** This is consistent with low light hurting the captioner more than CLIP's embedding. It is a subgroup observation, not a pre-specified hypothesis.
 - **Scope.** This is an evaluation result. Serving the visual retriever from `/search` needs the CLIP frame vectors indexed in Redis at `/index` time; that is not wired into the API yet.
 

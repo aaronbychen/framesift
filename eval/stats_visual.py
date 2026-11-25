@@ -58,6 +58,17 @@ def main():
         out[sub] = res
     for (sub, met), padj in zip(keys, holm(pvals)):
         out[sub][met]["p_holm"] = padj
+    # Hit@5 reweighted from test320's oversampled mix (46% difficult) to the natural 1k-A mix (14.7%).
+    w = 147 / 1000
+    rw = {}
+    for name, m in (("caption_only", base), ("selected", sel)):
+        h5 = m["hit@5"]
+        est = w * h5[diff_mask].mean() + (1 - w) * h5[~diff_mask].mean()
+        bs = [w * rng.choice(h5[diff_mask], diff_mask.sum()).mean()
+              + (1 - w) * rng.choice(h5[~diff_mask], (~diff_mask).sum()).mean() for _ in range(10000)]
+        rw[name] = {"hit@5": round(float(est), 4),
+                    "ci95": [round(float(np.percentile(bs, 2.5)), 4), round(float(np.percentile(bs, 97.5)), 4)]}
+    out["hit5_reweighted_to_1kA_mix"] = {"difficult_share": w, **rw}
     out["multiple_comparisons"] = "Holm over 8 tests (4 metrics x {all, difficult}); Hit@5/all is also the pre-specified primary test"
     Path(args.out).write_text(json.dumps(out, indent=1))
     for sub in ("all", "difficult", "not_difficult"):
