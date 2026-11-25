@@ -12,6 +12,8 @@ def _i(name, default):
 
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://127.0.0.1:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2-vision")
+VLLM_URL = os.getenv("VLLM_URL", "http://127.0.0.1:8100")
+VLLM_MODEL = os.getenv("VLLM_MODEL", "llama32-vision")
 
 # Inference serving. "sequential": the original path, one model call per frame, awaited in order.
 # "batched": frames from every in-flight request go through one BatchDispatcher.

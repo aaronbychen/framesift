@@ -141,6 +141,17 @@ Fusion did not beat the best single retriever on dev Hit@5. Under the pre-regist
 | Batched serving vs sequential, scan latency | +56% (1 stream), +28% p50 (2 streams), +24% p50 (4 streams) |
 | Batched vs sequential agreement, YES/NO decisions | 92.9% |
 | Batched vs sequential agreement, exact text | 52% |
+| **vLLM 0.10.0 vs in-process transformers** (same NF4 checkpoint, one frame per call), scan latency p50 | **−43%** at 1, 2 and 4 streams (73.5 → 41.9 s; 145.0 → 81.1 s; 287.8 → 162.8 s) |
+| vLLM vs transformers throughput | 0.19 → 0.33 frames/s (+75%) |
+| vLLM vs transformers agreement, YES/NO decisions / exact text | 92.9% (13/14 frames) / 36% |
+| vLLM, 4 concurrent vs one at a time (560 px, 1 tile) | ×1.04 throughput |
+
+**Why vLLM is faster, and why batching still does not help.**
+- vLLM runs the *same* checkpoint about 1.75× faster per request.
+- Its request concurrency never exceeded 1 during the load test (sampled from `vllm:num_requests_running`). At 1120 px one image occupies 6,460 of the 7,728 KV-cache tokens that fit on 12 GB.
+- Even at 560 px, where four requests fit, concurrency gained only 4%.
+- The one decision disagreement is a frame where the transformers output contained a second, contradictory answer block (YES, then NO); the parser keeps the last one, while vLLM stopped after the first.
+- This was measured on a single 14-frame clip, the same day, back to back (`artifacts/loadtest/backend_*.json`).
 
 **Why batching lost.**
 - The 4-bit (bitsandbytes NF4) weights only get a fast fused kernel for single-token, batch-1 matrix-vector products. At batch ≥ 2 every decoding step de-quantizes the weights instead.

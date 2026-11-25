@@ -58,7 +58,8 @@ Full details are in [`docs/report.md`](docs/report.md). Test set: MSR-VTT, 320 h
 | Hit@5 on low-light / high-contrast clips (n = 147) | 62.6% | [55.1, 70.1] |
 | Effect of adaptive preprocessing on those clips (Hit@5) | +0.0 pp | [−4.1, +4.1] |
 | Search latency (embed + HNSW, 5,123-frame index) | p50 ~40 ms, p99 < 60 ms | |
-| Batched vs sequential serving, scan latency | +56% (1 stream) … +24% (4 streams) | |
+| vLLM vs in-process transformers backend, scan latency (same model, 1/2/4 streams) | **−43% p50** (73.5 → 41.9 s at 1 stream; 287.8 → 162.8 s at 4) | |
+| Dynamic batching vs sequential, in-process transformers | +56% (1 stream) … +24% (4 streams): slower, see Notes | |
 
 ## Setup
 
@@ -109,13 +110,34 @@ Useful environment variables:
 
 | Variable | Default | Meaning |
 |---|---|---|
-| `INFERENCE_BACKEND` | `llama-vision` | `none` = search-only, `ollama` = optional Ollama backend |
+| `INFERENCE_BACKEND` | `llama-vision` | `vllm` = send frames to a vLLM server (see below), `none` = search-only, `ollama` = optional Ollama backend |
+| `VLLM_URL`, `VLLM_MODEL` | `http://127.0.0.1:8100`, `llama32-vision` | Where the vLLM backend sends requests |
 | `INDEX_NAME` | `scanner` | Which Redis index `/index`, `/search` and `/clips` use |
 | `EMBED_DEVICE` | `cuda` | `cpu` keeps query embeddings off the GPU |
 | `SERVING_MODE` | `batched` | `sequential` = original one-frame-at-a-time path |
 | `BATCH_MAX_SIZE` | `4` | Max frames per model call (2 is the largest that fits in 12 GB) |
 | `PREPROCESS_MODE` | `adaptive` | `off` / `adaptive` / `always` |
 | `W_FRAME`, `W_CLIP`, `W_BM25` | `1`, `0`, `0` | Retriever fusion weights (frozen from the dev-set grid) |
+
+### Faster inference: vLLM backend
+
+The same 4-bit Llama 3.2 Vision checkpoint served by vLLM 0.10.0 cuts per-scan latency by ~43% compared with the in-process engine (`artifacts/loadtest/backend_comparison.json`).
+
+```bash
+# One-time setup: build the image and copy the model into a Docker volume.
+# Reading the model from the Windows filesystem on every start takes ~8 min; from the volume it takes seconds.
+docker build -t framesift-vllm:0.10.0 serving/vllm
+docker volume create fs-models
+MSYS_NO_PATHCONV=1 docker run --rm -v "$PWD/.data/models/llama32-11b-vision-bnb4:/src:ro" -v fs-models:/dst alpine   sh -c "mkdir -p /dst/llama32-11b-vision-bnb4 && cp -r /src/. /dst/llama32-11b-vision-bnb4/"
+
+# Start vLLM on :8100. This uses the V0 engine (VLLM_USE_V1=0 is set in the image) and ~10 GB of VRAM.
+MSYS_NO_PATHCONV=1 docker run -d --name fs-vllm --gpus all -p 8100:8000 --ipc=host -v fs-models:/models:ro   framesift-vllm:0.10.0 /models/llama32-11b-vision-bnb4 --served-model-name llama32-vision   --quantization bitsandbytes --max-model-len 7200 --max-num-seqs 4 --gpu-memory-utilization 0.85   --enforce-eager --limit-mm-per-prompt '{"image":1}'
+
+# Point the app at it
+INFERENCE_BACKEND=vllm SERVING_MODE=sequential .venv/Scripts/python.exe -m uvicorn main:app --port 8000
+```
+
+Stop it with `docker stop fs-vllm`, and start it again later with `docker start fs-vllm`.
 
 ### Use 1: find an object in one video (web UI)
 
@@ -238,6 +260,12 @@ python -m eval.stats --out artifacts/eval/stats.json
 # Serving: original sequential path vs batched dispatcher, same model and clip
 python loadtest/serve_and_test.py --env SERVING_MODE=sequential -- --label before --concurrency 1 2 4 --out artifacts/loadtest/before.json
 python loadtest/serve_and_test.py --env SERVING_MODE=batched BATCH_MAX_SIZE=2 STREAM_WINDOW=4 -- --label after --concurrency 1 2 4 --out artifacts/loadtest/after.json
+
+# Backend: in-process transformers vs vLLM (start fs-vllm first for the second run), same model and clip
+python loadtest/serve_and_test.py --env SERVING_MODE=sequential -- --label backend-transformers --concurrency 1 2 4 --out artifacts/loadtest/backend_transformers.json
+python loadtest/serve_and_test.py --env SERVING_MODE=sequential INFERENCE_BACKEND=vllm -- --label backend-vllm --concurrency 1 2 4 --vllm-metrics http://127.0.0.1:8100/metrics --out artifacts/loadtest/backend_vllm.json
+python loadtest/summarize.py artifacts/loadtest/backend_transformers.json artifacts/loadtest/backend_vllm.json --combine artifacts/loadtest/backend_comparison.json
+python loadtest/compare_outputs.py --out artifacts/correctness/gate_vllm_vs_transformers.json artifacts/loadtest/backend_transformers.json artifacts/loadtest/backend_vllm.json
 ```
 
 Caption caches are resumable. If a run is interrupted, re-running the same command continues where it stopped. Set `EMBED_DEVICE=cpu` on `hit_at_k` and `tune_fusion` to keep the GPU free.
@@ -248,3 +276,4 @@ Caption caches are resumable. If a run is interrupted, re-running the same comma
 - **No audio.** The MSR-VTT copy used here (friedrichor/MSR-VTT on Hugging Face) has no audio tracks. About a third of the human queries describe sound (singing, talking), which a frame-only system cannot observe.
 - **Long GPU runs on a laptop.** Captioning keeps the GPU at full load for hours. Keep the machine plugged in and well ventilated. The search-only mode and the statistics scripts do not use the GPU.
 - **Clip-level vectors are truncated.** The clip-level retriever embeds all of a clip's captions as one text. bge-base reads at most 512 tokens, and 77% of test clips are longer, so the clip-level vector mostly covers the first part of the clip. The default configuration does not use this retriever (`W_CLIP=0`).
+- **Why batching does not help here.** The checkpoint is bitsandbytes NF4. Its fast kernel only handles a single sequence; with more than one, every decode step de-quantizes the weights. This holds in vLLM too: at 560 px with 4 requests in flight, throughput rose only 4%. At the default 1120 px, one image takes 6,460 tokens of the 7,728-token KV cache on 12 GB, so vLLM runs one request at a time. The vLLM speed-up therefore comes from faster single-request execution, not from batching. Batching gains would need a quantization format with batched kernels (e.g. GPTQ/AWQ via Marlin) or a larger GPU.

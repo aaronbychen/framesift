@@ -55,6 +55,9 @@ def build_dispatcher():
     backend = os.getenv("INFERENCE_BACKEND", "llama-vision")
     if backend == "none":  # search-only: /search and /clips work, no model is loaded
         return None, "none"
+    if backend == "vllm":
+        from scanner.vllm_backend import VllmSubmit
+        return VllmSubmit(), "vllm:" + config.VLLM_MODEL
     if backend == "ollama":
         from scanner.ollama_backend import OllamaSubmit
         return OllamaSubmit(), "ollama:" + config.OLLAMA_MODEL

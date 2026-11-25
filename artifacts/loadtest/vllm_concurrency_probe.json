@@ -1,0 +1,52 @@
+[
+ {
+  "side": 1120,
+  "sequential_s": 16.39284129999578,
+  "concurrent_s": 16.708609500085004,
+  "seq": [
+   "The image shows a busy city street at night, with a woman in the foreground and a crowd of people in the background. The woman is wearing a black top and a beige skirt, and is walking across the street.",
+   "The image depicts a busy city street at night, with a group of people crossing the road. The scene is blurred, but the individuals are recognizable as they walk across the street.",
+   "The image depicts a busy city street at night, with a group of people crossing the road. The scene is blurred, but the people are shown in various poses, including walking and standing.",
+   "The image depicts a bustling city street at night, with a group of people crossing the road in the foreground. The background is blurred, but it appears to be a cityscape with tall buildings and a yellow taxi cab.",
+   "The image depicts a busy city street at night, with people crossing the road in the foreground and a yellow taxi in the background. The scene is set against a backdrop of tall buildings and a dark sky.",
+   "The image depicts a busy city street at night, with people crossing the road and a car driving through the intersection. The scene is set against a backdrop of tall buildings and a dark sky.",
+   "The image depicts a busy city street at night, with a group of people walking across the road, some carrying luggage. The background is blurred, but it appears to be a cityscape with tall buildings and a car driving by.",
+   "The image shows a busy city street at night, with people walking across the road. The scene is blurred, but the atmosphere is lively and dynamic, with a sense of movement and activity."
+  ],
+  "par": [
+   "The image shows a busy city street at night, with a woman in the foreground and a crowd of people in the background. The woman is wearing a black top and a beige skirt, and is walking across the street.",
+   "The image depicts a busy city street at night, with a group of people crossing the road. The scene is blurred, but the individuals are recognizable as they walk across the street.",
+   "The image depicts a busy city street at night, with a group of people crossing the road. The scene is blurred, but the people are shown in various poses, including walking and standing.",
+   "The image depicts a bustling city street at night, with a group of people crossing the road in the foreground. The background is blurred, but it appears to be a cityscape with tall buildings and a yellow taxi cab.",
+   "The image depicts a busy city street at night, with people crossing the road in the foreground and a yellow taxi in the background. The scene is set against a backdrop of tall buildings and a dark sky.",
+   "The image depicts a busy city street at night, with people crossing the road and a car driving through the intersection. The scene is set against a backdrop of tall buildings and a dark sky.",
+   "The image depicts a busy city street at night, with a group of people walking across the road, some carrying luggage. The background is blurred, but it appears to be a cityscape with tall buildings and a car driving by.",
+   "The image shows a busy city street at night, with people walking across the road. The scene is blurred, but the atmosphere is lively and dynamic, with a sense of movement and activity."
+  ]
+ },
+ {
+  "side": 560,
+  "sequential_s": 15.907095700036734,
+  "concurrent_s": 15.236849199980497,
+  "seq": [
+   "The image shows a city street at night, with people walking across the street, and a car driving through the intersection. The background is blurred, but the cityscape is visible.",
+   "The image shows a busy city street at night, with people walking across a crosswalk. The background is blurred, but it appears to be a cityscape with tall buildings and lights.",
+   "The image shows a busy city street at night, with people crossing the road. The scene is blurry, but it appears to be a city street with tall buildings and cars in the background.",
+   "The image shows a busy city street at night, with people crossing the road and a yellow taxi cab in the background. The scene is blurred, but the atmosphere is lively and dynamic.",
+   "The image shows a group of people crossing a city street at night, with a yellow taxi in the background. The people are walking across a crosswalk, with a cityscape of tall buildings in the background.",
+   "The image shows a busy city street at night, with people crossing the road and cars driving by. The scene is blurred, but the atmosphere is one of activity and movement.",
+   "The image depicts a busy city street at night, with a group of people crossing the road. The scene is blurred, but the people are shown in various poses, some walking and others standing still.",
+   "The image depicts a busy city street at night, with people crossing the road and a car driving in the background. The scene is blurred, but the atmosphere suggests a lively urban environment."
+  ],
+  "par": [
+   "The image shows a city street at night, with a group of people walking across the street, and a car driving through the intersection. The background is blurred, but the cityscape is visible.",
+   "A group of people walking across a city street at night, with a cityscape in the background. The image is blurry, making it difficult to discern details.",
+   "The image shows a busy city street at night, with people crossing the road and cars driving by. The scene is blurred, but the atmosphere is one of activity and movement.",
+   "A group of people crossing a city street at night, with a yellow taxi cab in the background. The image is blurry, making it difficult to discern details.",
+   "The image shows a group of people crossing a city street at night, with a yellow taxi cab in the background. The people are walking across a crosswalk, with a cityscape of tall buildings in the background.",
+   "The image shows a busy city street at night, with people crossing the road and cars driving by. The scene is blurred, but the atmosphere is one of activity and movement.",
+   "The image depicts a busy city street at night, with a group of people crossing the road. The scene is blurred, but the people are shown in various poses, some walking and others standing still.",
+   "The image depicts a busy city street at night, with people crossing the road and a car driving in the background. The scene is blurred, but the atmosphere suggests a lively urban environment."
+  ]
+ }
+]
