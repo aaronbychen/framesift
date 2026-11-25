@@ -1,0 +1,73 @@
+{
+ "generated_at": "2026-11-25T16:41:43-06:00",
+ "set": "eval/sets/dev80.json",
+ "index_name": "eval_dev_tune",
+ "clip_model": ".data/models/clip-vit-large-patch14",
+ "rrf_k": 60,
+ "n_queries": 80,
+ "frames": 1275,
+ "selection_rule": "max hit@5, then mrr@100, then simplest",
+ "selected": "fusion_w1.0",
+ "candidates": [
+  {
+   "name": "caption_only",
+   "w_caption": 1.0,
+   "w_visual": 0.0,
+   "simplicity_order": 0,
+   "hit@1": 0.675,
+   "hit@5": 0.9,
+   "hit@10": 0.925,
+   "mrr@100": 0.7712
+  },
+  {
+   "name": "visual_only",
+   "w_caption": 0.0,
+   "w_visual": 1.0,
+   "simplicity_order": 1,
+   "hit@1": 0.6875,
+   "hit@5": 0.875,
+   "hit@10": 0.9625,
+   "mrr@100": 0.7784
+  },
+  {
+   "name": "fusion_w0.25",
+   "w_caption": 1.0,
+   "w_visual": 0.25,
+   "simplicity_order": 2,
+   "hit@1": 0.725,
+   "hit@5": 0.9,
+   "hit@10": 0.95,
+   "mrr@100": 0.8016
+  },
+  {
+   "name": "fusion_w0.5",
+   "w_caption": 1.0,
+   "w_visual": 0.5,
+   "simplicity_order": 3,
+   "hit@1": 0.75,
+   "hit@5": 0.9375,
+   "hit@10": 0.95,
+   "mrr@100": 0.822
+  },
+  {
+   "name": "fusion_w1.0",
+   "w_caption": 1.0,
+   "w_visual": 1.0,
+   "simplicity_order": 4,
+   "hit@1": 0.775,
+   "hit@5": 0.9375,
+   "hit@10": 0.95,
+   "mrr@100": 0.8442
+  },
+  {
+   "name": "fusion_w2.0",
+   "w_caption": 1.0,
+   "w_visual": 2.0,
+   "simplicity_order": 5,
+   "hit@1": 0.725,
+   "hit@5": 0.9,
+   "hit@10": 0.9625,
+   "mrr@100": 0.8074
+  }
+ ]
+}

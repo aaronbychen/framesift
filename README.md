@@ -54,7 +54,9 @@ Full details are in [`docs/report.md`](docs/report.md). Test set: MSR-VTT, 320 h
 
 | | Value | 95% CI |
 |---|---|---|
-| Hit@5 / Hit@10 / MRR | 68.8% / 76.9% / 0.538 | Hit@5 [63.4, 73.8] |
+| Hit@5 / Hit@10 / MRR, caption retrieval (v1) | 68.8% / 76.9% / 0.538 | Hit@5 [63.4, 73.8] |
+| Hit@5 / Hit@1 / MRR, caption + CLIP visual fusion (v2, eval only) | **74.4%** / 51.3% / 0.618 | Δ Hit@5 +5.6 pp [+1.6, +9.7], McNemar p = 0.010 |
+| Hit@1 on low-light / high-contrast clips, v1 → v2 | 38.1% → 50.3% (+32% relative) | Δ +12.2 pp [+6.1, +19.1] |
 | Hit@5 on low-light / high-contrast clips (n = 147) | 62.6% | [55.1, 70.1] |
 | Effect of adaptive preprocessing on those clips (Hit@5) | +0.0 pp | [−4.1, +4.1] |
 | Search latency (embed + HNSW, 5,123-frame index) | p50 ~40 ms, p99 < 60 ms | |

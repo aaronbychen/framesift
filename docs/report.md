@@ -22,6 +22,17 @@ I rebuilt the evaluation to test these claims properly. The split between tuning
 
 The 95% confidence interval for the preprocessing effect excludes the +25 pp that a 40% gain would require. The negative result therefore rests on a test with enough power to have caught the claimed effect. It is not just a failure to reach significance. Preprocessing slightly *hurts* ranking quality: MRR falls by 0.024 (CI [−0.043, −0.006]), and in a paired comparison 77 queries rank worse against 44 that rank better.
 
+**Follow-up (v2): a CLIP visual retriever.** The error analysis pointed at the caption step as the bottleneck: anything a one-sentence caption omits cannot be retrieved. So I added a retriever that matches the query against the pixels directly (CLIP ViT-L/14) and fused it with caption retrieval. The protocol was committed before any result was computed (`eval/visual.py`, commit `5654aa6`), and the configuration was selected on dev only. This is the second scoring of the test set.
+
+| Test320, caption only → caption + CLIP fusion | Δ [95% CI] | Holm-adjusted p |
+|---|---|---|
+| Hit@5: 68.8% → **74.4%** | +5.6 pp [+1.6, +9.7] | 0.029 (primary test, raw McNemar p = 0.010) |
+| Hit@1: 42.2% → 51.3% | +9.1 pp [+4.7, +13.4] | < 0.001 |
+| MRR: 0.538 → 0.618 | +0.080 [+0.051, +0.110] | < 0.001 |
+| Difficult clips, Hit@1: 38.1% → 50.3% | +12.2 pp [+6.1, +19.1] (+32% relative) | 0.003 |
+
+The gain the preprocessing was supposed to deliver on difficult footage came instead from changing *what* is matched (pixels, not captions). Even so it is +32% relative on Hit@1 and +13% on Hit@5, not +40%. The headline Hit@5 (74.4%) is still below 85%.
+
 ## 1. System
 
 ```
@@ -61,7 +72,7 @@ The thresholds were set from the pixel-statistics distribution alone. No retriev
 
 - The difficult stratum is **oversampled** in test320 (46% of clips, against 14.7% in 1k-A). Section 4.3 reweights the result back to the natural mix.
 - **Queries.** Each clip's human-written MSR-VTT caption is used as a query. A hit at k means that clip appears in the top k of the 320-clip corpus.
-- **Pre-registered selection rule.** On dev, the configuration with the best Hit@5 wins, with MRR as the tie-breaker. The grid covered 3 × 3 × 3 retriever weights × 2 RRF constants. After selection the weights were frozen in code (commit `5a62b2a`) before the test set was scored.
+- **Pre-specified selection rule.** On dev, the configuration with the best Hit@5 wins, with MRR as the tie-breaker. The grid covered 3 × 3 × 3 retriever weights × 2 RRF constants. After selection the weights were frozen in code (commit `5a62b2a`) before the test set was scored.
 
 ### 2.3 Controlled comparison
 
@@ -130,7 +141,7 @@ The lesson, also stated in the README, is that the dev number must never be quot
 | BM25 | 82.5 | 0.712 |
 | Best 3-way RRF fusion | 88.8 | 0.774 |
 
-Fusion did not beat the best single retriever on dev Hit@5. Under the pre-registered rule, the shipped default is dense frame retrieval alone. The other retrievers stay available through configuration.
+Fusion did not beat the best single retriever on dev Hit@5. Under the pre-specified rule, the shipped default is dense frame retrieval alone. The other retrievers stay available through configuration.
 
 ### 3.5 Serving performance
 
@@ -157,6 +168,46 @@ Fusion did not beat the best single retriever on dev Hit@5. Under the pre-regist
 - The 4-bit (bitsandbytes NF4) weights only get a fast fused kernel for single-token, batch-1 matrix-vector products. At batch ≥ 2 every decoding step de-quantizes the weights instead.
 - At batch 4 the 12 GB GPU overflows into system RAM, and throughput falls to 0.01 frames/s.
 - The latency comparison has one scan per concurrency level, so it is a large, consistent effect rather than a precisely estimated one.
+
+### 3.6 v2: adding a CLIP visual retriever
+
+**Protocol.** The protocol was committed before any result existed (`eval/visual.py`, commit `5654aa6`).
+- **Visual retriever.** CLIP ViT-L/14 embeds every 1-FPS frame with the standard processor (224 px, center crop) and no preprocessing. A clip's score is the max cosine between the raw query and its frames.
+- **Fusion.** Weighted RRF (k = 60) of the frozen caption retriever (weight 1) and the visual retriever (weight w).
+- **Candidates.** Caption only, visual only, and fusion with w ∈ {0.25, 0.5, 1, 2}.
+- **Selection rule (dev80).** Highest Hit@5, then MRR, then the simplest configuration.
+- **Test scoring.** The test run reads the selected configuration from the dev artifact. Primary test: Hit@5, selected vs caption only, exact McNemar.
+
+**Dev80** (`artifacts/eval/dev80_visual_grid.json`):
+
+| Config | Hit@1 | Hit@5 | Hit@10 | MRR |
+|---|---|---|---|---|
+| Caption only (v1 system) | 67.5 | 90.0 | 92.5 | 0.771 |
+| Visual only | 68.8 | 87.5 | 96.3 | 0.778 |
+| Fusion w = 0.25 | 72.5 | 90.0 | 95.0 | 0.802 |
+| Fusion w = 0.5 | 75.0 | 93.8 | 95.0 | 0.822 |
+| **Fusion w = 1 (selected)** | 77.5 | 93.8 | 95.0 | **0.844** |
+| Fusion w = 2 | 72.5 | 90.0 | 96.3 | 0.807 |
+
+**Test320** (`artifacts/eval/test320_visual.json` and `stats_visual.json`). Paired, n = 320. Holm correction over 8 tests (4 metrics × {all, difficult}):
+
+| Subset | Metric | Caption only | + CLIP fusion | Δ [95% CI] | Relative | p (Holm) |
+|---|---|---|---|---|---|---|
+| All | Hit@1 | 42.2 | 51.3 | +9.1 [4.7, 13.4] | +21.5% | 0.0005 |
+| All | **Hit@5** | 68.8 | **74.4** | +5.6 [1.6, 9.7] | +8.2% | 0.029 |
+| All | Hit@10 | 76.9 | 82.8 | +5.9 [2.5, 9.4] | +7.7% | 0.005 |
+| All | MRR | 0.538 | 0.618 | +0.080 [0.051, 0.110] | +14.9% | < 0.001 |
+| Difficult (147) | Hit@1 | 38.1 | 50.3 | +12.2 [6.1, 19.1] | +32.1% | 0.003 |
+| Difficult | Hit@5 | 62.6 | 70.8 | +8.2 [2.0, 15.0] | +13.0% | 0.043 |
+| Difficult | MRR | 0.490 | 0.595 | +0.104 [0.061, 0.149] | +21.3% | < 0.001 |
+| Not difficult (173) | Hit@5 | 74.0 | 77.5 | +3.5 [−1.2, 8.7] | +4.7% | (not tested) |
+
+On Hit@5, the two retrievers each find clips the other misses: fusion recovers 31 queries the caption system missed and loses 13.
+
+Notes:
+- **Visual only on test.** CLIP alone reaches Hit@5 73.4% (descriptive only, not selected). CLIP is strong on its own here, and most of the fusion gain comes from it.
+- **The gain is larger on difficult clips.** This is consistent with low light hurting the captioner more than CLIP's embedding. It is a subgroup observation, not a pre-specified hypothesis.
+- **Scope.** This is an evaluation result. Serving the visual retriever from `/search` needs the CLIP frame vectors indexed in Redis at `/index` time; that is not wired into the API yet.
 
 ## 4. Discussion
 
@@ -189,6 +240,7 @@ This is still well below 85%, and it is measured on a 320-clip corpus. Standard 
 - **"Difficult" is a pixel-statistics proxy,** not a human judgment of visibility.
 - **One captioning model, one prompt and greedy decoding.** The preprocessing result may not transfer to weaker models.
 - **The serving benchmark is small:** one 14-second clip, one scan per level, on a single laptop where the load generator shares the machine.
+- **The test set has now been scored twice:** v1, and the pre-specified v2 CLIP experiment. Every other choice was made on dev80, which has only 80 queries. The dev grid differences (one or two queries) are within noise, so the choice between w = 0.5 and w = 1 is not meaningful. The test gain of w = 1 over caption only is.
 
 ## 5. Reproducing
 
@@ -199,6 +251,9 @@ python -m eval.caption_set ...                    # captions, off and adaptive
 python -m eval.tune_fusion ...                    # dev-only selection
 python -m eval.hit_at_k ...                       # test320, each condition
 python -m eval.stats --out artifacts/eval/stats.json
+python -m eval.visual --set eval/sets/dev80.json   --index-name eval_dev_tune    --out artifacts/eval/dev80_visual_grid.json
+python -m eval.visual --set eval/sets/test320.json --index-name eval_test320_off --select-from artifacts/eval/dev80_visual_grid.json --out artifacts/eval/test320_visual.json
+python -m eval.stats_visual --out artifacts/eval/stats_visual.json
 ```
 
 Raw outputs:
