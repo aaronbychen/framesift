@@ -220,6 +220,21 @@ Notes:
   - Implementation check: with the cached test320 vectors loaded, the API's search path gives Hit@5 74.38%, identical to the evaluation, and the same rank on 315/320 queries. The rest differ because HNSW search is approximate.
   - Cost: search latency rises from p50 ~40 ms to 106 ms (p99 138 ms), because the CLIP text encoder runs on the CPU.
 
+### 3.7 Independent check on untouched clips
+
+The protocol was committed before running (`eval/fresh680.py`). The 680 1k-A clips outside test320 had never been used in any experiment. By construction none of them is difficult, so this checks how well the visual retriever generalises, not the low-light findings. Fusion is not checked: these clips have no Llama captions, which would take about 6 GPU hours. All numbers are CLIP visual only, with 95% bootstrap CIs (`artifacts/eval/fresh680_visual.json`).
+
+| Analysis | Queries / corpus | Hit@1 | Hit@5 | Hit@10 | MRR |
+|---|---|---|---|---|---|
+| A. Fresh queries, fresh corpus | 680 / 680 | 39.4 | 64.4 [60.7, 67.9] | 72.9 | 0.510 |
+| B. Fresh queries, full 1k-A corpus | 680 / 1,000 | 35.6 | 59.1 [55.4, 62.8] | 68.4 | 0.467 |
+| C. Fresh queries, 320-clip corpora (200 random draws) | 320 / 320 | | **73.0** (draws: 69.4–76.3) | | |
+| C. test320 not-difficult, for comparison | 173 / 320 | | 74.0 [67.1, 80.4] | | |
+| D. All 1k-A queries, full corpus (reference; includes test320) | 1,000 / 1,000 | 35.2 | 58.5 | 69.0 | 0.463 |
+
+- **The test320 result generalises.** At the same corpus size, fresh clips give 73.0% against 74.0% on test320's not-difficult queries, well inside its CI. As a sanity check, recomputing CLIP-only on test320 with this script reproduces 73.4%.
+- **Corpus size dominates the headline number.** The same retriever drops from 73.0% (320 candidates) to 64.4% (680) and 59.1% (1,000). Hit@5 on a 320-clip library is therefore not comparable to published 1k-A results. Analysis D (R@1 35.2, R@5 58.5, R@10 69.0) is the number that sits in the standard 1k-A setting, for CLIP alone and zero-shot.
+
 ## 4. Discussion
 
 ### 4.1 Why preprocessing did not help
