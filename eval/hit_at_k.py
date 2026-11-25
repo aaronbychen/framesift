@@ -72,7 +72,8 @@ def main():
     missing = [c["video_id"] for c in clips if c["video_id"] not in captions]
     if missing:
         raise SystemExit(f"{len(missing)} clips missing from {args.captions}, e.g. {missing[:3]}")
-    fusion = json.loads(args.fusion) if args.fusion else None
+    # Caption retrieval only (the v1 system); the CLIP retriever is evaluated by eval/visual.py.
+    fusion = {"w_visual": 0.0, **(json.loads(args.fusion) if args.fusion else {})}
 
     ix = CaptionIndex(name=args.index_name)
     build_index(ix, clips, captions)

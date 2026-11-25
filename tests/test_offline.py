@@ -64,3 +64,41 @@ def test_index_and_search_make_no_external_connections(block_egress):
     finally:
         ix.clear()
     assert block_egress == [], f"external connection attempts: {block_egress}"
+
+
+def test_visual_retriever_fuses_and_finds_visual_only_clips(block_egress, monkeypatch):
+    """Clips indexed with CLIP vectors only (captions=false) are found through the visual retriever,
+    and best_t comes from the best-matching frame. A stub encoder stands in for CLIP."""
+    import numpy as np
+    from scanner import visual
+    from scanner.index import CaptionIndex
+
+    def unit(i):
+        v = np.zeros(visual.VISUAL_DIMS, np.float32)
+        v[i] = 1.0
+        return v
+
+    class Stub:
+        def embed_text(self, text):
+            return unit(0) if "red" in text else unit(1)
+
+    monkeypatch.setattr(visual, "get_encoder", lambda: Stub())
+    ix = CaptionIndex(name="pytest_visual")
+    try:
+        ix.clear()
+        ix.add_clip("cap", [{"t": 0, "caption": "A chef slices onions in a kitchen."}], {})
+        ix.add_visual("cap", [0], [unit(1)])
+        ix.add_clip("vis", [{"t": 0, "caption": ""}, {"t": 1, "caption": ""}], {})  # CLIP-only clip
+        ix.add_visual("vis", [0, 1], [unit(2), unit(0)])
+        visual_only, timings = ix.search("a red car", k=2, fusion={"w_frame": 0.0})
+        assert visual_only[0]["clip_id"] == "vis" and visual_only[0]["best_t"] == 1
+        assert "visual_ms" in timings
+        fused, _ = ix.search("a red car", k=2)  # default weights: caption 1 + visual 1
+        assert {r["clip_id"] for r in fused} == {"cap", "vis"}
+        caption_only, _ = ix.search("a red car", k=2, fusion={"w_visual": 0.0})
+        assert all(r["clip_id"] != "vis" for r in caption_only)
+        ix.delete_clip("vis")
+        assert not list(ix.r.scan_iter(match="pytest_visual/vis_vis::*"))
+    finally:
+        ix.clear()
+    assert block_egress == [], f"external connection attempts: {block_egress}"

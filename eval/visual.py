@@ -95,7 +95,7 @@ def caption_rankings(clips, index_name):
     missing = [c["video_id"] for c in clips if c["video_id"] not in have]
     if missing:
         raise SystemExit(f"index {index_name} lacks {len(missing)} clips, e.g. {missing[:3]}")
-    fusion = {"w_frame": 1.0, "w_clip": 0.0, "w_bm25": 0.0}
+    fusion = {"w_frame": 1.0, "w_clip": 0.0, "w_bm25": 0.0, "w_visual": 0.0}
     return [[r["clip_id"] for r in ix.search(c["query"], k=DEPTH, fusion=fusion)[0]] for c in clips]
 
 

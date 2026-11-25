@@ -28,7 +28,7 @@ upload ──> 1-FPS sampler ──> adaptive preprocessing ──> BatchDispatc
                                                                  │
              /analyze  <── NDJSON stream of per-frame answers ───┤
                                                                  │ captions
-             /search   <── LlamaIndex: dense frame (default) / dense clip / BM25, weighted RRF ──┐
+             /search   <── LlamaIndex: dense caption frames + CLIP visual frames (default), RRF ──┐
              /clips/{id}/frames <── frame/time index                                             │
                                                        Redis Stack: HNSW vectors, clip/frame hashes,
                                                        per-clip time-sorted frame index
@@ -55,11 +55,11 @@ Full details are in [`docs/report.md`](docs/report.md). Test set: MSR-VTT, 320 h
 | | Value | 95% CI |
 |---|---|---|
 | Hit@5 / Hit@10 / MRR, caption retrieval (v1) | 68.8% / 76.9% / 0.538 | Hit@5 [63.4, 73.8] |
-| Hit@5 / Hit@1 / MRR, caption + CLIP visual fusion (v2, eval only) | **74.4%** / 51.3% / 0.618 | Δ Hit@5 +5.6 pp [+1.6, +9.7], McNemar p = 0.010 |
+| Hit@5 / Hit@1 / MRR, caption + CLIP visual fusion (v2, default in `/search`) | **74.4%** / 51.3% / 0.618 | Δ Hit@5 +5.6 pp [+1.6, +9.7], McNemar p = 0.010 |
 | Hit@1 on low-light / high-contrast clips, v1 → v2 | 38.1% → 50.3% (+32% relative) | Δ +12.2 pp [+6.1, +19.1] |
 | Hit@5 on low-light / high-contrast clips (n = 147) | 62.6% | [55.1, 70.1] |
 | Effect of adaptive preprocessing on those clips (Hit@5) | +0.0 pp | [−4.1, +4.1] |
-| Search latency (embed + HNSW, 5,123-frame index) | p50 ~40 ms, p99 < 60 ms | |
+| Search latency, caption + CLIP fusion (CPU, 5,123-frame index) | p50 106 ms, p99 138 ms (caption only: p50 ~40 ms) | |
 | vLLM vs in-process transformers backend, scan latency (same model, 1/2/4 streams) | **−43% p50** (73.5 → 41.9 s at 1 stream; 287.8 → 162.8 s at 4) | |
 | Dynamic batching vs sequential, in-process transformers | +56% (1 stream) … +24% (4 streams): slower, see Notes | |
 
@@ -75,6 +75,7 @@ docker run -d --name scanner-redis -p 6379:6379 redis/redis-stack-server:7.4.0-v
 # Model weights, downloaded once (both are ungated):
 huggingface-cli download unsloth/Llama-3.2-11B-Vision-Instruct-bnb-4bit --local-dir .data/models/llama32-11b-vision-bnb4
 huggingface-cli download BAAI/bge-base-en-v1.5 --local-dir .data/models/bge-base-en-v1.5
+huggingface-cli download openai/clip-vit-large-patch14 model.safetensors config.json preprocessor_config.json tokenizer.json tokenizer_config.json vocab.json merges.txt special_tokens_map.json --local-dir .data/models/clip-vit-large-patch14
 ```
 
 ### Activating the venv
@@ -119,7 +120,8 @@ Useful environment variables:
 | `SERVING_MODE` | `batched` | `sequential` = original one-frame-at-a-time path |
 | `BATCH_MAX_SIZE` | `4` | Max frames per model call (2 is the largest that fits in 12 GB) |
 | `PREPROCESS_MODE` | `adaptive` | `off` / `adaptive` / `always` |
-| `W_FRAME`, `W_CLIP`, `W_BM25` | `1`, `0`, `0` | Retriever fusion weights (frozen from the dev-set grid) |
+| `W_FRAME`, `W_VISUAL`, `W_CLIP`, `W_BM25` | `1`, `1`, `0`, `0` | Retriever fusion weights (frozen from the dev-set grids) |
+| `CLIP_MODEL`, `CLIP_DEVICE` | `.data/models/clip-vit-large-patch14`, `cpu` | Visual retriever; visual retrieval is skipped if the model folder is missing |
 
 ### Faster inference: vLLM backend
 
@@ -152,8 +154,11 @@ curl -N -F "video=@uploads/test.mp4" -F "object_str=yellow taxi" http://localhos
 ### Use 2: index a library, then search it in plain English
 
 ```bash
-# Index a video: captions every second (~3.4 s per video-second on an RTX 4080 Laptop)
+# Index a video: Llama captions + CLIP vectors for every second (~2-3.4 s per video-second on an RTX 4080 Laptop)
 curl -N -F "video=@uploads/test.mp4" -F "clip_id=test" http://localhost:8000/index
+
+# Fast index: CLIP vectors only, no vision LLM (~0.2 s per video-second on CPU; works in search-only mode)
+curl -N -F "video=@uploads/test.mp4" -F "clip_id=test" -F "captions=false" http://localhost:8000/index
 
 # Search (~10-50 ms per query)
 curl -s "http://localhost:8000/search?q=a+yellow+taxi+in+traffic&k=5"
@@ -164,7 +169,11 @@ curl -s "http://localhost:8000/clips/test/frames?t0=0&t1=5"
 
 ### Try search on the 320 MSR-VTT test clips (no GPU)
 
-The eval already built the index `eval_test320_off`, so you can search it without indexing anything:
+The eval already built the index `eval_test320_off`, so you can search it without indexing anything. One-time step: load the cached CLIP frame vectors into it, so search uses caption + visual fusion.
+
+```bash
+python -m eval.index_visual_cache --cache .data/visual/test320_clip_l14.npz --index-name eval_test320_off
+```
 
 ```bash
 INFERENCE_BACKEND=none INDEX_NAME=eval_test320_off EMBED_DEVICE=cpu .venv/Scripts/python.exe -m uvicorn main:app --port 8001
@@ -177,8 +186,8 @@ From another terminal:
 curl -s "http://localhost:8001/search?q=people+are+singing+on+the+beach&k=3"
 curl -s "http://localhost:8001/clips/video7117/frames?t0=7&t1=9"
 
-# Unhappy path: the query depends on audio. The correct clip video7227 is not in the top 100,
-# because its frames only show "a person playing a guitar" and the clips have no audio track.
+# Unhappy path: the query depends on audio. The correct clip video7227 ranks only #58
+# (#100+ with captions alone), because its frames only show "a person playing a guitar" and the clips have no audio track.
 curl -s "http://localhost:8001/search?q=a+man+is+singing&k=5"
 curl -s "http://localhost:8001/clips/video7227/frames?t0=0&t1=5"
 

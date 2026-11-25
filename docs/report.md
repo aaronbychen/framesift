@@ -214,7 +214,11 @@ Notes:
   A CLIP-only index is therefore roughly 10× cheaper and needs no GPU. Captions still provide the human-readable "best frame" text and the `/analyze` feature.
 - **Natural difficulty mix.** Reweighted to 1k-A's 14.7% difficult share, Hit@5 is 72.3% [66.6, 77.9] for caption only and 76.5% [70.9, 81.8] for fusion.
 - **The gain is larger on difficult clips.** This is consistent with low light hurting the captioner more than CLIP's embedding. It is a subgroup observation, not a pre-specified hypothesis.
-- **Scope.** This is an evaluation result. Serving the visual retriever from `/search` needs the CLIP frame vectors indexed in Redis at `/index` time; that is not wired into the API yet.
+- **Serving.** The visual retriever is now the default in the API.
+  - `/index` stores CLIP frame vectors in a second Redis vector store; `captions=false` indexes CLIP vectors only, with no vision LLM.
+  - `/search` fuses the two retrievers with the dev-selected weights.
+  - Implementation check: with the cached test320 vectors loaded, the API's search path gives Hit@5 74.38%, identical to the evaluation, and the same rank on 315/320 queries. The rest differ because HNSW search is approximate.
+  - Cost: search latency rises from p50 ~40 ms to 106 ms (p99 138 ms), because the CLIP text encoder runs on the CPU.
 
 ## 4. Discussion
 

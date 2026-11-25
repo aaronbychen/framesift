@@ -166,9 +166,23 @@ async def analyze_video(video: UploadFile = File(...), object_str: str = Form(..
     return StreamingResponse(generate(), media_type="application/x-ndjson")
 
 
+def embed_visual(video_path):
+    """CLIP embeddings of the raw 1-FPS frames (no preprocessing), or None if CLIP is unavailable."""
+    from scanner.frames import sample_1fps
+    from scanner.visual import get_encoder
+    enc = get_encoder()
+    pairs = list(sample_1fps(str(video_path))) if enc is not None else []
+    if not pairs:
+        return None
+    ts, frames = zip(*pairs)
+    return list(ts), enc.embed_images(list(frames))
+
+
 @app.post("/index")
-async def index_video(video: UploadFile = File(...), clip_id: str = Form(None)):
-    if state["dispatcher"] is None:
+async def index_video(video: UploadFile = File(...), clip_id: str = Form(None), captions: bool = Form(True)):
+    """captions=true: Llama captions + CLIP vectors. captions=false: CLIP vectors only, no vision LLM
+    (~10x cheaper per frame, CPU only); search then relies on the visual retriever for this clip."""
+    if captions and state["dispatcher"] is None:
         return no_model()
     task_id = f"{int(time.time())}_{uuid.uuid4().hex[:8]}"
     video_path = await save_upload(video, task_id)
@@ -178,15 +192,26 @@ async def index_video(video: UploadFile = File(...), clip_id: str = Form(None)):
 
     async def generate():
         frames = []
-        async for (second, _, stats, enhanced, frame_path), res in run_frames(
-                submit, video_path, CAPTION_PROMPT, config.CAPTION_MAX_TOKENS, WINDOW, save_dir=frames_dir):
-            caption = "" if isinstance(res, Exception) else res[0].strip()
-            frames.append({"t": second, "caption": caption, "stats": stats, "enhanced": enhanced,
-                           "frame_path": f"/frames/{task_id}/frame_{second}.jpg"})
-            yield json.dumps({"status": "frame", "t": second, "caption": caption, "enhanced": enhanced}) + "\n"
-        await asyncio.to_thread(get_index().add_clip, clip_id, frames,
-                                {"video": str(video_path), "task_id": task_id})
-        yield json.dumps({"status": "indexed", "clip_id": clip_id, "frames": len(frames)}) + "\n"
+        if captions:
+            async for (second, _, stats, enhanced, frame_path), res in run_frames(
+                    submit, video_path, CAPTION_PROMPT, config.CAPTION_MAX_TOKENS, WINDOW, save_dir=frames_dir):
+                caption = "" if isinstance(res, Exception) else res[0].strip()
+                frames.append({"t": second, "caption": caption, "stats": stats, "enhanced": enhanced,
+                               "frame_path": f"/frames/{task_id}/frame_{second}.jpg"})
+                yield json.dumps({"status": "frame", "t": second, "caption": caption, "enhanced": enhanced}) + "\n"
+        visual = await asyncio.to_thread(embed_visual, video_path)
+        if not captions:
+            if visual is None:
+                yield json.dumps({"status": "error", "error": "captions=false needs the CLIP model"}) + "\n"
+                return
+            frames = [{"t": t, "caption": "", "stats": {}, "enhanced": False} for t in visual[0]]
+        ix = get_index()
+        await asyncio.to_thread(ix.add_clip, clip_id, frames,
+                                {"video": str(video_path), "task_id": task_id, "captions": captions})
+        if visual is not None:
+            await asyncio.to_thread(ix.add_visual, clip_id, *visual)
+        yield json.dumps({"status": "indexed", "clip_id": clip_id, "frames": len(frames),
+                          "captions": captions, "visual": visual is not None}) + "\n"
 
     return StreamingResponse(generate(), media_type="application/x-ndjson")
 
