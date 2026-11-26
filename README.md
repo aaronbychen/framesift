@@ -145,9 +145,22 @@ INFERENCE_BACKEND=vllm SERVING_MODE=sequential .venv/Scripts/python.exe -m uvico
 
 Stop it with `docker stop fs-vllm`, and start it again later with `docker start fs-vllm`.
 
-### Use 1: find an object in one video (web UI)
+### The web UI
 
-Open http://localhost:8000, upload a video and type what to look for (e.g. `yellow taxi`). Each 1-FPS frame streams back as YES/NO with a confidence and a timestamp. The same request from the command line:
+Open the server's root URL (e.g. http://localhost:8000). It needs no internet access and has four tabs:
+
+| Tab | What it does | Endpoints |
+|---|---|---|
+| **Search** | Plain-English search over the index. Click a result to play the clip from the best-matching second, next to its per-second caption timeline (click a line to seek). `/?q=...` opens a search directly. | `/search`, `/clips/{id}/video`, `/clips/{id}/frames` |
+| **Index** | Upload a video and add it to the index, with Llama captions or CLIP-only. Captions stream in as they are generated. | `/index` |
+| **Find object** | The original object finder: upload a video, name an object, and watch each second's verdict stream in. Click a frame to seek. | `/analyze` |
+| **System** | Server settings, indexed clips, links to metrics, Prometheus, Grafana and the API docs. | `/health`, `/clips`, `/metrics` |
+
+In search-only mode (`INFERENCE_BACKEND=none`), Find object and captioned indexing are disabled; CLIP-only indexing still works.
+
+### Use 1: find an object in one video
+
+In the UI, use the **Find object** tab. Each 1-FPS frame streams back as YES/NO with a confidence and a timestamp. The same request from the command line:
 
 ```bash
 curl -N -F "video=@uploads/test.mp4" -F "object_str=yellow taxi" http://localhost:8000/analyze
@@ -167,6 +180,10 @@ curl -s "http://localhost:8000/search?q=a+yellow+taxi+in+traffic&k=5"
 
 # Captions of one clip between two timestamps
 curl -s "http://localhost:8000/clips/test/frames?t0=0&t1=5"
+
+# All clip ids in the index, and one clip's source video
+curl -s "http://localhost:8000/clips"
+curl -s -o clip.mp4 "http://localhost:8000/clips/test/video"
 ```
 
 ### Try search on the 320 MSR-VTT test clips (no GPU)
@@ -199,13 +216,7 @@ curl -s -w " [%{http_code}]\n" "http://localhost:8001/search?q="                
 curl -s -w " [%{http_code}]\n" -F "video=@uploads/test.mp4" -F "object_str=taxi" http://localhost:8001/analyze   # no model -> 503
 ```
 
-To watch a returned clip, open the local file (MSR-VTT videos are under `.data/msrvtt/videos/video/`):
-
-```bash
-start "" .data/msrvtt/videos/video/video7117.mp4                       # Git Bash
-# PowerShell: Invoke-Item .data\msrvtt\videos\video\video7117.mp4
-explorer.exe '.data\msrvtt\videos\video'                               # browse all 10,000 clips
-```
+To watch the results, open http://localhost:8001/?q=people+are+singing+on+the+beach in a browser: the UI plays each clip from the matching second. The files themselves are under `.data/msrvtt/videos/video/`.
 
 ### Monitoring (Prometheus + Grafana)
 

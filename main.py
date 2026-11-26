@@ -3,6 +3,7 @@
 POST /analyze   stream a 1-FPS scan of an uploaded video for a free-text query (NDJSON)
 POST /index     caption an uploaded clip at 1 FPS and add it to the local retrieval index
 GET  /search    natural-language top-k search over indexed clips (LlamaIndex + Redis)
+GET  /clips      indexed clip ids;  GET /clips/{clip_id}/video   the clip's source video
 GET  /clips/{clip_id}/frames   frame/time index lookup
 GET  /metrics   Prometheus metrics
 
@@ -20,7 +21,7 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI, File, Form, Query, Request, UploadFile
-from fastapi.responses import JSONResponse, StreamingResponse
+from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from prometheus_client import Counter, Gauge, Histogram, make_asgi_app
@@ -130,6 +131,8 @@ async def health():
         "analyze_max_tokens": config.ANALYZE_MAX_TOKENS,
         "preprocess_mode": config.PREPROCESS_MODE,
         "process_power_hints": state.get("power"),
+        "index_name": config.INDEX_NAME,
+        "visual_retriever": Path(os.getenv("CLIP_MODEL", ".data/models/clip-vit-large-patch14"), "config.json").exists(),
     }
 
 
@@ -222,6 +225,27 @@ async def search(q: str = Query(..., min_length=1), k: int = Query(5, ge=1, le=1
     results, timings = await asyncio.to_thread(get_index().search, q, k)
     SEARCH_SECONDS.observe(time.perf_counter() - start)
     return {"query": q, "k": k, "results": results, "timings_ms": timings}
+
+
+@app.get("/clips")
+async def clips():
+    ids = await asyncio.to_thread(get_index().clip_ids)
+    return {"index": config.INDEX_NAME, "count": len(ids), "clips": ids}
+
+
+VIDEO_ROOTS = [UPLOAD_DIR.resolve(), Path(".data").resolve()]
+
+
+@app.get("/clips/{clip_id}/video")
+async def clip_video(clip_id: str):
+    """Serve the source video recorded in the clip's metadata (only from uploads/ or .data/)."""
+    info = await asyncio.to_thread(get_index().clip_meta, clip_id)
+    meta = (info or {}).get("meta", {})
+    raw = meta.get("video") or meta.get("path")
+    path = Path(raw.replace("\\", "/")).resolve() if raw else None
+    if path is None or not path.is_file() or not any(path.is_relative_to(r) for r in VIDEO_ROOTS):
+        return JSONResponse(status_code=404, content={"error": f"no video for {clip_id}"})
+    return FileResponse(path, media_type="video/mp4")
 
 
 @app.get("/clips/{clip_id}/frames")

@@ -176,6 +176,12 @@ class CaptionIndex:
     def clip_ids(self):
         return sorted(self.r.smembers(self.k("clips")))
 
+    def clip_meta(self, clip_id):
+        h = self.r.hgetall(self.k("clip", clip_id))
+        if not h:
+            return None
+        return {"clip_id": clip_id, "n_frames": int(h.get("n_frames", 0)), "meta": json.loads(h.get("meta", "{}"))}
+
     def frames_between(self, clip_id, t0, t1):
         """Frame/time index lookup: captions for t0 <= t <= t1."""
         ts = self.r.zrangebyscore(self.k("frames", clip_id), t0, t1)
