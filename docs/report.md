@@ -33,7 +33,7 @@ The 95% confidence interval for the preprocessing effect excludes the +25 pp tha
 
 The gain the preprocessing was supposed to deliver on difficult footage came instead from changing *what* is matched (pixels, not captions). Even so it is +32% relative on Hit@1 and +13% on Hit@5, not +40%. The headline Hit@5 (74.4%) is still below 85%.
 
-Almost all of that gain comes from CLIP itself. A post-hoc comparison (section 3.6) finds no Hit@5 difference between fusion and CLIP alone: +0.9 pp [−3.4, +5.3]. Fusion only improves ranking order, with MRR +0.041, Holm p = 0.031. For a CLIP-only index, which is about 10× cheaper to build, that is a small price.
+Most of that gain comes from CLIP itself. Post-hoc, with all 20 captions per clip as queries (5,945 queries, section 3.9), fusion beats CLIP alone by Hit@5 +2.9 pp [+1.6, +4.3]: 74.7% vs 71.7%. Captions add a small, real gain, at about 10× the indexing cost of a CLIP-only index.
 
 ## 1. System
 
@@ -217,7 +217,7 @@ Notes:
   | Hit@10 | 82.2 | 82.8 | +0.6 [−3.1, 4.4] | 1.0 |
   | MRR | 0.577 | 0.618 | +0.041 [0.005, 0.078] | **0.031** |
 
-  Captions do not help to *find* the clip at all: the Hit@5 and Hit@10 differences are about zero. They only help *order* the candidates, with a modest MRR gain. On difficult clips no metric differs. Since captions cost about 10× more to index, a CLIP-only index is the better trade-off for most uses. On dev, fusion had led clearly (Hit@5 93.8 vs 87.5), another dev80 difference that did not hold up.
+  With one query per clip only MRR differs, and the Hit@5 CI (±4 pp) is too wide to say more. With all 20 MSR-VTT captions per clip (3.9), fusion does beat CLIP alone: Hit@5 +2.9 pp [+1.6, +4.3]. So captions add a small but real gain, at about 10× the indexing cost. On dev, fusion had led by 6 pp (93.8 vs 87.5), which was too optimistic.
 - **Indexing cost.** This makes the cost question concrete.
   - CLIP indexing: 0.19 s per frame on the CPU (5,123 frames in 951 s, including video decoding).
   - Llama captions: about 2.0 s per frame on the GPU with vLLM, and 3.4 s per frame in-process.
@@ -268,6 +268,34 @@ On dev1k all candidates were within 0.7 pp on R@5 (max 59.2%, top5 59.9%). The r
 - **Ranking order improves.** MRR is higher, with 232 queries ranking better and 117 worse. Small, consistent ranking gains without a recall gain are the same pattern as fusion in 3.6.
 - On the 680-clip fresh corpus the picture is the same: R@5 +0.7 pp (p = 0.57), MRR +0.020.
 - **Second use of fresh680.** Its first use (3.7) did not inform any choice made here.
+- **Larger-sample follow-up (3.9):** with 20 queries per clip, top5 beats max on every metric (R@5 +1.4 pp [+0.8, +2.0]). The effect is real but small. The 680-query test was not powered to see it.
+
+### 3.9 Twenty queries per clip
+
+One query per clip leaves CIs of about ±4 pp on paired differences, so effects of 1–3 pp are invisible. MSR-VTT has 20 human captions per clip. The follow-up uses all of them as queries, with exact duplicates dropped. Queries from the same clip are correlated, so all inference is clustered by clip:
+- CIs from a cluster bootstrap;
+- p-values from a clustered sign-flip permutation test (10k each);
+- Holm correction over 4 metrics.
+
+The protocol was committed before running (`eval/multicap.py`, commit `906010a`); results are in `artifacts/eval/multicap.json`.
+
+| Comparison | Queries / clips | Metric | A | B | Diff [cluster 95% CI] | p (Holm) |
+|---|---|---|---|---|---|---|
+| fresh680, 1,000-clip corpus: max (A) vs top5 (B) | 12,675 / 680 | R@1 | 35.5 | 36.8 | +1.3 [+0.6, +2.0] | < 0.001 |
+| | | **R@5** | 59.2 | 60.6 | +1.4 [+0.8, +2.0] | < 0.001 |
+| | | R@10 | 68.2 | 69.3 | +1.1 [+0.6, +1.6] | < 0.001 |
+| | | MRR | 0.466 | 0.478 | +0.011 [+0.006, +0.017] | < 0.001 |
+| test320, 320-clip corpus: CLIP only (A) vs fusion (B), post-hoc | 5,945 / 320 | Hit@1 | 46.9 | 48.4 | +1.5 [−0.2, +3.2] | 0.095 |
+| | | **Hit@5** | 71.7 | 74.7 | +2.9 [+1.6, +4.3] | < 0.001 |
+| | | Hit@10 | 79.7 | 82.6 | +2.9 [+1.5, +4.3] | < 0.001 |
+| | | MRR | 0.582 | 0.603 | +0.021 [+0.008, +0.034] | 0.004 |
+
+On the same 5,945 queries, caption-only retrieval reaches Hit@5 66.6% (reference only).
+
+- **Both earlier "no difference" results were a lack of power, not a lack of effect.** The point estimates hardly moved: top5 +1.5 → +1.4 pp, fusion +0.9 → +2.9 pp, both inside the earlier CIs. With 20× the queries, the CIs shrank from about ±4 pp to about ±1 pp. Absence of significance at n = 320 or 680 meant "not measurable here", not "zero".
+- **Status.** The top5 comparison is a pre-specified follow-up to 3.8. It does not change 3.8's failed primary test; it is reported next to it. The fusion comparison is post-hoc and the third look at test320. The 20 queries are not new clips, so the corpus-level findings still rest on 320 and 680 clips.
+- **Effects are small.** Neither top5 pooling (+1.4 pp) nor fusion over CLIP (+2.9 pp) comes close to the gain of adding CLIP in the first place (+5.6 pp over captions).
+- **Serving default unchanged.** `/search` still pools frames with max. Switching to top5 is now supported by evidence, but that evidence comes from fresh680, so the switch has not been verified on clips that played no part in the decision.
 
 ## 4. Discussion
 
@@ -296,7 +324,7 @@ This is still well below 85%, and it is measured on a 320-clip corpus. Standard 
 
 ### 4.4 Limitations
 
-- **One query per clip.** This yields 320 queries. The CIs are about ±5 pp overall and ±7.5 pp on the difficult subset.
+- **One query per clip in the main tests.** This yields 320 queries. The CIs are about ±5 pp overall and ±7.5 pp on the difficult subset. Section 3.9 uses all 20 captions per clip, which narrows paired CIs to about ±1 pp. The number of distinct clips (320, 680) is unchanged, though.
 - **"Difficult" is a pixel-statistics proxy,** not a human judgment of visibility.
 - **One captioning model, one prompt and greedy decoding.** The preprocessing result may not transfer to weaker models.
 - **The serving benchmark is small:** one 14-second clip, one scan per level, on a single laptop where the load generator shares the machine.
@@ -318,6 +346,7 @@ python -m eval.fusion_vs_clip --out artifacts/eval/fusion_vs_clip.json   # post-
 python -m eval.fresh680 --out artifacts/eval/fresh680_visual.json
 python -m eval.aggregation --stage dev  --out artifacts/eval/dev1k_aggregation.json
 python -m eval.aggregation --stage test --select-from artifacts/eval/dev1k_aggregation.json --out artifacts/eval/fresh680_aggregation.json
+python -m eval.multicap --out artifacts/eval/multicap.json        # needs Redis index eval_test320_off
 ```
 
 Raw outputs:
