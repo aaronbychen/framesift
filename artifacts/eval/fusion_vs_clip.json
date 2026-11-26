@@ -1,0 +1,192 @@
+{
+ "run": "artifacts/eval/test320_visual.json",
+ "status": "post-hoc, exploratory (not pre-specified)",
+ "fusion": "fusion_w1.0",
+ "visual_only_check": "matches artifact",
+ "all": {
+  "n": 320,
+  "hit@1": {
+   "clip_only": 0.4688,
+   "fusion": 0.5125,
+   "diff": 0.0437,
+   "diff_ci95": [
+    -0.0063,
+    0.0969
+   ],
+   "mcnemar": {
+    "only_clip": 27,
+    "only_fusion": 41,
+    "p_value": 0.1143
+   },
+   "p_holm": 0.7998
+  },
+  "hit@5": {
+   "clip_only": 0.7344,
+   "fusion": 0.7438,
+   "diff": 0.0094,
+   "diff_ci95": [
+    -0.0344,
+    0.0531
+   ],
+   "mcnemar": {
+    "only_clip": 24,
+    "only_fusion": 27,
+    "p_value": 0.7798
+   },
+   "p_holm": 1.0
+  },
+  "hit@10": {
+   "clip_only": 0.8219,
+   "fusion": 0.8281,
+   "diff": 0.0063,
+   "diff_ci95": [
+    -0.0312,
+    0.0437
+   ],
+   "mcnemar": {
+    "only_clip": 17,
+    "only_fusion": 19,
+    "p_value": 0.8679
+   },
+   "p_holm": 1.0
+  },
+  "mrr@100": {
+   "clip_only": 0.5772,
+   "fusion": 0.6184,
+   "diff": 0.0412,
+   "diff_ci95": [
+    0.0045,
+    0.0776
+   ],
+   "wilcoxon": {
+    "improved": 114,
+    "worse": 64,
+    "p_value": 0.0039
+   },
+   "p_holm": 0.031
+  }
+ },
+ "difficult": {
+  "n": 147,
+  "hit@1": {
+   "clip_only": 0.449,
+   "fusion": 0.5034,
+   "diff": 0.0544,
+   "diff_ci95": [
+    -0.0204,
+    0.1293
+   ],
+   "mcnemar": {
+    "only_clip": 12,
+    "only_fusion": 20,
+    "p_value": 0.2153
+   },
+   "p_holm": 1.0
+  },
+  "hit@5": {
+   "clip_only": 0.7279,
+   "fusion": 0.7075,
+   "diff": -0.0204,
+   "diff_ci95": [
+    -0.0884,
+    0.0476
+   ],
+   "mcnemar": {
+    "only_clip": 15,
+    "only_fusion": 12,
+    "p_value": 0.7011
+   },
+   "p_holm": 1.0
+  },
+  "hit@10": {
+   "clip_only": 0.8299,
+   "fusion": 0.7959,
+   "diff": -0.034,
+   "diff_ci95": [
+    -0.0952,
+    0.0272
+   ],
+   "mcnemar": {
+    "only_clip": 13,
+    "only_fusion": 8,
+    "p_value": 0.3833
+   },
+   "p_holm": 1.0
+  },
+  "mrr@100": {
+   "clip_only": 0.5685,
+   "fusion": 0.5946,
+   "diff": 0.0261,
+   "diff_ci95": [
+    -0.0307,
+    0.0837
+   ],
+   "wilcoxon": {
+    "improved": 48,
+    "worse": 36,
+    "p_value": 0.259
+   },
+   "p_holm": 1.0
+  }
+ },
+ "not_difficult": {
+  "n": 173,
+  "hit@1": {
+   "clip_only": 0.4855,
+   "fusion": 0.5202,
+   "diff": 0.0347,
+   "diff_ci95": [
+    -0.0347,
+    0.104
+   ],
+   "mcnemar": {
+    "only_clip": 15,
+    "only_fusion": 21,
+    "p_value": 0.405
+   }
+  },
+  "hit@5": {
+   "clip_only": 0.7399,
+   "fusion": 0.7746,
+   "diff": 0.0347,
+   "diff_ci95": [
+    -0.0173,
+    0.0925
+   ],
+   "mcnemar": {
+    "only_clip": 9,
+    "only_fusion": 15,
+    "p_value": 0.3075
+   }
+  },
+  "hit@10": {
+   "clip_only": 0.815,
+   "fusion": 0.8555,
+   "diff": 0.0405,
+   "diff_ci95": [
+    0.0,
+    0.0867
+   ],
+   "mcnemar": {
+    "only_clip": 4,
+    "only_fusion": 11,
+    "p_value": 0.1185
+   }
+  },
+  "mrr@100": {
+   "clip_only": 0.5846,
+   "fusion": 0.6386,
+   "diff": 0.054,
+   "diff_ci95": [
+    0.0072,
+    0.1008
+   ],
+   "wilcoxon": {
+    "improved": 66,
+    "worse": 28,
+    "p_value": 0.0045
+   }
+  }
+ },
+ "multiple_comparisons": "Holm over 8 tests (4 metrics x {all, difficult})"
+}

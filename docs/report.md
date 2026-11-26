@@ -33,6 +33,8 @@ The 95% confidence interval for the preprocessing effect excludes the +25 pp tha
 
 The gain the preprocessing was supposed to deliver on difficult footage came instead from changing *what* is matched (pixels, not captions). Even so it is +32% relative on Hit@1 and +13% on Hit@5, not +40%. The headline Hit@5 (74.4%) is still below 85%.
 
+Almost all of that gain comes from CLIP itself. A post-hoc comparison (section 3.6) finds no Hit@5 difference between fusion and CLIP alone: +0.9 pp [−3.4, +5.3]. Fusion only improves ranking order, with MRR +0.041, Holm p = 0.031. For a CLIP-only index, which is about 10× cheaper to build, that is a small price.
+
 ## 1. System
 
 ```
@@ -206,7 +208,16 @@ On Hit@5, the two retrievers each find clips the other misses: fusion recovers 3
 
 Notes:
 - **Where the idea came from.** The hypothesis behind v2 (captions are the bottleneck) came from error analysis of the v1 *test* results. Selection and protocol stayed on dev, but the choice of experiment was informed by the test set. That is a softer form of test-set reuse, and it is one reason for the independent check in 3.7.
-- **Fusion vs CLIP alone was not tested.** CLIP alone reaches Hit@5 73.4%, Hit@1 46.9%, MRR 0.577 on test, against 74.4% / 51.3% / 0.618 for fusion. These are descriptive numbers: the pre-specified test compares fusion with caption only. Most of the gain comes from CLIP, and with 320 queries the extra benefit of fusion over CLIP alone cannot be established. On dev, fusion led clearly (Hit@5 93.8 vs 87.5, MRR 0.844 vs 0.778), but dev has only 80 queries.
+- **Fusion vs CLIP alone (post-hoc).** The pre-specified test compares fusion with caption only. Fusion vs CLIP alone was checked afterwards on the same per-query ranks (`eval/fusion_vs_clip.py`, `artifacts/eval/fusion_vs_clip.json`). It is exploratory, with no new choices and Holm correction over 8 tests:
+
+  | test320 (320) | CLIP only | Fusion | Diff [95% CI] | p (Holm) |
+  |---|---|---|---|---|
+  | Hit@1 | 46.9 | 51.3 | +4.4 [−0.6, 9.7] | 0.80 |
+  | Hit@5 | 73.4 | 74.4 | +0.9 [−3.4, 5.3] | 1.0 |
+  | Hit@10 | 82.2 | 82.8 | +0.6 [−3.1, 4.4] | 1.0 |
+  | MRR | 0.577 | 0.618 | +0.041 [0.005, 0.078] | **0.031** |
+
+  Captions do not help to *find* the clip at all: the Hit@5 and Hit@10 differences are about zero. They only help *order* the candidates, with a modest MRR gain. On difficult clips no metric differs. Since captions cost about 10× more to index, a CLIP-only index is the better trade-off for most uses. On dev, fusion had led clearly (Hit@5 93.8 vs 87.5), another dev80 difference that did not hold up.
 - **Indexing cost.** This makes the cost question concrete.
   - CLIP indexing: 0.19 s per frame on the CPU (5,123 frames in 951 s, including video decoding).
   - Llama captions: about 2.0 s per frame on the GPU with vLLM, and 3.4 s per frame in-process.
@@ -280,6 +291,7 @@ python -m eval.stats --out artifacts/eval/stats.json
 python -m eval.visual --set eval/sets/dev80.json   --index-name eval_dev_tune    --out artifacts/eval/dev80_visual_grid.json
 python -m eval.visual --set eval/sets/test320.json --index-name eval_test320_off --select-from artifacts/eval/dev80_visual_grid.json --out artifacts/eval/test320_visual.json
 python -m eval.stats_visual --out artifacts/eval/stats_visual.json
+python -m eval.fusion_vs_clip --out artifacts/eval/fusion_vs_clip.json   # post-hoc
 ```
 
 Raw outputs:
