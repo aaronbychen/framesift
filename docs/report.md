@@ -246,6 +246,29 @@ The protocol was committed before running (`eval/fresh680.py`). The 680 1k-A cli
 - **The test320 result generalises.** At the same corpus size, fresh clips give 73.0% against 74.0% on test320's not-difficult queries, well inside its CI. As a sanity check, recomputing CLIP-only on test320 with this script reproduces 73.4%.
 - **Corpus size dominates the headline number.** The same retriever drops from 73.0% (320 candidates) to 64.4% (680) and 59.1% (1,000). Hit@5 on a 320-clip library is therefore not comparable to published 1k-A results. Analysis D (R@1 35.2, R@5 58.5, R@10 69.0) is the number that sits in the standard 1k-A setting, for CLIP alone and zero-shot.
 
+### 3.8 Pooling frame scores: max vs top-k mean
+
+The visual retriever scores a clip by its single best frame. Averaging the top few frames is the cheapest way to use more of the clip: it needs no new model and no re-encoding.
+
+The protocol was committed before running (`eval/aggregation.py`, commit `ec584e9`):
+- Candidates: max, mean embedding, and the mean of the top 2, 3 or 5 frame scores.
+- Selection used a new dev set, **dev1k**: 1,000 train-split clips (15,874 frames), disjoint from dev80 and 1k-A. dev80 was retired for this because on 80 candidates CLIP is near ceiling, and its earlier leads did not hold on test.
+- Verification on fresh680 against the full 1,000-clip corpus; test320 was not used. Primary test: R@5, exact McNemar, Holm over 4 metrics.
+
+On dev1k all candidates were within 0.7 pp on R@5 (max 59.2%, top5 59.9%). The rule selected **top5**.
+
+| fresh680 queries, 1,000-clip corpus | max | top5 | Diff [95% CI] | p (Holm) |
+|---|---|---|---|---|
+| R@1 | 35.6 | 38.1 | +2.5 [+0.1, +4.7] | 0.14 |
+| **R@5 (primary)** | 59.1 | 60.6 | +1.5 [−0.4, +3.5] | **0.37** |
+| R@10 | 68.4 | 69.0 | +0.6 [−1.0, +2.4] | 0.61 |
+| MRR | 0.467 | 0.486 | +0.019 [+0.004, +0.033] | < 0.001 |
+
+- **The primary test failed.** top5 does not significantly improve R@5, so the default stays max.
+- **Ranking order improves.** MRR is higher, with 232 queries ranking better and 117 worse. Small, consistent ranking gains without a recall gain are the same pattern as fusion in 3.6.
+- On the 680-clip fresh corpus the picture is the same: R@5 +0.7 pp (p = 0.57), MRR +0.020.
+- **Second use of fresh680.** Its first use (3.7) did not inform any choice made here.
+
 ## 4. Discussion
 
 ### 4.1 Why preprocessing did not help
@@ -292,6 +315,9 @@ python -m eval.visual --set eval/sets/dev80.json   --index-name eval_dev_tune   
 python -m eval.visual --set eval/sets/test320.json --index-name eval_test320_off --select-from artifacts/eval/dev80_visual_grid.json --out artifacts/eval/test320_visual.json
 python -m eval.stats_visual --out artifacts/eval/stats_visual.json
 python -m eval.fusion_vs_clip --out artifacts/eval/fusion_vs_clip.json   # post-hoc
+python -m eval.fresh680 --out artifacts/eval/fresh680_visual.json
+python -m eval.aggregation --stage dev  --out artifacts/eval/dev1k_aggregation.json
+python -m eval.aggregation --stage test --select-from artifacts/eval/dev1k_aggregation.json --out artifacts/eval/fresh680_aggregation.json
 ```
 
 Raw outputs:

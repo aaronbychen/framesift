@@ -1,0 +1,51 @@
+{
+ "generated_at": "2026-11-25T21:47:39-06:00",
+ "clip_model": ".data/models/clip-vit-large-patch14",
+ "set": "eval/sets/dev1k.json",
+ "n_queries": 1000,
+ "frames": 15874,
+ "selection_rule": "max r@5, then mrr@100, then simplest",
+ "selected": "top5",
+ "candidates": [
+  {
+   "method": "max",
+   "simplicity_order": 0,
+   "r@1": 0.359,
+   "r@5": 0.592,
+   "r@10": 0.669,
+   "mrr@100": 0.4674
+  },
+  {
+   "method": "mean_emb",
+   "simplicity_order": 1,
+   "r@1": 0.363,
+   "r@5": 0.594,
+   "r@10": 0.684,
+   "mrr@100": 0.4702
+  },
+  {
+   "method": "top2",
+   "simplicity_order": 2,
+   "r@1": 0.376,
+   "r@5": 0.597,
+   "r@10": 0.68,
+   "mrr@100": 0.4785
+  },
+  {
+   "method": "top3",
+   "simplicity_order": 3,
+   "r@1": 0.376,
+   "r@5": 0.595,
+   "r@10": 0.683,
+   "mrr@100": 0.4782
+  },
+  {
+   "method": "top5",
+   "simplicity_order": 4,
+   "r@1": 0.372,
+   "r@5": 0.599,
+   "r@10": 0.686,
+   "mrr@100": 0.476
+  }
+ ]
+}

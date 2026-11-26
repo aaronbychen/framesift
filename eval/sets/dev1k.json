@@ -1,0 +1,5009 @@
+{
+ "meta": {
+  "source": "MSR-VTT 9k train split",
+  "seed": 1,
+  "excludes": "dev80 and 1k-A test"
+ },
+ "clips": [
+  {
+   "video_id": "video1000",
+   "path": ".data\\msrvtt\\videos\\video\\video1000.mp4",
+   "query": "two women dressed as stormtroopers"
+  },
+  {
+   "video_id": "video1026",
+   "path": ".data\\msrvtt\\videos\\video\\video1026.mp4",
+   "query": "rush limbaugh is talking about how the united states should be fighting isis"
+  },
+  {
+   "video_id": "video1037",
+   "path": ".data\\msrvtt\\videos\\video\\video1037.mp4",
+   "query": "a woman is giving demo for baby trolley"
+  },
+  {
+   "video_id": "video1039",
+   "path": ".data\\msrvtt\\videos\\video\\video1039.mp4",
+   "query": "worker is doing repairs"
+  },
+  {
+   "video_id": "video105",
+   "path": ".data\\msrvtt\\videos\\video\\video105.mp4",
+   "query": "a man with a white jacket is explaining exercises for young people"
+  },
+  {
+   "video_id": "video1057",
+   "path": ".data\\msrvtt\\videos\\video\\video1057.mp4",
+   "query": "kid shows off his drumming skills"
+  },
+  {
+   "video_id": "video1061",
+   "path": ".data\\msrvtt\\videos\\video\\video1061.mp4",
+   "query": "jay leno checking out sports cars"
+  },
+  {
+   "video_id": "video1068",
+   "path": ".data\\msrvtt\\videos\\video\\video1068.mp4",
+   "query": "a cartoon of girls talking about fashion"
+  },
+  {
+   "video_id": "video1076",
+   "path": ".data\\msrvtt\\videos\\video\\video1076.mp4",
+   "query": "a woman is sitting"
+  },
+  {
+   "video_id": "video1100",
+   "path": ".data\\msrvtt\\videos\\video\\video1100.mp4",
+   "query": "a group of tomatoes on a plate with the speaker talking about their nutritional value and health benefits"
+  },
+  {
+   "video_id": "video1103",
+   "path": ".data\\msrvtt\\videos\\video\\video1103.mp4",
+   "query": "a man is playing soccer"
+  },
+  {
+   "video_id": "video1115",
+   "path": ".data\\msrvtt\\videos\\video\\video1115.mp4",
+   "query": "the person is showing how a mechanical device works"
+  },
+  {
+   "video_id": "video1123",
+   "path": ".data\\msrvtt\\videos\\video\\video1123.mp4",
+   "query": "man gives review on stroller"
+  },
+  {
+   "video_id": "video1129",
+   "path": ".data\\msrvtt\\videos\\video\\video1129.mp4",
+   "query": "a woman sets a timer"
+  },
+  {
+   "video_id": "video1134",
+   "path": ".data\\msrvtt\\videos\\video\\video1134.mp4",
+   "query": "a man is playing a video game"
+  },
+  {
+   "video_id": "video1145",
+   "path": ".data\\msrvtt\\videos\\video\\video1145.mp4",
+   "query": "a person sitting on a gam eshow"
+  },
+  {
+   "video_id": "video1149",
+   "path": ".data\\msrvtt\\videos\\video\\video1149.mp4",
+   "query": "a girl and boy kissing each other inside forest girl seeing scene displaying on screen"
+  },
+  {
+   "video_id": "video1155",
+   "path": ".data\\msrvtt\\videos\\video\\video1155.mp4",
+   "query": "a lion in the field laying down looking at another lion"
+  },
+  {
+   "video_id": "video1161",
+   "path": ".data\\msrvtt\\videos\\video\\video1161.mp4",
+   "query": "a little boy is playing a guitar and singing on the stage"
+  },
+  {
+   "video_id": "video1165",
+   "path": ".data\\msrvtt\\videos\\video\\video1165.mp4",
+   "query": "cartoon characters are interacting"
+  },
+  {
+   "video_id": "video1168",
+   "path": ".data\\msrvtt\\videos\\video\\video1168.mp4",
+   "query": "the modest wedding dress for the bridal looking gorgeous"
+  },
+  {
+   "video_id": "video1179",
+   "path": ".data\\msrvtt\\videos\\video\\video1179.mp4",
+   "query": "a man careses a womans hair and lays her down"
+  },
+  {
+   "video_id": "video1191",
+   "path": ".data\\msrvtt\\videos\\video\\video1191.mp4",
+   "query": "a man is playing a video game with sports cars"
+  },
+  {
+   "video_id": "video1192",
+   "path": ".data\\msrvtt\\videos\\video\\video1192.mp4",
+   "query": "two men film from an app through their iphone"
+  },
+  {
+   "video_id": "video1195",
+   "path": ".data\\msrvtt\\videos\\video\\video1195.mp4",
+   "query": "a puppy is on carpet"
+  },
+  {
+   "video_id": "video1198",
+   "path": ".data\\msrvtt\\videos\\video\\video1198.mp4",
+   "query": "a spanish speaker talks as a silver car races on pavement"
+  },
+  {
+   "video_id": "video1199",
+   "path": ".data\\msrvtt\\videos\\video\\video1199.mp4",
+   "query": "person is showing the ingredients in the kitchen"
+  },
+  {
+   "video_id": "video1206",
+   "path": ".data\\msrvtt\\videos\\video\\video1206.mp4",
+   "query": "a person draws a cartoon character"
+  },
+  {
+   "video_id": "video1210",
+   "path": ".data\\msrvtt\\videos\\video\\video1210.mp4",
+   "query": "there is a man making a wood furniture with tool"
+  },
+  {
+   "video_id": "video123",
+   "path": ".data\\msrvtt\\videos\\video\\video123.mp4",
+   "query": "a man in a kitchen talking about old times in older kitchens he is a chef"
+  },
+  {
+   "video_id": "video1234",
+   "path": ".data\\msrvtt\\videos\\video\\video1234.mp4",
+   "query": "a singer singing a song in a video with sub-titles"
+  },
+  {
+   "video_id": "video1238",
+   "path": ".data\\msrvtt\\videos\\video\\video1238.mp4",
+   "query": "people are playing a fun game together"
+  },
+  {
+   "video_id": "video1239",
+   "path": ".data\\msrvtt\\videos\\video\\video1239.mp4",
+   "query": "a milk info is been showed"
+  },
+  {
+   "video_id": "video1259",
+   "path": ".data\\msrvtt\\videos\\video\\video1259.mp4",
+   "query": "four men are discussing movies"
+  },
+  {
+   "video_id": "video1260",
+   "path": ".data\\msrvtt\\videos\\video\\video1260.mp4",
+   "query": "a woman preforms a song on stage"
+  },
+  {
+   "video_id": "video1263",
+   "path": ".data\\msrvtt\\videos\\video\\video1263.mp4",
+   "query": "a series of text graphics are explaining a patient procedure"
+  },
+  {
+   "video_id": "video1271",
+   "path": ".data\\msrvtt\\videos\\video\\video1271.mp4",
+   "query": "a small monkey dancing around inside a cage"
+  },
+  {
+   "video_id": "video1288",
+   "path": ".data\\msrvtt\\videos\\video\\video1288.mp4",
+   "query": "a young boy preaching about faith"
+  },
+  {
+   "video_id": "video1294",
+   "path": ".data\\msrvtt\\videos\\video\\video1294.mp4",
+   "query": "a woman prepares dough in a metal bowl"
+  },
+  {
+   "video_id": "video1299",
+   "path": ".data\\msrvtt\\videos\\video\\video1299.mp4",
+   "query": "a young man demonstrates his dance moves inside his house"
+  },
+  {
+   "video_id": "video13",
+   "path": ".data\\msrvtt\\videos\\video\\video13.mp4",
+   "query": "a play is acted out"
+  },
+  {
+   "video_id": "video1310",
+   "path": ".data\\msrvtt\\videos\\video\\video1310.mp4",
+   "query": "it is a short advertisement"
+  },
+  {
+   "video_id": "video1342",
+   "path": ".data\\msrvtt\\videos\\video\\video1342.mp4",
+   "query": "photos of footballers set to music"
+  },
+  {
+   "video_id": "video1348",
+   "path": ".data\\msrvtt\\videos\\video\\video1348.mp4",
+   "query": "a person is browsing around on their xbox"
+  },
+  {
+   "video_id": "video1352",
+   "path": ".data\\msrvtt\\videos\\video\\video1352.mp4",
+   "query": "a young girl sings beautifully"
+  },
+  {
+   "video_id": "video136",
+   "path": ".data\\msrvtt\\videos\\video\\video136.mp4",
+   "query": "on a green field a huge group of people run up a hill"
+  },
+  {
+   "video_id": "video1372",
+   "path": ".data\\msrvtt\\videos\\video\\video1372.mp4",
+   "query": "a woman is telling the news"
+  },
+  {
+   "video_id": "video1380",
+   "path": ".data\\msrvtt\\videos\\video\\video1380.mp4",
+   "query": "the men is telling the feature of the new holly wood movie specialty"
+  },
+  {
+   "video_id": "video139",
+   "path": ".data\\msrvtt\\videos\\video\\video139.mp4",
+   "query": "a woman is taking a photo"
+  },
+  {
+   "video_id": "video1396",
+   "path": ".data\\msrvtt\\videos\\video\\video1396.mp4",
+   "query": "old man in a red tie talking about where laser corp is located"
+  },
+  {
+   "video_id": "video1401",
+   "path": ".data\\msrvtt\\videos\\video\\video1401.mp4",
+   "query": "a man showing other person his photos and explaining in non english"
+  },
+  {
+   "video_id": "video1414",
+   "path": ".data\\msrvtt\\videos\\video\\video1414.mp4",
+   "query": "two dolls are sitting at a table"
+  },
+  {
+   "video_id": "video142",
+   "path": ".data\\msrvtt\\videos\\video\\video142.mp4",
+   "query": "someone is playing the online game"
+  },
+  {
+   "video_id": "video1425",
+   "path": ".data\\msrvtt\\videos\\video\\video1425.mp4",
+   "query": "a person is playing a video game"
+  },
+  {
+   "video_id": "video1437",
+   "path": ".data\\msrvtt\\videos\\video\\video1437.mp4",
+   "query": "a dog is playing in the water with family"
+  },
+  {
+   "video_id": "video1469",
+   "path": ".data\\msrvtt\\videos\\video\\video1469.mp4",
+   "query": "a cute kid tasting a new kind of dish which is being given by his mother"
+  },
+  {
+   "video_id": "video1472",
+   "path": ".data\\msrvtt\\videos\\video\\video1472.mp4",
+   "query": "squidward cartoon dancing scene"
+  },
+  {
+   "video_id": "video1474",
+   "path": ".data\\msrvtt\\videos\\video\\video1474.mp4",
+   "query": "a group of people gather in the room and walk out a door"
+  },
+  {
+   "video_id": "video1485",
+   "path": ".data\\msrvtt\\videos\\video\\video1485.mp4",
+   "query": "a video of a celebrity getting praised for her body"
+  },
+  {
+   "video_id": "video1490",
+   "path": ".data\\msrvtt\\videos\\video\\video1490.mp4",
+   "query": "a person is playing a video game"
+  },
+  {
+   "video_id": "video1491",
+   "path": ".data\\msrvtt\\videos\\video\\video1491.mp4",
+   "query": "freddy krueger dragging a victim into a fire spewing pit in a video game"
+  },
+  {
+   "video_id": "video1492",
+   "path": ".data\\msrvtt\\videos\\video\\video1492.mp4",
+   "query": "peppa pig is shown in a sports based episode"
+  },
+  {
+   "video_id": "video1503",
+   "path": ".data\\msrvtt\\videos\\video\\video1503.mp4",
+   "query": "women on a japanese talk show"
+  },
+  {
+   "video_id": "video1506",
+   "path": ".data\\msrvtt\\videos\\video\\video1506.mp4",
+   "query": "some people are playing music"
+  },
+  {
+   "video_id": "video1509",
+   "path": ".data\\msrvtt\\videos\\video\\video1509.mp4",
+   "query": "a model struts down a runway for fashion"
+  },
+  {
+   "video_id": "video151",
+   "path": ".data\\msrvtt\\videos\\video\\video151.mp4",
+   "query": "there is a suit man is talking nearby a man"
+  },
+  {
+   "video_id": "video1512",
+   "path": ".data\\msrvtt\\videos\\video\\video1512.mp4",
+   "query": "two women discuss farmer s markets and groceries while a man prepares food"
+  },
+  {
+   "video_id": "video1514",
+   "path": ".data\\msrvtt\\videos\\video\\video1514.mp4",
+   "query": "a person folding a yellow piece of paper"
+  },
+  {
+   "video_id": "video1520",
+   "path": ".data\\msrvtt\\videos\\video\\video1520.mp4",
+   "query": "a man is fixing a water pump"
+  },
+  {
+   "video_id": "video1537",
+   "path": ".data\\msrvtt\\videos\\video\\video1537.mp4",
+   "query": "woman is applying blue eye shadow and blending it with a brush in the corners of her eyes"
+  },
+  {
+   "video_id": "video1550",
+   "path": ".data\\msrvtt\\videos\\video\\video1550.mp4",
+   "query": "there are some people traveling to a walley"
+  },
+  {
+   "video_id": "video1555",
+   "path": ".data\\msrvtt\\videos\\video\\video1555.mp4",
+   "query": "a girl is talking about what she has eaten"
+  },
+  {
+   "video_id": "video1574",
+   "path": ".data\\msrvtt\\videos\\video\\video1574.mp4",
+   "query": "a animated portrayal of a movie theater"
+  },
+  {
+   "video_id": "video158",
+   "path": ".data\\msrvtt\\videos\\video\\video158.mp4",
+   "query": "a football player is interviewed"
+  },
+  {
+   "video_id": "video1593",
+   "path": ".data\\msrvtt\\videos\\video\\video1593.mp4",
+   "query": "a woman gives a cooking tutorial"
+  },
+  {
+   "video_id": "video1596",
+   "path": ".data\\msrvtt\\videos\\video\\video1596.mp4",
+   "query": "a boy plays with a minion toy in it s box"
+  },
+  {
+   "video_id": "video1609",
+   "path": ".data\\msrvtt\\videos\\video\\video1609.mp4",
+   "query": "a man is climbing down this large hanger"
+  },
+  {
+   "video_id": "video163",
+   "path": ".data\\msrvtt\\videos\\video\\video163.mp4",
+   "query": "the beetles play guitar and so does elvis"
+  },
+  {
+   "video_id": "video1630",
+   "path": ".data\\msrvtt\\videos\\video\\video1630.mp4",
+   "query": "aljazeera coverage of war on terror"
+  },
+  {
+   "video_id": "video1636",
+   "path": ".data\\msrvtt\\videos\\video\\video1636.mp4",
+   "query": "someone plays the sims"
+  },
+  {
+   "video_id": "video1637",
+   "path": ".data\\msrvtt\\videos\\video\\video1637.mp4",
+   "query": "the video is giving details about movie produced by"
+  },
+  {
+   "video_id": "video1640",
+   "path": ".data\\msrvtt\\videos\\video\\video1640.mp4",
+   "query": "people discuss how much they like a beer"
+  },
+  {
+   "video_id": "video1641",
+   "path": ".data\\msrvtt\\videos\\video\\video1641.mp4",
+   "query": "spongebob talking to squidly"
+  },
+  {
+   "video_id": "video1653",
+   "path": ".data\\msrvtt\\videos\\video\\video1653.mp4",
+   "query": "two teams players playing rugby very interestingly"
+  },
+  {
+   "video_id": "video1654",
+   "path": ".data\\msrvtt\\videos\\video\\video1654.mp4",
+   "query": "a commercial for body spray"
+  },
+  {
+   "video_id": "video1656",
+   "path": ".data\\msrvtt\\videos\\video\\video1656.mp4",
+   "query": "a man talking about how to hold a baseball"
+  },
+  {
+   "video_id": "video166",
+   "path": ".data\\msrvtt\\videos\\video\\video166.mp4",
+   "query": "a woman is driving the wrong way on a street and causes several crashes"
+  },
+  {
+   "video_id": "video1669",
+   "path": ".data\\msrvtt\\videos\\video\\video1669.mp4",
+   "query": "a young man sings on a televised musical competition show"
+  },
+  {
+   "video_id": "video1671",
+   "path": ".data\\msrvtt\\videos\\video\\video1671.mp4",
+   "query": "children are passing a container while in school"
+  },
+  {
+   "video_id": "video1690",
+   "path": ".data\\msrvtt\\videos\\video\\video1690.mp4",
+   "query": "a person is doing wheelies on a motorcycle"
+  },
+  {
+   "video_id": "video1700",
+   "path": ".data\\msrvtt\\videos\\video\\video1700.mp4",
+   "query": "a man is talking about rendering animation"
+  },
+  {
+   "video_id": "video1706",
+   "path": ".data\\msrvtt\\videos\\video\\video1706.mp4",
+   "query": "sand widge is sliced and put it on the cup"
+  },
+  {
+   "video_id": "video1707",
+   "path": ".data\\msrvtt\\videos\\video\\video1707.mp4",
+   "query": "people are riding small motorcycles"
+  },
+  {
+   "video_id": "video1724",
+   "path": ".data\\msrvtt\\videos\\video\\video1724.mp4",
+   "query": "a person talks about a wildlife photographer"
+  },
+  {
+   "video_id": "video1726",
+   "path": ".data\\msrvtt\\videos\\video\\video1726.mp4",
+   "query": "a black car is parked"
+  },
+  {
+   "video_id": "video173",
+   "path": ".data\\msrvtt\\videos\\video\\video173.mp4",
+   "query": "this is a homemade video of a boy describing how to cook some fish"
+  },
+  {
+   "video_id": "video1731",
+   "path": ".data\\msrvtt\\videos\\video\\video1731.mp4",
+   "query": "blonde woman is showing some exercises while people look at her"
+  },
+  {
+   "video_id": "video1749",
+   "path": ".data\\msrvtt\\videos\\video\\video1749.mp4",
+   "query": "a man discussing his different views"
+  },
+  {
+   "video_id": "video1759",
+   "path": ".data\\msrvtt\\videos\\video\\video1759.mp4",
+   "query": "a man is reviewing about the car"
+  },
+  {
+   "video_id": "video1767",
+   "path": ".data\\msrvtt\\videos\\video\\video1767.mp4",
+   "query": "a little girl is on a talent show"
+  },
+  {
+   "video_id": "video1768",
+   "path": ".data\\msrvtt\\videos\\video\\video1768.mp4",
+   "query": "a dad is making fun with his baby and the baby is laughing for that"
+  },
+  {
+   "video_id": "video1781",
+   "path": ".data\\msrvtt\\videos\\video\\video1781.mp4",
+   "query": "a teacher is explaining what it s like to teach"
+  },
+  {
+   "video_id": "video1784",
+   "path": ".data\\msrvtt\\videos\\video\\video1784.mp4",
+   "query": "a man is taking a gun and aiming"
+  },
+  {
+   "video_id": "video1788",
+   "path": ".data\\msrvtt\\videos\\video\\video1788.mp4",
+   "query": "a woman raps on in a room"
+  },
+  {
+   "video_id": "video179",
+   "path": ".data\\msrvtt\\videos\\video\\video179.mp4",
+   "query": "a man is talking on the megaphone"
+  },
+  {
+   "video_id": "video1798",
+   "path": ".data\\msrvtt\\videos\\video\\video1798.mp4",
+   "query": "teaching the girl how to dispose the sanitary napkin after use"
+  },
+  {
+   "video_id": "video1810",
+   "path": ".data\\msrvtt\\videos\\video\\video1810.mp4",
+   "query": "a man is talking"
+  },
+  {
+   "video_id": "video1834",
+   "path": ".data\\msrvtt\\videos\\video\\video1834.mp4",
+   "query": "a man talking about the motor in a honda civic"
+  },
+  {
+   "video_id": "video1841",
+   "path": ".data\\msrvtt\\videos\\video\\video1841.mp4",
+   "query": "a girl begins singing on stage in voice kids"
+  },
+  {
+   "video_id": "video1864",
+   "path": ".data\\msrvtt\\videos\\video\\video1864.mp4",
+   "query": "a soccer player is trying to gain control of the ball"
+  },
+  {
+   "video_id": "video1869",
+   "path": ".data\\msrvtt\\videos\\video\\video1869.mp4",
+   "query": "a man is cutting paper"
+  },
+  {
+   "video_id": "video1883",
+   "path": ".data\\msrvtt\\videos\\video\\video1883.mp4",
+   "query": "dashcam of a live car collision"
+  },
+  {
+   "video_id": "video1887",
+   "path": ".data\\msrvtt\\videos\\video\\video1887.mp4",
+   "query": "people walk around with lanterns"
+  },
+  {
+   "video_id": "video1889",
+   "path": ".data\\msrvtt\\videos\\video\\video1889.mp4",
+   "query": "a man points to some plants in the woods"
+  },
+  {
+   "video_id": "video1896",
+   "path": ".data\\msrvtt\\videos\\video\\video1896.mp4",
+   "query": "a man in a black shirt pointing to different ingredients on a counter"
+  },
+  {
+   "video_id": "video1902",
+   "path": ".data\\msrvtt\\videos\\video\\video1902.mp4",
+   "query": "the muppets are being shown in a theater"
+  },
+  {
+   "video_id": "video1910",
+   "path": ".data\\msrvtt\\videos\\video\\video1910.mp4",
+   "query": "a man dressed up as robin hood is talking to a late night talk show host"
+  },
+  {
+   "video_id": "video1914",
+   "path": ".data\\msrvtt\\videos\\video\\video1914.mp4",
+   "query": "a person playing with toys"
+  },
+  {
+   "video_id": "video1920",
+   "path": ".data\\msrvtt\\videos\\video\\video1920.mp4",
+   "query": "a cartoon child is lifted into the air by a star"
+  },
+  {
+   "video_id": "video1925",
+   "path": ".data\\msrvtt\\videos\\video\\video1925.mp4",
+   "query": "a bear shaking a tree that has a bee nest"
+  },
+  {
+   "video_id": "video1936",
+   "path": ".data\\msrvtt\\videos\\video\\video1936.mp4",
+   "query": "a man playing video games"
+  },
+  {
+   "video_id": "video1941",
+   "path": ".data\\msrvtt\\videos\\video\\video1941.mp4",
+   "query": "picture of different guys"
+  },
+  {
+   "video_id": "video1948",
+   "path": ".data\\msrvtt\\videos\\video\\video1948.mp4",
+   "query": "he is assemble something"
+  },
+  {
+   "video_id": "video1951",
+   "path": ".data\\msrvtt\\videos\\video\\video1951.mp4",
+   "query": "a man is on a boat"
+  },
+  {
+   "video_id": "video1960",
+   "path": ".data\\msrvtt\\videos\\video\\video1960.mp4",
+   "query": "images of a beautiful woman are shown"
+  },
+  {
+   "video_id": "video1969",
+   "path": ".data\\msrvtt\\videos\\video\\video1969.mp4",
+   "query": "a video game character is jumping"
+  },
+  {
+   "video_id": "video1983",
+   "path": ".data\\msrvtt\\videos\\video\\video1983.mp4",
+   "query": "a dog resting in a box while feeding its baby"
+  },
+  {
+   "video_id": "video1997",
+   "path": ".data\\msrvtt\\videos\\video\\video1997.mp4",
+   "query": "a man is water skiing behind a boat"
+  },
+  {
+   "video_id": "video2012",
+   "path": ".data\\msrvtt\\videos\\video\\video2012.mp4",
+   "query": "women are modeling high heeled shoes"
+  },
+  {
+   "video_id": "video2013",
+   "path": ".data\\msrvtt\\videos\\video\\video2013.mp4",
+   "query": "animated cartoon with techno music for the backround"
+  },
+  {
+   "video_id": "video202",
+   "path": ".data\\msrvtt\\videos\\video\\video202.mp4",
+   "query": "a woman wearing a black sweater and a green spotted apron stir fries food"
+  },
+  {
+   "video_id": "video203",
+   "path": ".data\\msrvtt\\videos\\video\\video203.mp4",
+   "query": "a man in white medical gown and mask prepares a sample on table adding bar code sticker"
+  },
+  {
+   "video_id": "video2036",
+   "path": ".data\\msrvtt\\videos\\video\\video2036.mp4",
+   "query": "a soldier salutes his commanding officer"
+  },
+  {
+   "video_id": "video2046",
+   "path": ".data\\msrvtt\\videos\\video\\video2046.mp4",
+   "query": "an octopus moving in deep sea to somewhere"
+  },
+  {
+   "video_id": "video2047",
+   "path": ".data\\msrvtt\\videos\\video\\video2047.mp4",
+   "query": "a woman is ice skating"
+  },
+  {
+   "video_id": "video2066",
+   "path": ".data\\msrvtt\\videos\\video\\video2066.mp4",
+   "query": "various spices are seen on counter in clear glass bowls in kitchen"
+  },
+  {
+   "video_id": "video2068",
+   "path": ".data\\msrvtt\\videos\\video\\video2068.mp4",
+   "query": "a man works hard on folding some origami"
+  },
+  {
+   "video_id": "video2077",
+   "path": ".data\\msrvtt\\videos\\video\\video2077.mp4",
+   "query": "a man is hosting a show"
+  },
+  {
+   "video_id": "video2087",
+   "path": ".data\\msrvtt\\videos\\video\\video2087.mp4",
+   "query": "two women talking on the camera"
+  },
+  {
+   "video_id": "video2088",
+   "path": ".data\\msrvtt\\videos\\video\\video2088.mp4",
+   "query": "young boys are playing baseball"
+  },
+  {
+   "video_id": "video2092",
+   "path": ".data\\msrvtt\\videos\\video\\video2092.mp4",
+   "query": "horses start is pens and then start running in a race wit their jockeys"
+  },
+  {
+   "video_id": "video2100",
+   "path": ".data\\msrvtt\\videos\\video\\video2100.mp4",
+   "query": "in a movie trailer a man and a woman have a conversation in a foreign language"
+  },
+  {
+   "video_id": "video2118",
+   "path": ".data\\msrvtt\\videos\\video\\video2118.mp4",
+   "query": "a guy with a long red beard wearing a green baseball cap is walking through a building while talking"
+  },
+  {
+   "video_id": "video2130",
+   "path": ".data\\msrvtt\\videos\\video\\video2130.mp4",
+   "query": "two men interviewing an old lady"
+  },
+  {
+   "video_id": "video2136",
+   "path": ".data\\msrvtt\\videos\\video\\video2136.mp4",
+   "query": "it is the part of glittering"
+  },
+  {
+   "video_id": "video2140",
+   "path": ".data\\msrvtt\\videos\\video\\video2140.mp4",
+   "query": "is being interviewed"
+  },
+  {
+   "video_id": "video2144",
+   "path": ".data\\msrvtt\\videos\\video\\video2144.mp4",
+   "query": "the man in the brown coat chew gum and talk on the balck couch"
+  },
+  {
+   "video_id": "video2148",
+   "path": ".data\\msrvtt\\videos\\video\\video2148.mp4",
+   "query": "animated characters are dancing"
+  },
+  {
+   "video_id": "video2149",
+   "path": ".data\\msrvtt\\videos\\video\\video2149.mp4",
+   "query": "three young people are giving a speech"
+  },
+  {
+   "video_id": "video2154",
+   "path": ".data\\msrvtt\\videos\\video\\video2154.mp4",
+   "query": "a person playing a video game while subtitles are being displayed"
+  },
+  {
+   "video_id": "video2155",
+   "path": ".data\\msrvtt\\videos\\video\\video2155.mp4",
+   "query": "a girl twists her hair"
+  },
+  {
+   "video_id": "video2164",
+   "path": ".data\\msrvtt\\videos\\video\\video2164.mp4",
+   "query": "large size mountain is found near the sea"
+  },
+  {
+   "video_id": "video217",
+   "path": ".data\\msrvtt\\videos\\video\\video217.mp4",
+   "query": "people on an indian show"
+  },
+  {
+   "video_id": "video2198",
+   "path": ".data\\msrvtt\\videos\\video\\video2198.mp4",
+   "query": "a man talks about kids in a funny way"
+  },
+  {
+   "video_id": "video2204",
+   "path": ".data\\msrvtt\\videos\\video\\video2204.mp4",
+   "query": "a woman is packing clothes"
+  },
+  {
+   "video_id": "video2220",
+   "path": ".data\\msrvtt\\videos\\video\\video2220.mp4",
+   "query": "different men and women sitting and talking"
+  },
+  {
+   "video_id": "video2223",
+   "path": ".data\\msrvtt\\videos\\video\\video2223.mp4",
+   "query": "a girl talks about showing pride and pictures of children wearing sparkly glasses are shown"
+  },
+  {
+   "video_id": "video2233",
+   "path": ".data\\msrvtt\\videos\\video\\video2233.mp4",
+   "query": "a man in a suit jacket is telling me to look at myself"
+  },
+  {
+   "video_id": "video2236",
+   "path": ".data\\msrvtt\\videos\\video\\video2236.mp4",
+   "query": "a person driving a fast car"
+  },
+  {
+   "video_id": "video2256",
+   "path": ".data\\msrvtt\\videos\\video\\video2256.mp4",
+   "query": "three women talking on a new show"
+  },
+  {
+   "video_id": "video2282",
+   "path": ".data\\msrvtt\\videos\\video\\video2282.mp4",
+   "query": "a gamer plays a soccer video game"
+  },
+  {
+   "video_id": "video2285",
+   "path": ".data\\msrvtt\\videos\\video\\video2285.mp4",
+   "query": "a teenage boy narrates and records a let s play of a kingdom hearts game"
+  },
+  {
+   "video_id": "video2290",
+   "path": ".data\\msrvtt\\videos\\video\\video2290.mp4",
+   "query": "the performer wore a stylish hat"
+  },
+  {
+   "video_id": "video2292",
+   "path": ".data\\msrvtt\\videos\\video\\video2292.mp4",
+   "query": "a woman is dancing to the music in a garden"
+  },
+  {
+   "video_id": "video2300",
+   "path": ".data\\msrvtt\\videos\\video\\video2300.mp4",
+   "query": "someone is showing on internet system"
+  },
+  {
+   "video_id": "video2320",
+   "path": ".data\\msrvtt\\videos\\video\\video2320.mp4",
+   "query": "action thriller gunshot scene"
+  },
+  {
+   "video_id": "video2340",
+   "path": ".data\\msrvtt\\videos\\video\\video2340.mp4",
+   "query": "this video showed a commercial for dragonball z"
+  },
+  {
+   "video_id": "video2343",
+   "path": ".data\\msrvtt\\videos\\video\\video2343.mp4",
+   "query": "a family is having coversation"
+  },
+  {
+   "video_id": "video238",
+   "path": ".data\\msrvtt\\videos\\video\\video238.mp4",
+   "query": "someone is showing weather graphs"
+  },
+  {
+   "video_id": "video2392",
+   "path": ".data\\msrvtt\\videos\\video\\video2392.mp4",
+   "query": "a teacher is talking"
+  },
+  {
+   "video_id": "video240",
+   "path": ".data\\msrvtt\\videos\\video\\video240.mp4",
+   "query": "blonde woman is having conversation with man in grey suit"
+  },
+  {
+   "video_id": "video2400",
+   "path": ".data\\msrvtt\\videos\\video\\video2400.mp4",
+   "query": "a guy is preparing to parachute"
+  },
+  {
+   "video_id": "video2422",
+   "path": ".data\\msrvtt\\videos\\video\\video2422.mp4",
+   "query": "disney princess puzzles are shown put together"
+  },
+  {
+   "video_id": "video2436",
+   "path": ".data\\msrvtt\\videos\\video\\video2436.mp4",
+   "query": "people are watching a military procession"
+  },
+  {
+   "video_id": "video2450",
+   "path": ".data\\msrvtt\\videos\\video\\video2450.mp4",
+   "query": "various scenes of a group of people being scared"
+  },
+  {
+   "video_id": "video2452",
+   "path": ".data\\msrvtt\\videos\\video\\video2452.mp4",
+   "query": "a small bull charges a man sitting on the ground and waving a cape"
+  },
+  {
+   "video_id": "video2453",
+   "path": ".data\\msrvtt\\videos\\video\\video2453.mp4",
+   "query": "children sing and dance with disney characters"
+  },
+  {
+   "video_id": "video2454",
+   "path": ".data\\msrvtt\\videos\\video\\video2454.mp4",
+   "query": "some people are talking to each other in a room"
+  },
+  {
+   "video_id": "video2460",
+   "path": ".data\\msrvtt\\videos\\video\\video2460.mp4",
+   "query": "a ate night host interviewing a celebrity"
+  },
+  {
+   "video_id": "video2466",
+   "path": ".data\\msrvtt\\videos\\video\\video2466.mp4",
+   "query": "a black guy with a white shirt is sitting on stairs"
+  },
+  {
+   "video_id": "video2473",
+   "path": ".data\\msrvtt\\videos\\video\\video2473.mp4",
+   "query": "cartoon animals are playing music and singing"
+  },
+  {
+   "video_id": "video2474",
+   "path": ".data\\msrvtt\\videos\\video\\video2474.mp4",
+   "query": "players are on the soccer field"
+  },
+  {
+   "video_id": "video2497",
+   "path": ".data\\msrvtt\\videos\\video\\video2497.mp4",
+   "query": "a man talking something about the animated cartoon characters"
+  },
+  {
+   "video_id": "video250",
+   "path": ".data\\msrvtt\\videos\\video\\video250.mp4",
+   "query": "a car is in a still photo"
+  },
+  {
+   "video_id": "video2514",
+   "path": ".data\\msrvtt\\videos\\video\\video2514.mp4",
+   "query": "a filmographer describes what it was like to work with a famous director"
+  },
+  {
+   "video_id": "video2517",
+   "path": ".data\\msrvtt\\videos\\video\\video2517.mp4",
+   "query": "zerg rush commercial for earning on computer screen"
+  },
+  {
+   "video_id": "video254",
+   "path": ".data\\msrvtt\\videos\\video\\video254.mp4",
+   "query": "a soccer player is scoring a goal in a penalty kick"
+  },
+  {
+   "video_id": "video2549",
+   "path": ".data\\msrvtt\\videos\\video\\video2549.mp4",
+   "query": "a screencast of a videogame where freddy krueger is battling a four-armed monster"
+  },
+  {
+   "video_id": "video2574",
+   "path": ".data\\msrvtt\\videos\\video\\video2574.mp4",
+   "query": "woman talking about black cats and other cats"
+  },
+  {
+   "video_id": "video2575",
+   "path": ".data\\msrvtt\\videos\\video\\video2575.mp4",
+   "query": "an exercise bike is being advertised while a female narrator describes its ability to help lose weight"
+  },
+  {
+   "video_id": "video2580",
+   "path": ".data\\msrvtt\\videos\\video\\video2580.mp4",
+   "query": "a person is playing a video game"
+  },
+  {
+   "video_id": "video2594",
+   "path": ".data\\msrvtt\\videos\\video\\video2594.mp4",
+   "query": "hockey players are playing"
+  },
+  {
+   "video_id": "video2595",
+   "path": ".data\\msrvtt\\videos\\video\\video2595.mp4",
+   "query": "a man wearing head phone is singing"
+  },
+  {
+   "video_id": "video26",
+   "path": ".data\\msrvtt\\videos\\video\\video26.mp4",
+   "query": "a variety of show debut dates are shown in a slideshow"
+  },
+  {
+   "video_id": "video2609",
+   "path": ".data\\msrvtt\\videos\\video\\video2609.mp4",
+   "query": "a pesron is describing one of the better motherboards for a computer"
+  },
+  {
+   "video_id": "video2615",
+   "path": ".data\\msrvtt\\videos\\video\\video2615.mp4",
+   "query": "singers are singing song"
+  },
+  {
+   "video_id": "video2627",
+   "path": ".data\\msrvtt\\videos\\video\\video2627.mp4",
+   "query": "a computer animated man talks about atoms protons and electrons"
+  },
+  {
+   "video_id": "video2635",
+   "path": ".data\\msrvtt\\videos\\video\\video2635.mp4",
+   "query": "a person shows a car interior"
+  },
+  {
+   "video_id": "video2638",
+   "path": ".data\\msrvtt\\videos\\video\\video2638.mp4",
+   "query": "a man and woman are talking to eachother in a show on bbc"
+  },
+  {
+   "video_id": "video2645",
+   "path": ".data\\msrvtt\\videos\\video\\video2645.mp4",
+   "query": "a man interviews girls at a bar"
+  },
+  {
+   "video_id": "video2648",
+   "path": ".data\\msrvtt\\videos\\video\\video2648.mp4",
+   "query": "a musical group performing"
+  },
+  {
+   "video_id": "video2671",
+   "path": ".data\\msrvtt\\videos\\video\\video2671.mp4",
+   "query": "military men going in the chopper"
+  },
+  {
+   "video_id": "video2677",
+   "path": ".data\\msrvtt\\videos\\video\\video2677.mp4",
+   "query": "a woman talking to an audience on a microphone"
+  },
+  {
+   "video_id": "video2685",
+   "path": ".data\\msrvtt\\videos\\video\\video2685.mp4",
+   "query": "a compilation of a few different soccer games"
+  },
+  {
+   "video_id": "video2693",
+   "path": ".data\\msrvtt\\videos\\video\\video2693.mp4",
+   "query": "the windows provided a scenic view"
+  },
+  {
+   "video_id": "video2705",
+   "path": ".data\\msrvtt\\videos\\video\\video2705.mp4",
+   "query": "man in blue over coat is talking to the other person"
+  },
+  {
+   "video_id": "video2712",
+   "path": ".data\\msrvtt\\videos\\video\\video2712.mp4",
+   "query": "a guy and a girl snuggle each other while sitting in a life guard chair on a beach"
+  },
+  {
+   "video_id": "video2722",
+   "path": ".data\\msrvtt\\videos\\video\\video2722.mp4",
+   "query": "women are reviewing a sports bra"
+  },
+  {
+   "video_id": "video2723",
+   "path": ".data\\msrvtt\\videos\\video\\video2723.mp4",
+   "query": "woman holds a small furry animal and lets it crawl around"
+  },
+  {
+   "video_id": "video2729",
+   "path": ".data\\msrvtt\\videos\\video\\video2729.mp4",
+   "query": "a large piece of machinery is moving a car around inside of a warehouse"
+  },
+  {
+   "video_id": "video2736",
+   "path": ".data\\msrvtt\\videos\\video\\video2736.mp4",
+   "query": "cartoon of superhero fighting crime"
+  },
+  {
+   "video_id": "video275",
+   "path": ".data\\msrvtt\\videos\\video\\video275.mp4",
+   "query": "a made is removing a wire from a motor"
+  },
+  {
+   "video_id": "video2751",
+   "path": ".data\\msrvtt\\videos\\video\\video2751.mp4",
+   "query": "retro party with two men with roses"
+  },
+  {
+   "video_id": "video2761",
+   "path": ".data\\msrvtt\\videos\\video\\video2761.mp4",
+   "query": "a man is assembling electronics"
+  },
+  {
+   "video_id": "video2765",
+   "path": ".data\\msrvtt\\videos\\video\\video2765.mp4",
+   "query": "person playing video game"
+  },
+  {
+   "video_id": "video2766",
+   "path": ".data\\msrvtt\\videos\\video\\video2766.mp4",
+   "query": "two american girl dolls with children pretending to talk for them"
+  },
+  {
+   "video_id": "video2772",
+   "path": ".data\\msrvtt\\videos\\video\\video2772.mp4",
+   "query": "a person is driving"
+  },
+  {
+   "video_id": "video2775",
+   "path": ".data\\msrvtt\\videos\\video\\video2775.mp4",
+   "query": "a girl in blue is talking about a black dress"
+  },
+  {
+   "video_id": "video2777",
+   "path": ".data\\msrvtt\\videos\\video\\video2777.mp4",
+   "query": "a person is reaching into water to grab balls"
+  },
+  {
+   "video_id": "video2784",
+   "path": ".data\\msrvtt\\videos\\video\\video2784.mp4",
+   "query": "an animated woman is sitting on a park bench"
+  },
+  {
+   "video_id": "video2785",
+   "path": ".data\\msrvtt\\videos\\video\\video2785.mp4",
+   "query": "a guy wearing a green shirt talks about sitting on chairs"
+  },
+  {
+   "video_id": "video2802",
+   "path": ".data\\msrvtt\\videos\\video\\video2802.mp4",
+   "query": "there is a blue shirt man is talking with a man"
+  },
+  {
+   "video_id": "video2803",
+   "path": ".data\\msrvtt\\videos\\video\\video2803.mp4",
+   "query": "a man walks down the runway"
+  },
+  {
+   "video_id": "video2813",
+   "path": ".data\\msrvtt\\videos\\video\\video2813.mp4",
+   "query": "two men in jeans get out tools from underneath the front seats of a car"
+  },
+  {
+   "video_id": "video2814",
+   "path": ".data\\msrvtt\\videos\\video\\video2814.mp4",
+   "query": "a person is playing a video game"
+  },
+  {
+   "video_id": "video283",
+   "path": ".data\\msrvtt\\videos\\video\\video283.mp4",
+   "query": "a bearded man speaks on a pulpit"
+  },
+  {
+   "video_id": "video2833",
+   "path": ".data\\msrvtt\\videos\\video\\video2833.mp4",
+   "query": "a man in black coat is explaining something"
+  },
+  {
+   "video_id": "video2842",
+   "path": ".data\\msrvtt\\videos\\video\\video2842.mp4",
+   "query": "there is a orange dressing man is talking about a graph"
+  },
+  {
+   "video_id": "video2843",
+   "path": ".data\\msrvtt\\videos\\video\\video2843.mp4",
+   "query": "war movie with man running through a shelling"
+  },
+  {
+   "video_id": "video2846",
+   "path": ".data\\msrvtt\\videos\\video\\video2846.mp4",
+   "query": "a man and girl are talking about her box"
+  },
+  {
+   "video_id": "video2852",
+   "path": ".data\\msrvtt\\videos\\video\\video2852.mp4",
+   "query": "a clip from a pirate movie"
+  },
+  {
+   "video_id": "video2855",
+   "path": ".data\\msrvtt\\videos\\video\\video2855.mp4",
+   "query": "person is presenting the latest study about display driver"
+  },
+  {
+   "video_id": "video2857",
+   "path": ".data\\msrvtt\\videos\\video\\video2857.mp4",
+   "query": "a popular magazine owner is on tv for an interview and also there are two other panelists on the interview"
+  },
+  {
+   "video_id": "video2861",
+   "path": ".data\\msrvtt\\videos\\video\\video2861.mp4",
+   "query": "the man was wearinng gloves"
+  },
+  {
+   "video_id": "video2863",
+   "path": ".data\\msrvtt\\videos\\video\\video2863.mp4",
+   "query": "a woman is commenting on dr"
+  },
+  {
+   "video_id": "video2894",
+   "path": ".data\\msrvtt\\videos\\video\\video2894.mp4",
+   "query": "two women talking on the camera"
+  },
+  {
+   "video_id": "video2911",
+   "path": ".data\\msrvtt\\videos\\video\\video2911.mp4",
+   "query": "animated figures are shown facing off in a video game"
+  },
+  {
+   "video_id": "video2926",
+   "path": ".data\\msrvtt\\videos\\video\\video2926.mp4",
+   "query": "a guy in shorts and a white shirt is teaching different basketball moves"
+  },
+  {
+   "video_id": "video2932",
+   "path": ".data\\msrvtt\\videos\\video\\video2932.mp4",
+   "query": "a person playing a video game by driving a cart"
+  },
+  {
+   "video_id": "video294",
+   "path": ".data\\msrvtt\\videos\\video\\video294.mp4",
+   "query": "an animated musician is blowing a flute"
+  },
+  {
+   "video_id": "video2941",
+   "path": ".data\\msrvtt\\videos\\video\\video2941.mp4",
+   "query": "a young child is riding a white horse when the horse becomes startled and the child is thrown backwards but remains atop the horse"
+  },
+  {
+   "video_id": "video2956",
+   "path": ".data\\msrvtt\\videos\\video\\video2956.mp4",
+   "query": "a korean female is saying bye-bye"
+  },
+  {
+   "video_id": "video2965",
+   "path": ".data\\msrvtt\\videos\\video\\video2965.mp4",
+   "query": "young kids sing for judges"
+  },
+  {
+   "video_id": "video298",
+   "path": ".data\\msrvtt\\videos\\video\\video298.mp4",
+   "query": "the credits in purple writing scrolling across the screen"
+  },
+  {
+   "video_id": "video2984",
+   "path": ".data\\msrvtt\\videos\\video\\video2984.mp4",
+   "query": "a short clip taken inside an animated cartoon"
+  },
+  {
+   "video_id": "video299",
+   "path": ".data\\msrvtt\\videos\\video\\video299.mp4",
+   "query": "a woman is standing"
+  },
+  {
+   "video_id": "video302",
+   "path": ".data\\msrvtt\\videos\\video\\video302.mp4",
+   "query": "people practising volley ball game in the play ground"
+  },
+  {
+   "video_id": "video3025",
+   "path": ".data\\msrvtt\\videos\\video\\video3025.mp4",
+   "query": "someone is showing video graphics on computer"
+  },
+  {
+   "video_id": "video3048",
+   "path": ".data\\msrvtt\\videos\\video\\video3048.mp4",
+   "query": "clear water roars and crashes down the face of a rock eventually cascading down into a serene turquoise tide pool"
+  },
+  {
+   "video_id": "video3070",
+   "path": ".data\\msrvtt\\videos\\video\\video3070.mp4",
+   "query": "pictures of two people are shown"
+  },
+  {
+   "video_id": "video3084",
+   "path": ".data\\msrvtt\\videos\\video\\video3084.mp4",
+   "query": "kids dance on disney channel"
+  },
+  {
+   "video_id": "video3085",
+   "path": ".data\\msrvtt\\videos\\video\\video3085.mp4",
+   "query": "a person observes and pets a small brown owl"
+  },
+  {
+   "video_id": "video3095",
+   "path": ".data\\msrvtt\\videos\\video\\video3095.mp4",
+   "query": "conan o brien is interviewing edward norton on his show"
+  },
+  {
+   "video_id": "video3104",
+   "path": ".data\\msrvtt\\videos\\video\\video3104.mp4",
+   "query": "a woman is speaking with her fingers underneath her chin"
+  },
+  {
+   "video_id": "video3106",
+   "path": ".data\\msrvtt\\videos\\video\\video3106.mp4",
+   "query": "man is talking about his project on the scene"
+  },
+  {
+   "video_id": "video311",
+   "path": ".data\\msrvtt\\videos\\video\\video311.mp4",
+   "query": "phil reading a text message"
+  },
+  {
+   "video_id": "video3119",
+   "path": ".data\\msrvtt\\videos\\video\\video3119.mp4",
+   "query": "a woman walks through a city square where people are frolicking about"
+  },
+  {
+   "video_id": "video3136",
+   "path": ".data\\msrvtt\\videos\\video\\video3136.mp4",
+   "query": "person is preparing some food"
+  },
+  {
+   "video_id": "video3137",
+   "path": ".data\\msrvtt\\videos\\video\\video3137.mp4",
+   "query": "live performance of classic piano music"
+  },
+  {
+   "video_id": "video3138",
+   "path": ".data\\msrvtt\\videos\\video\\video3138.mp4",
+   "query": "a young guy rapping in front of a graffiti filled wall"
+  },
+  {
+   "video_id": "video3141",
+   "path": ".data\\msrvtt\\videos\\video\\video3141.mp4",
+   "query": "a man holding a pet monkey in his arms observes the monkey s reaction to seeing other animals and surrounding sounds"
+  },
+  {
+   "video_id": "video3171",
+   "path": ".data\\msrvtt\\videos\\video\\video3171.mp4",
+   "query": "a black man with a hat is playing the drums"
+  },
+  {
+   "video_id": "video3207",
+   "path": ".data\\msrvtt\\videos\\video\\video3207.mp4",
+   "query": "girl playing with beads"
+  },
+  {
+   "video_id": "video3236",
+   "path": ".data\\msrvtt\\videos\\video\\video3236.mp4",
+   "query": "a machine with a circle on it slides back and forth"
+  },
+  {
+   "video_id": "video325",
+   "path": ".data\\msrvtt\\videos\\video\\video325.mp4",
+   "query": "a person is explaining something"
+  },
+  {
+   "video_id": "video3260",
+   "path": ".data\\msrvtt\\videos\\video\\video3260.mp4",
+   "query": "a man reviews a movie trailer in his bedroom"
+  },
+  {
+   "video_id": "video3285",
+   "path": ".data\\msrvtt\\videos\\video\\video3285.mp4",
+   "query": "a man reading a children s book to a group of kids"
+  },
+  {
+   "video_id": "video3290",
+   "path": ".data\\msrvtt\\videos\\video\\video3290.mp4",
+   "query": "someone is playing video game"
+  },
+  {
+   "video_id": "video3293",
+   "path": ".data\\msrvtt\\videos\\video\\video3293.mp4",
+   "query": "spinning silhouettes of continents are underneath rippling rings that are overlaid with a network news logo"
+  },
+  {
+   "video_id": "video3295",
+   "path": ".data\\msrvtt\\videos\\video\\video3295.mp4",
+   "query": "singing and dancing for a song"
+  },
+  {
+   "video_id": "video3301",
+   "path": ".data\\msrvtt\\videos\\video\\video3301.mp4",
+   "query": "this video is about yoona"
+  },
+  {
+   "video_id": "video3303",
+   "path": ".data\\msrvtt\\videos\\video\\video3303.mp4",
+   "query": "a man raps in his bathtub with his dog"
+  },
+  {
+   "video_id": "video3310",
+   "path": ".data\\msrvtt\\videos\\video\\video3310.mp4",
+   "query": "large pot with water lid is added to the pot closing with a strainer being put into a sink"
+  },
+  {
+   "video_id": "video3311",
+   "path": ".data\\msrvtt\\videos\\video\\video3311.mp4",
+   "query": "a stout woman wearing dark blue shirt and pants is training another woman for physio therapy"
+  },
+  {
+   "video_id": "video3317",
+   "path": ".data\\msrvtt\\videos\\video\\video3317.mp4",
+   "query": "a group of boy becomes aggressive with a man who does not let them beat him up"
+  },
+  {
+   "video_id": "video3323",
+   "path": ".data\\msrvtt\\videos\\video\\video3323.mp4",
+   "query": "instructions are being given by a young man with a visual of how to play a game"
+  },
+  {
+   "video_id": "video3326",
+   "path": ".data\\msrvtt\\videos\\video\\video3326.mp4",
+   "query": "a man wearing purple glasses discusses how he almost got sick from eating noodles"
+  },
+  {
+   "video_id": "video335",
+   "path": ".data\\msrvtt\\videos\\video\\video335.mp4",
+   "query": "a doctor performing a procedure inside of a lab next to a machine"
+  },
+  {
+   "video_id": "video3360",
+   "path": ".data\\msrvtt\\videos\\video\\video3360.mp4",
+   "query": "a person is cutting up potatoes into french fries"
+  },
+  {
+   "video_id": "video3368",
+   "path": ".data\\msrvtt\\videos\\video\\video3368.mp4",
+   "query": "two physically fit women play tennis in very form fitting shorts"
+  },
+  {
+   "video_id": "video3369",
+   "path": ".data\\msrvtt\\videos\\video\\video3369.mp4",
+   "query": "a rally is held"
+  },
+  {
+   "video_id": "video3376",
+   "path": ".data\\msrvtt\\videos\\video\\video3376.mp4",
+   "query": "a news anchor talking while movie clips are playing in the background"
+  },
+  {
+   "video_id": "video3384",
+   "path": ".data\\msrvtt\\videos\\video\\video3384.mp4",
+   "query": "boys and girls are waving fingers"
+  },
+  {
+   "video_id": "video3394",
+   "path": ".data\\msrvtt\\videos\\video\\video3394.mp4",
+   "query": "beautiful female models walk the runway while music plays"
+  },
+  {
+   "video_id": "video3395",
+   "path": ".data\\msrvtt\\videos\\video\\video3395.mp4",
+   "query": "a man sitting next to a girl on a plane fastens his seat belt"
+  },
+  {
+   "video_id": "video3400",
+   "path": ".data\\msrvtt\\videos\\video\\video3400.mp4",
+   "query": "making of recipe: strain and use all shrimp juice"
+  },
+  {
+   "video_id": "video3406",
+   "path": ".data\\msrvtt\\videos\\video\\video3406.mp4",
+   "query": "a women in a bedroom with long blond hair up in a ponytail wearing a pink robe and holding up different pink shirts"
+  },
+  {
+   "video_id": "video3407",
+   "path": ".data\\msrvtt\\videos\\video\\video3407.mp4",
+   "query": "someone is playing a game"
+  },
+  {
+   "video_id": "video3414",
+   "path": ".data\\msrvtt\\videos\\video\\video3414.mp4",
+   "query": "a woman speaking about an event that happened to her"
+  },
+  {
+   "video_id": "video3416",
+   "path": ".data\\msrvtt\\videos\\video\\video3416.mp4",
+   "query": "wolfs are chasing a bovine"
+  },
+  {
+   "video_id": "video342",
+   "path": ".data\\msrvtt\\videos\\video\\video342.mp4",
+   "query": "animated fish swimming in the water"
+  },
+  {
+   "video_id": "video343",
+   "path": ".data\\msrvtt\\videos\\video\\video343.mp4",
+   "query": "pictures of kids receiving awards"
+  },
+  {
+   "video_id": "video3430",
+   "path": ".data\\msrvtt\\videos\\video\\video3430.mp4",
+   "query": "someone is drawing a flower"
+  },
+  {
+   "video_id": "video3432",
+   "path": ".data\\msrvtt\\videos\\video\\video3432.mp4",
+   "query": "kids are jumping in school"
+  },
+  {
+   "video_id": "video3434",
+   "path": ".data\\msrvtt\\videos\\video\\video3434.mp4",
+   "query": "a man is cooking vegetables in a pan in a kitchen"
+  },
+  {
+   "video_id": "video3451",
+   "path": ".data\\msrvtt\\videos\\video\\video3451.mp4",
+   "query": "a man is avoiding to drink cooldrinks"
+  },
+  {
+   "video_id": "video3452",
+   "path": ".data\\msrvtt\\videos\\video\\video3452.mp4",
+   "query": "there s a skunk walking backward while smelling the carpet"
+  },
+  {
+   "video_id": "video3454",
+   "path": ".data\\msrvtt\\videos\\video\\video3454.mp4",
+   "query": "a woman in white spotted shirt stands in large kitchen and adds milk and eggs to blender"
+  },
+  {
+   "video_id": "video346",
+   "path": ".data\\msrvtt\\videos\\video\\video346.mp4",
+   "query": "a short clip of a man and a woman talking to each other"
+  },
+  {
+   "video_id": "video3468",
+   "path": ".data\\msrvtt\\videos\\video\\video3468.mp4",
+   "query": "a woman talks about giving away a large bundle of makeup"
+  },
+  {
+   "video_id": "video35",
+   "path": ".data\\msrvtt\\videos\\video\\video35.mp4",
+   "query": "inside a vehicle scene"
+  },
+  {
+   "video_id": "video3500",
+   "path": ".data\\msrvtt\\videos\\video\\video3500.mp4",
+   "query": "college students gather around a plane work on computers and study"
+  },
+  {
+   "video_id": "video3502",
+   "path": ".data\\msrvtt\\videos\\video\\video3502.mp4",
+   "query": "a reporter wearing black coat and check neck-tie on white shirt is asking question from senior manager of samsung company"
+  },
+  {
+   "video_id": "video3504",
+   "path": ".data\\msrvtt\\videos\\video\\video3504.mp4",
+   "query": "a man cooks in color ful pots and laddles the soup into a bowl on the dish"
+  },
+  {
+   "video_id": "video3518",
+   "path": ".data\\msrvtt\\videos\\video\\video3518.mp4",
+   "query": "a huge fireworks display is going off while music is playing"
+  },
+  {
+   "video_id": "video3519",
+   "path": ".data\\msrvtt\\videos\\video\\video3519.mp4",
+   "query": "table tennis match is going on with two players fighting for the win"
+  },
+  {
+   "video_id": "video3532",
+   "path": ".data\\msrvtt\\videos\\video\\video3532.mp4",
+   "query": "a group of people that looks like politicians are seated in a room watching a speech"
+  },
+  {
+   "video_id": "video3538",
+   "path": ".data\\msrvtt\\videos\\video\\video3538.mp4",
+   "query": "a man is playing with dolls"
+  },
+  {
+   "video_id": "video354",
+   "path": ".data\\msrvtt\\videos\\video\\video354.mp4",
+   "query": "several people being interviewed about one woman"
+  },
+  {
+   "video_id": "video3554",
+   "path": ".data\\msrvtt\\videos\\video\\video3554.mp4",
+   "query": "a woman is in a barber shop"
+  },
+  {
+   "video_id": "video3559",
+   "path": ".data\\msrvtt\\videos\\video\\video3559.mp4",
+   "query": "tables are being set with silverware by waiters dressed in black"
+  },
+  {
+   "video_id": "video3577",
+   "path": ".data\\msrvtt\\videos\\video\\video3577.mp4",
+   "query": "a person talking about a folded airplane"
+  },
+  {
+   "video_id": "video359",
+   "path": ".data\\msrvtt\\videos\\video\\video359.mp4",
+   "query": "a woman cooking with a kitchenaid"
+  },
+  {
+   "video_id": "video3591",
+   "path": ".data\\msrvtt\\videos\\video\\video3591.mp4",
+   "query": "a person is cooking"
+  },
+  {
+   "video_id": "video3595",
+   "path": ".data\\msrvtt\\videos\\video\\video3595.mp4",
+   "query": "squidward wakes up to his people in cartoon"
+  },
+  {
+   "video_id": "video3606",
+   "path": ".data\\msrvtt\\videos\\video\\video3606.mp4",
+   "query": "a couple people make jokes about clones"
+  },
+  {
+   "video_id": "video3614",
+   "path": ".data\\msrvtt\\videos\\video\\video3614.mp4",
+   "query": "housing at a place called saiko lake with a view of the lake"
+  },
+  {
+   "video_id": "video3625",
+   "path": ".data\\msrvtt\\videos\\video\\video3625.mp4",
+   "query": "at a beach someone is riding on the wavy sea"
+  },
+  {
+   "video_id": "video3634",
+   "path": ".data\\msrvtt\\videos\\video\\video3634.mp4",
+   "query": "teams are playing football"
+  },
+  {
+   "video_id": "video3638",
+   "path": ".data\\msrvtt\\videos\\video\\video3638.mp4",
+   "query": "a motivational video about a man and a woman"
+  },
+  {
+   "video_id": "video3645",
+   "path": ".data\\msrvtt\\videos\\video\\video3645.mp4",
+   "query": "an animated female cartoon character dancing on stage"
+  },
+  {
+   "video_id": "video3654",
+   "path": ".data\\msrvtt\\videos\\video\\video3654.mp4",
+   "query": "two men in grey suits white shirts and black ties speak on a late-night tv set"
+  },
+  {
+   "video_id": "video3663",
+   "path": ".data\\msrvtt\\videos\\video\\video3663.mp4",
+   "query": "a very colorful panoramic view of a third world country a man talking about his blog and its content"
+  },
+  {
+   "video_id": "video3669",
+   "path": ".data\\msrvtt\\videos\\video\\video3669.mp4",
+   "query": "a couple of men wrestling"
+  },
+  {
+   "video_id": "video367",
+   "path": ".data\\msrvtt\\videos\\video\\video367.mp4",
+   "query": "a men s single tennis match is being shown and it is in the auditorium"
+  },
+  {
+   "video_id": "video3673",
+   "path": ".data\\msrvtt\\videos\\video\\video3673.mp4",
+   "query": "three men and a woman sit at a round table connected to a long counter in a tv studio with lit walls and a large screen of lawn and trees"
+  },
+  {
+   "video_id": "video3687",
+   "path": ".data\\msrvtt\\videos\\video\\video3687.mp4",
+   "query": "dancing dolls on the stage"
+  },
+  {
+   "video_id": "video3696",
+   "path": ".data\\msrvtt\\videos\\video\\video3696.mp4",
+   "query": "a medium symphony play instruments as the conductor leads"
+  },
+  {
+   "video_id": "video3718",
+   "path": ".data\\msrvtt\\videos\\video\\video3718.mp4",
+   "query": "a man films his son singing in the bathroom and he films himself singing in the car"
+  },
+  {
+   "video_id": "video3723",
+   "path": ".data\\msrvtt\\videos\\video\\video3723.mp4",
+   "query": "a pictcher still of a nice shot during an exciting game"
+  },
+  {
+   "video_id": "video3729",
+   "path": ".data\\msrvtt\\videos\\video\\video3729.mp4",
+   "query": "a video game character is speaking"
+  },
+  {
+   "video_id": "video3749",
+   "path": ".data\\msrvtt\\videos\\video\\video3749.mp4",
+   "query": "a person petting a donkey"
+  },
+  {
+   "video_id": "video3757",
+   "path": ".data\\msrvtt\\videos\\video\\video3757.mp4",
+   "query": "people are cheering players"
+  },
+  {
+   "video_id": "video3760",
+   "path": ".data\\msrvtt\\videos\\video\\video3760.mp4",
+   "query": "a football match is being palyed between two teams"
+  },
+  {
+   "video_id": "video3779",
+   "path": ".data\\msrvtt\\videos\\video\\video3779.mp4",
+   "query": "a man falls out of a van"
+  },
+  {
+   "video_id": "video3786",
+   "path": ".data\\msrvtt\\videos\\video\\video3786.mp4",
+   "query": "a scene from an action movie"
+  },
+  {
+   "video_id": "video3792",
+   "path": ".data\\msrvtt\\videos\\video\\video3792.mp4",
+   "query": "a man walks around and talks though a microphone while on stage"
+  },
+  {
+   "video_id": "video3813",
+   "path": ".data\\msrvtt\\videos\\video\\video3813.mp4",
+   "query": "tv game show contestants compete"
+  },
+  {
+   "video_id": "video3827",
+   "path": ".data\\msrvtt\\videos\\video\\video3827.mp4",
+   "query": "two men and two women are travelling in a car"
+  },
+  {
+   "video_id": "video383",
+   "path": ".data\\msrvtt\\videos\\video\\video383.mp4",
+   "query": "zach galifinakis talking about his movie"
+  },
+  {
+   "video_id": "video3833",
+   "path": ".data\\msrvtt\\videos\\video\\video3833.mp4",
+   "query": "a snake is eating another snake"
+  },
+  {
+   "video_id": "video3834",
+   "path": ".data\\msrvtt\\videos\\video\\video3834.mp4",
+   "query": "the back of a ferrari is examined by a crowd"
+  },
+  {
+   "video_id": "video3849",
+   "path": ".data\\msrvtt\\videos\\video\\video3849.mp4",
+   "query": "a person is making a loaded burrito"
+  },
+  {
+   "video_id": "video3852",
+   "path": ".data\\msrvtt\\videos\\video\\video3852.mp4",
+   "query": "a guy voicing over a scene of spongebob"
+  },
+  {
+   "video_id": "video3857",
+   "path": ".data\\msrvtt\\videos\\video\\video3857.mp4",
+   "query": "women are discussing a supposed criminal and his getting away with his crimes"
+  },
+  {
+   "video_id": "video3875",
+   "path": ".data\\msrvtt\\videos\\video\\video3875.mp4",
+   "query": "their is a funny cartoon being shown on adult swim"
+  },
+  {
+   "video_id": "video3884",
+   "path": ".data\\msrvtt\\videos\\video\\video3884.mp4",
+   "query": "the video promoted disney junior"
+  },
+  {
+   "video_id": "video389",
+   "path": ".data\\msrvtt\\videos\\video\\video389.mp4",
+   "query": "a man and a woman are dancing on a stage"
+  },
+  {
+   "video_id": "video3893",
+   "path": ".data\\msrvtt\\videos\\video\\video3893.mp4",
+   "query": "young girl brushing a young mans shirt off"
+  },
+  {
+   "video_id": "video3918",
+   "path": ".data\\msrvtt\\videos\\video\\video3918.mp4",
+   "query": "a host is surrounded by beautiful women"
+  },
+  {
+   "video_id": "video3937",
+   "path": ".data\\msrvtt\\videos\\video\\video3937.mp4",
+   "query": "a man is talking over an animation"
+  },
+  {
+   "video_id": "video3958",
+   "path": ".data\\msrvtt\\videos\\video\\video3958.mp4",
+   "query": "a man is in an airplane talking about clouds"
+  },
+  {
+   "video_id": "video397",
+   "path": ".data\\msrvtt\\videos\\video\\video397.mp4",
+   "query": "plastic toys narrated scene"
+  },
+  {
+   "video_id": "video3973",
+   "path": ".data\\msrvtt\\videos\\video\\video3973.mp4",
+   "query": "a woman singing and dancing on the road"
+  },
+  {
+   "video_id": "video3981",
+   "path": ".data\\msrvtt\\videos\\video\\video3981.mp4",
+   "query": "someone getting kicked off dancing with the stars"
+  },
+  {
+   "video_id": "video3988",
+   "path": ".data\\msrvtt\\videos\\video\\video3988.mp4",
+   "query": "a old man with suit talking in front of the camera"
+  },
+  {
+   "video_id": "video4002",
+   "path": ".data\\msrvtt\\videos\\video\\video4002.mp4",
+   "query": "a chef demonstrates how to cook a vegetable stir fry dish"
+  },
+  {
+   "video_id": "video401",
+   "path": ".data\\msrvtt\\videos\\video\\video401.mp4",
+   "query": "a group of people watching a video of a man"
+  },
+  {
+   "video_id": "video4011",
+   "path": ".data\\msrvtt\\videos\\video\\video4011.mp4",
+   "query": "women walking down a catwalk"
+  },
+  {
+   "video_id": "video4016",
+   "path": ".data\\msrvtt\\videos\\video\\video4016.mp4",
+   "query": "a clip taken from the ninja turtles tv show"
+  },
+  {
+   "video_id": "video4027",
+   "path": ".data\\msrvtt\\videos\\video\\video4027.mp4",
+   "query": "woman in blue shirt is crossing the street near the cars"
+  },
+  {
+   "video_id": "video4035",
+   "path": ".data\\msrvtt\\videos\\video\\video4035.mp4",
+   "query": "a character is battling with an enemy"
+  },
+  {
+   "video_id": "video4049",
+   "path": ".data\\msrvtt\\videos\\video\\video4049.mp4",
+   "query": "the group of mice have escaped and are running down the highway"
+  },
+  {
+   "video_id": "video405",
+   "path": ".data\\msrvtt\\videos\\video\\video405.mp4",
+   "query": "a woman looks upset walking up to a man then smells him"
+  },
+  {
+   "video_id": "video4054",
+   "path": ".data\\msrvtt\\videos\\video\\video4054.mp4",
+   "query": "a man and a woman are having a discussion"
+  },
+  {
+   "video_id": "video4055",
+   "path": ".data\\msrvtt\\videos\\video\\video4055.mp4",
+   "query": "a fire burning in the woods"
+  },
+  {
+   "video_id": "video4061",
+   "path": ".data\\msrvtt\\videos\\video\\video4061.mp4",
+   "query": "some children have paint on their face"
+  },
+  {
+   "video_id": "video4070",
+   "path": ".data\\msrvtt\\videos\\video\\video4070.mp4",
+   "query": "a man in a blue shirt slides behind a desk and starts a class lesson he has a globe and a blackboard behind him"
+  },
+  {
+   "video_id": "video4085",
+   "path": ".data\\msrvtt\\videos\\video\\video4085.mp4",
+   "query": "a group is dancing"
+  },
+  {
+   "video_id": "video4091",
+   "path": ".data\\msrvtt\\videos\\video\\video4091.mp4",
+   "query": "an older man in a white shirt is riding a jet ski"
+  },
+  {
+   "video_id": "video4100",
+   "path": ".data\\msrvtt\\videos\\video\\video4100.mp4",
+   "query": "a man and a woman performing a musical"
+  },
+  {
+   "video_id": "video4105",
+   "path": ".data\\msrvtt\\videos\\video\\video4105.mp4",
+   "query": "a man in a dress is talking in a microphone while another man is sitting in a chair"
+  },
+  {
+   "video_id": "video4123",
+   "path": ".data\\msrvtt\\videos\\video\\video4123.mp4",
+   "query": "a brown dog playing in the water caught a big fish in mouth to the shore"
+  },
+  {
+   "video_id": "video4131",
+   "path": ".data\\msrvtt\\videos\\video\\video4131.mp4",
+   "query": "a woman is receiving a haircut"
+  },
+  {
+   "video_id": "video4132",
+   "path": ".data\\msrvtt\\videos\\video\\video4132.mp4",
+   "query": "a girl in a ash tops jumps and do some gymnastics and rest on the bed"
+  },
+  {
+   "video_id": "video4133",
+   "path": ".data\\msrvtt\\videos\\video\\video4133.mp4",
+   "query": "a woman talking about different cooking utensils"
+  },
+  {
+   "video_id": "video4134",
+   "path": ".data\\msrvtt\\videos\\video\\video4134.mp4",
+   "query": "people walking in a hallway in a movie theater where there are movie posters on the walls"
+  },
+  {
+   "video_id": "video4140",
+   "path": ".data\\msrvtt\\videos\\video\\video4140.mp4",
+   "query": "several people are laughing on a tv show"
+  },
+  {
+   "video_id": "video4145",
+   "path": ".data\\msrvtt\\videos\\video\\video4145.mp4",
+   "query": "several women are modeling underwear"
+  },
+  {
+   "video_id": "video4156",
+   "path": ".data\\msrvtt\\videos\\video\\video4156.mp4",
+   "query": "people are commenting on a video game taking place in a fast food restaurant"
+  },
+  {
+   "video_id": "video4162",
+   "path": ".data\\msrvtt\\videos\\video\\video4162.mp4",
+   "query": "a porsche being shown in two different colors"
+  },
+  {
+   "video_id": "video4169",
+   "path": ".data\\msrvtt\\videos\\video\\video4169.mp4",
+   "query": "a travel reporter talks about the restaurants at a large resort area"
+  },
+  {
+   "video_id": "video4173",
+   "path": ".data\\msrvtt\\videos\\video\\video4173.mp4",
+   "query": "a man rocking with his guitar"
+  },
+  {
+   "video_id": "video4175",
+   "path": ".data\\msrvtt\\videos\\video\\video4175.mp4",
+   "query": "a man is standing"
+  },
+  {
+   "video_id": "video418",
+   "path": ".data\\msrvtt\\videos\\video\\video418.mp4",
+   "query": "people are drinking in a bar"
+  },
+  {
+   "video_id": "video4183",
+   "path": ".data\\msrvtt\\videos\\video\\video4183.mp4",
+   "query": "a person doing something on his tablet"
+  },
+  {
+   "video_id": "video4186",
+   "path": ".data\\msrvtt\\videos\\video\\video4186.mp4",
+   "query": "a bar graph is shown with dots representing different chinese products"
+  },
+  {
+   "video_id": "video4187",
+   "path": ".data\\msrvtt\\videos\\video\\video4187.mp4",
+   "query": "a lacrosse player scores a goal"
+  },
+  {
+   "video_id": "video4199",
+   "path": ".data\\msrvtt\\videos\\video\\video4199.mp4",
+   "query": "a woman is talking to a camera"
+  },
+  {
+   "video_id": "video4214",
+   "path": ".data\\msrvtt\\videos\\video\\video4214.mp4",
+   "query": "this is a video from a basketball game"
+  },
+  {
+   "video_id": "video4215",
+   "path": ".data\\msrvtt\\videos\\video\\video4215.mp4",
+   "query": "a woman is talking into a microphone"
+  },
+  {
+   "video_id": "video4216",
+   "path": ".data\\msrvtt\\videos\\video\\video4216.mp4",
+   "query": "a news reporter runs away"
+  },
+  {
+   "video_id": "video4217",
+   "path": ".data\\msrvtt\\videos\\video\\video4217.mp4",
+   "query": "a woman in the snow removing her coat to show shes in a bikini and then making a snow angel"
+  },
+  {
+   "video_id": "video4238",
+   "path": ".data\\msrvtt\\videos\\video\\video4238.mp4",
+   "query": "a girl is sitting in her bed looking at her cast on her leg and smiling"
+  },
+  {
+   "video_id": "video4256",
+   "path": ".data\\msrvtt\\videos\\video\\video4256.mp4",
+   "query": "a woman is singing on a stage while being judged"
+  },
+  {
+   "video_id": "video4262",
+   "path": ".data\\msrvtt\\videos\\video\\video4262.mp4",
+   "query": "steven segal talking to an interviewer"
+  },
+  {
+   "video_id": "video4263",
+   "path": ".data\\msrvtt\\videos\\video\\video4263.mp4",
+   "query": "a person talks a manuall camera control app and states that the app is absoultely free"
+  },
+  {
+   "video_id": "video4271",
+   "path": ".data\\msrvtt\\videos\\video\\video4271.mp4",
+   "query": "a man is talking to many reporters"
+  },
+  {
+   "video_id": "video4277",
+   "path": ".data\\msrvtt\\videos\\video\\video4277.mp4",
+   "query": "a rabbit is jumping up and down"
+  },
+  {
+   "video_id": "video4282",
+   "path": ".data\\msrvtt\\videos\\video\\video4282.mp4",
+   "query": "object swinging back and fourth inside a vehicle as it drives in traffic while another vehicle wrecks"
+  },
+  {
+   "video_id": "video4283",
+   "path": ".data\\msrvtt\\videos\\video\\video4283.mp4",
+   "query": "computer program index book which is placed on the btl cc tv model"
+  },
+  {
+   "video_id": "video4287",
+   "path": ".data\\msrvtt\\videos\\video\\video4287.mp4",
+   "query": "a man and a women walk out into the water and toss a large net"
+  },
+  {
+   "video_id": "video4290",
+   "path": ".data\\msrvtt\\videos\\video\\video4290.mp4",
+   "query": "man throwing footbal to target in slow motion"
+  },
+  {
+   "video_id": "video4295",
+   "path": ".data\\msrvtt\\videos\\video\\video4295.mp4",
+   "query": "a woman in a checkered shirt is instructing viewers on how to subscribe"
+  },
+  {
+   "video_id": "video430",
+   "path": ".data\\msrvtt\\videos\\video\\video430.mp4",
+   "query": "the children are rejoicing"
+  },
+  {
+   "video_id": "video4301",
+   "path": ".data\\msrvtt\\videos\\video\\video4301.mp4",
+   "query": "a army chief talking to soldiers"
+  },
+  {
+   "video_id": "video4302",
+   "path": ".data\\msrvtt\\videos\\video\\video4302.mp4",
+   "query": "a group of girls is dancing to music"
+  },
+  {
+   "video_id": "video4304",
+   "path": ".data\\msrvtt\\videos\\video\\video4304.mp4",
+   "query": "a men with white suit and a gun in his hand running on streets"
+  },
+  {
+   "video_id": "video4314",
+   "path": ".data\\msrvtt\\videos\\video\\video4314.mp4",
+   "query": "a man sings at a concert"
+  },
+  {
+   "video_id": "video4325",
+   "path": ".data\\msrvtt\\videos\\video\\video4325.mp4",
+   "query": "a man places a ring on a womans finger"
+  },
+  {
+   "video_id": "video4330",
+   "path": ".data\\msrvtt\\videos\\video\\video4330.mp4",
+   "query": "horses run around their pen and eat grass"
+  },
+  {
+   "video_id": "video4372",
+   "path": ".data\\msrvtt\\videos\\video\\video4372.mp4",
+   "query": "a chef taking the fries from a pan and keeping it on the plate"
+  },
+  {
+   "video_id": "video4385",
+   "path": ".data\\msrvtt\\videos\\video\\video4385.mp4",
+   "query": "man chopping up vegetables"
+  },
+  {
+   "video_id": "video4391",
+   "path": ".data\\msrvtt\\videos\\video\\video4391.mp4",
+   "query": "a man is playing an angry birds game"
+  },
+  {
+   "video_id": "video4401",
+   "path": ".data\\msrvtt\\videos\\video\\video4401.mp4",
+   "query": "some animated characters are having a wedding"
+  },
+  {
+   "video_id": "video4404",
+   "path": ".data\\msrvtt\\videos\\video\\video4404.mp4",
+   "query": "a man describes the fcc being under pressure to change upload times"
+  },
+  {
+   "video_id": "video4408",
+   "path": ".data\\msrvtt\\videos\\video\\video4408.mp4",
+   "query": "lady talking about a stroller"
+  },
+  {
+   "video_id": "video4414",
+   "path": ".data\\msrvtt\\videos\\video\\video4414.mp4",
+   "query": "a man in suit behind news desk talks with guest with many computers in background"
+  },
+  {
+   "video_id": "video4421",
+   "path": ".data\\msrvtt\\videos\\video\\video4421.mp4",
+   "query": "a man playing minecraft"
+  },
+  {
+   "video_id": "video4428",
+   "path": ".data\\msrvtt\\videos\\video\\video4428.mp4",
+   "query": "a guy with no shirt is holding a mic"
+  },
+  {
+   "video_id": "video4429",
+   "path": ".data\\msrvtt\\videos\\video\\video4429.mp4",
+   "query": "a woman is showing you two different types of shredders"
+  },
+  {
+   "video_id": "video4439",
+   "path": ".data\\msrvtt\\videos\\video\\video4439.mp4",
+   "query": "an older man with a light complexion wearing a grey shirt and coat speaks to the camera as various machinery and boxes sit in a grey room behind him"
+  },
+  {
+   "video_id": "video4443",
+   "path": ".data\\msrvtt\\videos\\video\\video4443.mp4",
+   "query": "a song by the band linkin park plays while an eagle flies around"
+  },
+  {
+   "video_id": "video4446",
+   "path": ".data\\msrvtt\\videos\\video\\video4446.mp4",
+   "query": "guy talking about saving money"
+  },
+  {
+   "video_id": "video4449",
+   "path": ".data\\msrvtt\\videos\\video\\video4449.mp4",
+   "query": "someone is playing a computer game and talking about it while wearing headphones"
+  },
+  {
+   "video_id": "video4457",
+   "path": ".data\\msrvtt\\videos\\video\\video4457.mp4",
+   "query": "a commercial for a car is playing"
+  },
+  {
+   "video_id": "video4461",
+   "path": ".data\\msrvtt\\videos\\video\\video4461.mp4",
+   "query": "a girl is dancing"
+  },
+  {
+   "video_id": "video4465",
+   "path": ".data\\msrvtt\\videos\\video\\video4465.mp4",
+   "query": "a man is smiling"
+  },
+  {
+   "video_id": "video4475",
+   "path": ".data\\msrvtt\\videos\\video\\video4475.mp4",
+   "query": "a car is being driven"
+  },
+  {
+   "video_id": "video448",
+   "path": ".data\\msrvtt\\videos\\video\\video448.mp4",
+   "query": "this is an advertisement showing that admirals galley which is one of the best buffet restaurant and the motive of the restaurant is quality"
+  },
+  {
+   "video_id": "video4493",
+   "path": ".data\\msrvtt\\videos\\video\\video4493.mp4",
+   "query": "a fashion dress design a girl wearing fashion dress dressing walking on stage audience watching displaying on screen"
+  },
+  {
+   "video_id": "video4505",
+   "path": ".data\\msrvtt\\videos\\video\\video4505.mp4",
+   "query": "an animation of a skeleton with a bomb is shown"
+  },
+  {
+   "video_id": "video4509",
+   "path": ".data\\msrvtt\\videos\\video\\video4509.mp4",
+   "query": "a woman is looking at her hand"
+  },
+  {
+   "video_id": "video4514",
+   "path": ".data\\msrvtt\\videos\\video\\video4514.mp4",
+   "query": "a minecraft character farts and walks around outside"
+  },
+  {
+   "video_id": "video4520",
+   "path": ".data\\msrvtt\\videos\\video\\video4520.mp4",
+   "query": "you feel like a third wheel"
+  },
+  {
+   "video_id": "video4521",
+   "path": ".data\\msrvtt\\videos\\video\\video4521.mp4",
+   "query": "children eating foods along with siblings and father"
+  },
+  {
+   "video_id": "video4536",
+   "path": ".data\\msrvtt\\videos\\video\\video4536.mp4",
+   "query": "men holding receiver and seeing the person who is sitting opposite to him"
+  },
+  {
+   "video_id": "video454",
+   "path": ".data\\msrvtt\\videos\\video\\video454.mp4",
+   "query": "woman is presenting the meal with papaya"
+  },
+  {
+   "video_id": "video4547",
+   "path": ".data\\msrvtt\\videos\\video\\video4547.mp4",
+   "query": "woman teaching people how to do their hair"
+  },
+  {
+   "video_id": "video4556",
+   "path": ".data\\msrvtt\\videos\\video\\video4556.mp4",
+   "query": "a intro to a television show"
+  },
+  {
+   "video_id": "video4574",
+   "path": ".data\\msrvtt\\videos\\video\\video4574.mp4",
+   "query": "a player is jumping over another player with a ball on green ground"
+  },
+  {
+   "video_id": "video4579",
+   "path": ".data\\msrvtt\\videos\\video\\video4579.mp4",
+   "query": "there are 4 squares each with different food items"
+  },
+  {
+   "video_id": "video4586",
+   "path": ".data\\msrvtt\\videos\\video\\video4586.mp4",
+   "query": "a man is giving an interview"
+  },
+  {
+   "video_id": "video4587",
+   "path": ".data\\msrvtt\\videos\\video\\video4587.mp4",
+   "query": "a woman flys through the window of a tall building doing a flip"
+  },
+  {
+   "video_id": "video460",
+   "path": ".data\\msrvtt\\videos\\video\\video460.mp4",
+   "query": "a person is drawing a chart"
+  },
+  {
+   "video_id": "video4605",
+   "path": ".data\\msrvtt\\videos\\video\\video4605.mp4",
+   "query": "thor battles malekith in thor 2"
+  },
+  {
+   "video_id": "video4613",
+   "path": ".data\\msrvtt\\videos\\video\\video4613.mp4",
+   "query": "glimpses of a michel jackson video"
+  },
+  {
+   "video_id": "video4620",
+   "path": ".data\\msrvtt\\videos\\video\\video4620.mp4",
+   "query": "jimmi hendrix rocks out in white singing foxy lady in a live performance"
+  },
+  {
+   "video_id": "video4639",
+   "path": ".data\\msrvtt\\videos\\video\\video4639.mp4",
+   "query": "a muslim woman is angry about something and she is crying as well"
+  },
+  {
+   "video_id": "video4646",
+   "path": ".data\\msrvtt\\videos\\video\\video4646.mp4",
+   "query": "a man shows the demo of a silver colored volkswagen car"
+  },
+  {
+   "video_id": "video4648",
+   "path": ".data\\msrvtt\\videos\\video\\video4648.mp4",
+   "query": "awesome plays by athletes"
+  },
+  {
+   "video_id": "video4651",
+   "path": ".data\\msrvtt\\videos\\video\\video4651.mp4",
+   "query": "ellen degeneres is talking to shania twain"
+  },
+  {
+   "video_id": "video466",
+   "path": ".data\\msrvtt\\videos\\video\\video466.mp4",
+   "query": "some one giving demo about car"
+  },
+  {
+   "video_id": "video4667",
+   "path": ".data\\msrvtt\\videos\\video\\video4667.mp4",
+   "query": "a woman is telling you to make sure you have high-grade beef"
+  },
+  {
+   "video_id": "video4686",
+   "path": ".data\\msrvtt\\videos\\video\\video4686.mp4",
+   "query": "men laughing about something sports"
+  },
+  {
+   "video_id": "video4687",
+   "path": ".data\\msrvtt\\videos\\video\\video4687.mp4",
+   "query": "a video talking about a hair product featuring a woman with long pretty hair"
+  },
+  {
+   "video_id": "video4692",
+   "path": ".data\\msrvtt\\videos\\video\\video4692.mp4",
+   "query": "kids are being taught how to cook"
+  },
+  {
+   "video_id": "video4694",
+   "path": ".data\\msrvtt\\videos\\video\\video4694.mp4",
+   "query": "a man wears black dress and firing some crackers"
+  },
+  {
+   "video_id": "video4704",
+   "path": ".data\\msrvtt\\videos\\video\\video4704.mp4",
+   "query": "a question appears on teh screen and a man in glasses and jeans answers it"
+  },
+  {
+   "video_id": "video4744",
+   "path": ".data\\msrvtt\\videos\\video\\video4744.mp4",
+   "query": "some people play volleyball at a park"
+  },
+  {
+   "video_id": "video4745",
+   "path": ".data\\msrvtt\\videos\\video\\video4745.mp4",
+   "query": "a couple play in the yard"
+  },
+  {
+   "video_id": "video4746",
+   "path": ".data\\msrvtt\\videos\\video\\video4746.mp4",
+   "query": "a british man driving down an abandoned road in a black car"
+  },
+  {
+   "video_id": "video477",
+   "path": ".data\\msrvtt\\videos\\video\\video477.mp4",
+   "query": "person sorts through seeds"
+  },
+  {
+   "video_id": "video4770",
+   "path": ".data\\msrvtt\\videos\\video\\video4770.mp4",
+   "query": "a girl is walking down a hallway while she is singing"
+  },
+  {
+   "video_id": "video478",
+   "path": ".data\\msrvtt\\videos\\video\\video478.mp4",
+   "query": "a man is painting a car body yellow"
+  },
+  {
+   "video_id": "video4789",
+   "path": ".data\\msrvtt\\videos\\video\\video4789.mp4",
+   "query": "a man is talking while driving his car"
+  },
+  {
+   "video_id": "video4798",
+   "path": ".data\\msrvtt\\videos\\video\\video4798.mp4",
+   "query": "its a animated video"
+  },
+  {
+   "video_id": "video4806",
+   "path": ".data\\msrvtt\\videos\\video\\video4806.mp4",
+   "query": "two men are fighting"
+  },
+  {
+   "video_id": "video4807",
+   "path": ".data\\msrvtt\\videos\\video\\video4807.mp4",
+   "query": "a man is talking about a car"
+  },
+  {
+   "video_id": "video4813",
+   "path": ".data\\msrvtt\\videos\\video\\video4813.mp4",
+   "query": "a woman is talking about equality in a room"
+  },
+  {
+   "video_id": "video4815",
+   "path": ".data\\msrvtt\\videos\\video\\video4815.mp4",
+   "query": "a guy is demonstrating about the picture and software in the pc"
+  },
+  {
+   "video_id": "video4850",
+   "path": ".data\\msrvtt\\videos\\video\\video4850.mp4",
+   "query": "a countdown from various football highlights is played"
+  },
+  {
+   "video_id": "video4859",
+   "path": ".data\\msrvtt\\videos\\video\\video4859.mp4",
+   "query": "the video is showing an area of katmandu"
+  },
+  {
+   "video_id": "video486",
+   "path": ".data\\msrvtt\\videos\\video\\video486.mp4",
+   "query": "a group of people are performing a choreographed dance"
+  },
+  {
+   "video_id": "video4862",
+   "path": ".data\\msrvtt\\videos\\video\\video4862.mp4",
+   "query": "a man is telling about a celebrity"
+  },
+  {
+   "video_id": "video4866",
+   "path": ".data\\msrvtt\\videos\\video\\video4866.mp4",
+   "query": "three women all wearing different shades of beige strut down a catwalk in a fashion show a man in dark glasses with silver across the nosepiece and at the corners says this can t be real they look horrible"
+  },
+  {
+   "video_id": "video4883",
+   "path": ".data\\msrvtt\\videos\\video\\video4883.mp4",
+   "query": "a horse is rapping in the stables as result of video manipulation"
+  },
+  {
+   "video_id": "video4884",
+   "path": ".data\\msrvtt\\videos\\video\\video4884.mp4",
+   "query": "a young girl sings on stage in front of an audience"
+  },
+  {
+   "video_id": "video4887",
+   "path": ".data\\msrvtt\\videos\\video\\video4887.mp4",
+   "query": "a guy with a pink shirt is talking to some one"
+  },
+  {
+   "video_id": "video4892",
+   "path": ".data\\msrvtt\\videos\\video\\video4892.mp4",
+   "query": "a video game caster talking about the game he is playing"
+  },
+  {
+   "video_id": "video4898",
+   "path": ".data\\msrvtt\\videos\\video\\video4898.mp4",
+   "query": "a lake is surrounded by snow peaks and grassy hillsides"
+  },
+  {
+   "video_id": "video4906",
+   "path": ".data\\msrvtt\\videos\\video\\video4906.mp4",
+   "query": "a young man discussing items on a list"
+  },
+  {
+   "video_id": "video4922",
+   "path": ".data\\msrvtt\\videos\\video\\video4922.mp4",
+   "query": "pretty girls talking about their experience and chimpanzee playing with the phone"
+  },
+  {
+   "video_id": "video4929",
+   "path": ".data\\msrvtt\\videos\\video\\video4929.mp4",
+   "query": "cartoon cars are racing"
+  },
+  {
+   "video_id": "video4934",
+   "path": ".data\\msrvtt\\videos\\video\\video4934.mp4",
+   "query": "an indian girl waits while another couple interact with a baby"
+  },
+  {
+   "video_id": "video4936",
+   "path": ".data\\msrvtt\\videos\\video\\video4936.mp4",
+   "query": "a person is playing a video game"
+  },
+  {
+   "video_id": "video4940",
+   "path": ".data\\msrvtt\\videos\\video\\video4940.mp4",
+   "query": "a little girl and a dog playing with bubbles"
+  },
+  {
+   "video_id": "video4947",
+   "path": ".data\\msrvtt\\videos\\video\\video4947.mp4",
+   "query": "some men are talking about a movie with the rock"
+  },
+  {
+   "video_id": "video4951",
+   "path": ".data\\msrvtt\\videos\\video\\video4951.mp4",
+   "query": "a women is dancing and singing song on street at night"
+  },
+  {
+   "video_id": "video4966",
+   "path": ".data\\msrvtt\\videos\\video\\video4966.mp4",
+   "query": "a woman is baking on a show"
+  },
+  {
+   "video_id": "video497",
+   "path": ".data\\msrvtt\\videos\\video\\video497.mp4",
+   "query": "a person is playing with a rubix cube"
+  },
+  {
+   "video_id": "video4989",
+   "path": ".data\\msrvtt\\videos\\video\\video4989.mp4",
+   "query": "a cartoon character is wandering here and there"
+  },
+  {
+   "video_id": "video4990",
+   "path": ".data\\msrvtt\\videos\\video\\video4990.mp4",
+   "query": "a wedding where footloose the song is playing"
+  },
+  {
+   "video_id": "video50",
+   "path": ".data\\msrvtt\\videos\\video\\video50.mp4",
+   "query": "a man and woman making faces at each other"
+  },
+  {
+   "video_id": "video5002",
+   "path": ".data\\msrvtt\\videos\\video\\video5002.mp4",
+   "query": "there s a man talking about something very passionately"
+  },
+  {
+   "video_id": "video5005",
+   "path": ".data\\msrvtt\\videos\\video\\video5005.mp4",
+   "query": "a pulmonologist speaks on the medical field"
+  },
+  {
+   "video_id": "video501",
+   "path": ".data\\msrvtt\\videos\\video\\video501.mp4",
+   "query": "the car was white"
+  },
+  {
+   "video_id": "video5014",
+   "path": ".data\\msrvtt\\videos\\video\\video5014.mp4",
+   "query": "three monkeys are jumping on the bed"
+  },
+  {
+   "video_id": "video5019",
+   "path": ".data\\msrvtt\\videos\\video\\video5019.mp4",
+   "query": "a person is pointing a gun towards another person"
+  },
+  {
+   "video_id": "video502",
+   "path": ".data\\msrvtt\\videos\\video\\video502.mp4",
+   "query": "a woman is giving a tutorial for some kind of adobe art software"
+  },
+  {
+   "video_id": "video5020",
+   "path": ".data\\msrvtt\\videos\\video\\video5020.mp4",
+   "query": "marty mcfly tries to escape bullies on a overboard the bullies pull out much tougher looking boards and link them together"
+  },
+  {
+   "video_id": "video503",
+   "path": ".data\\msrvtt\\videos\\video\\video503.mp4",
+   "query": "a mute video of a person stirring chicken in a pot"
+  },
+  {
+   "video_id": "video5031",
+   "path": ".data\\msrvtt\\videos\\video\\video5031.mp4",
+   "query": "a man is playing with his gun saying that he should commit suicide"
+  },
+  {
+   "video_id": "video5037",
+   "path": ".data\\msrvtt\\videos\\video\\video5037.mp4",
+   "query": "a person is showing various famous buildings of the city"
+  },
+  {
+   "video_id": "video504",
+   "path": ".data\\msrvtt\\videos\\video\\video504.mp4",
+   "query": "man describes layout of a pistol"
+  },
+  {
+   "video_id": "video5046",
+   "path": ".data\\msrvtt\\videos\\video\\video5046.mp4",
+   "query": "a monk discusses opportunity in a sermon type talk he is giving"
+  },
+  {
+   "video_id": "video5049",
+   "path": ".data\\msrvtt\\videos\\video\\video5049.mp4",
+   "query": "a man talks about the tools in his shop both old hand tools and power tools"
+  },
+  {
+   "video_id": "video5051",
+   "path": ".data\\msrvtt\\videos\\video\\video5051.mp4",
+   "query": "night vision assitant is demonstrated on a car"
+  },
+  {
+   "video_id": "video506",
+   "path": ".data\\msrvtt\\videos\\video\\video506.mp4",
+   "query": "an animated map is being displayed"
+  },
+  {
+   "video_id": "video5063",
+   "path": ".data\\msrvtt\\videos\\video\\video5063.mp4",
+   "query": "someone is showing video graphics game"
+  },
+  {
+   "video_id": "video5070",
+   "path": ".data\\msrvtt\\videos\\video\\video5070.mp4",
+   "query": "a beautiful young women in a sexy black dress posing and walking"
+  },
+  {
+   "video_id": "video5079",
+   "path": ".data\\msrvtt\\videos\\video\\video5079.mp4",
+   "query": "several kids in black sweaters are dancing"
+  },
+  {
+   "video_id": "video5080",
+   "path": ".data\\msrvtt\\videos\\video\\video5080.mp4",
+   "query": "a star breaks apart"
+  },
+  {
+   "video_id": "video5087",
+   "path": ".data\\msrvtt\\videos\\video\\video5087.mp4",
+   "query": "a woman is playing with a girl in the pool"
+  },
+  {
+   "video_id": "video5099",
+   "path": ".data\\msrvtt\\videos\\video\\video5099.mp4",
+   "query": "a person folds a yellow piece of paper"
+  },
+  {
+   "video_id": "video5120",
+   "path": ".data\\msrvtt\\videos\\video\\video5120.mp4",
+   "query": "the guy sits on a bike"
+  },
+  {
+   "video_id": "video5129",
+   "path": ".data\\msrvtt\\videos\\video\\video5129.mp4",
+   "query": "a woman removes pink clay from a green rubber mold"
+  },
+  {
+   "video_id": "video5142",
+   "path": ".data\\msrvtt\\videos\\video\\video5142.mp4",
+   "query": "an orangutan and a dog make good friends"
+  },
+  {
+   "video_id": "video5144",
+   "path": ".data\\msrvtt\\videos\\video\\video5144.mp4",
+   "query": "the swing rate of a tennis racket is measured by a bald man in a blue shirt"
+  },
+  {
+   "video_id": "video5153",
+   "path": ".data\\msrvtt\\videos\\video\\video5153.mp4",
+   "query": "the boys talked in a huddle"
+  },
+  {
+   "video_id": "video5156",
+   "path": ".data\\msrvtt\\videos\\video\\video5156.mp4",
+   "query": "a man and woman are singing amongst a group of other people"
+  },
+  {
+   "video_id": "video5168",
+   "path": ".data\\msrvtt\\videos\\video\\video5168.mp4",
+   "query": "it is the opening of a show"
+  },
+  {
+   "video_id": "video5172",
+   "path": ".data\\msrvtt\\videos\\video\\video5172.mp4",
+   "query": "a man is explaining about a business structure"
+  },
+  {
+   "video_id": "video5176",
+   "path": ".data\\msrvtt\\videos\\video\\video5176.mp4",
+   "query": "a guitarist starts singing about a woman"
+  },
+  {
+   "video_id": "video5177",
+   "path": ".data\\msrvtt\\videos\\video\\video5177.mp4",
+   "query": "many motorcyclists ride down a street with a woman singing on the back of a motorcycle"
+  },
+  {
+   "video_id": "video5184",
+   "path": ".data\\msrvtt\\videos\\video\\video5184.mp4",
+   "query": "two boys are on a airplane putting on a mask"
+  },
+  {
+   "video_id": "video5199",
+   "path": ".data\\msrvtt\\videos\\video\\video5199.mp4",
+   "query": "a creepy old time video of toy figures is rolling"
+  },
+  {
+   "video_id": "video5217",
+   "path": ".data\\msrvtt\\videos\\video\\video5217.mp4",
+   "query": "there are tow people getting out of a car"
+  },
+  {
+   "video_id": "video522",
+   "path": ".data\\msrvtt\\videos\\video\\video522.mp4",
+   "query": "a man in blue hits a ball to a man in red who hits it back with the end of the handle of a tennis racket"
+  },
+  {
+   "video_id": "video5225",
+   "path": ".data\\msrvtt\\videos\\video\\video5225.mp4",
+   "query": "man shows how to fold a blue piece of paper"
+  },
+  {
+   "video_id": "video5233",
+   "path": ".data\\msrvtt\\videos\\video\\video5233.mp4",
+   "query": "the colt report with a man with a sports coat doing most of the talking with a woman to his right and a male to his left"
+  },
+  {
+   "video_id": "video5236",
+   "path": ".data\\msrvtt\\videos\\video\\video5236.mp4",
+   "query": "a person runs in circles on a dirt covered athletic field"
+  },
+  {
+   "video_id": "video5242",
+   "path": ".data\\msrvtt\\videos\\video\\video5242.mp4",
+   "query": "wrestling match between two guys where the referee blows the whistle"
+  },
+  {
+   "video_id": "video5245",
+   "path": ".data\\msrvtt\\videos\\video\\video5245.mp4",
+   "query": "a person explain about a gun and aiming a target"
+  },
+  {
+   "video_id": "video5247",
+   "path": ".data\\msrvtt\\videos\\video\\video5247.mp4",
+   "query": "a short clip showcasing the interior of a lamborghini"
+  },
+  {
+   "video_id": "video5248",
+   "path": ".data\\msrvtt\\videos\\video\\video5248.mp4",
+   "query": "a woman showcasing and describing a set of ingredients which were all placed in separate small glass bowls on top of a dark gray kitchen counter"
+  },
+  {
+   "video_id": "video5271",
+   "path": ".data\\msrvtt\\videos\\video\\video5271.mp4",
+   "query": "a woman reviewing a leap frog toy"
+  },
+  {
+   "video_id": "video5283",
+   "path": ".data\\msrvtt\\videos\\video\\video5283.mp4",
+   "query": "three women sitting and talking about a product"
+  },
+  {
+   "video_id": "video5287",
+   "path": ".data\\msrvtt\\videos\\video\\video5287.mp4",
+   "query": "thor the movie on tv"
+  },
+  {
+   "video_id": "video5294",
+   "path": ".data\\msrvtt\\videos\\video\\video5294.mp4",
+   "query": "a minecraft demonstration is shown"
+  },
+  {
+   "video_id": "video5302",
+   "path": ".data\\msrvtt\\videos\\video\\video5302.mp4",
+   "query": "a man is standing"
+  },
+  {
+   "video_id": "video5311",
+   "path": ".data\\msrvtt\\videos\\video\\video5311.mp4",
+   "query": "a woman is discussing kids working in a learning environment"
+  },
+  {
+   "video_id": "video5313",
+   "path": ".data\\msrvtt\\videos\\video\\video5313.mp4",
+   "query": "judges are judging a competition"
+  },
+  {
+   "video_id": "video5323",
+   "path": ".data\\msrvtt\\videos\\video\\video5323.mp4",
+   "query": "a woman is providing instructions on how she going to take corning ware and organize it in her kitchen"
+  },
+  {
+   "video_id": "video533",
+   "path": ".data\\msrvtt\\videos\\video\\video533.mp4",
+   "query": "men are working out in a gym set to music"
+  },
+  {
+   "video_id": "video5352",
+   "path": ".data\\msrvtt\\videos\\video\\video5352.mp4",
+   "query": "a baby elephant standing by a larger elephant"
+  },
+  {
+   "video_id": "video5361",
+   "path": ".data\\msrvtt\\videos\\video\\video5361.mp4",
+   "query": "two men wrestling during a match"
+  },
+  {
+   "video_id": "video5378",
+   "path": ".data\\msrvtt\\videos\\video\\video5378.mp4",
+   "query": "a man does a report on politicians"
+  },
+  {
+   "video_id": "video5379",
+   "path": ".data\\msrvtt\\videos\\video\\video5379.mp4",
+   "query": "cartoon show for kids"
+  },
+  {
+   "video_id": "video5380",
+   "path": ".data\\msrvtt\\videos\\video\\video5380.mp4",
+   "query": "a man watches a clip where another person is sprinting and jumping off a building"
+  },
+  {
+   "video_id": "video5381",
+   "path": ".data\\msrvtt\\videos\\video\\video5381.mp4",
+   "query": "a man sprays graffiti on a subway train"
+  },
+  {
+   "video_id": "video5383",
+   "path": ".data\\msrvtt\\videos\\video\\video5383.mp4",
+   "query": "many option are displayed with blue background then any thing can be changed using cursor"
+  },
+  {
+   "video_id": "video5411",
+   "path": ".data\\msrvtt\\videos\\video\\video5411.mp4",
+   "query": "girl in red and boy in blue dress swimming in pool of water"
+  },
+  {
+   "video_id": "video5416",
+   "path": ".data\\msrvtt\\videos\\video\\video5416.mp4",
+   "query": "there is a man in yellow is dating with a woman"
+  },
+  {
+   "video_id": "video5419",
+   "path": ".data\\msrvtt\\videos\\video\\video5419.mp4",
+   "query": "waitress serves the bar"
+  },
+  {
+   "video_id": "video5425",
+   "path": ".data\\msrvtt\\videos\\video\\video5425.mp4",
+   "query": "it is a commercial for a rock band festival"
+  },
+  {
+   "video_id": "video5450",
+   "path": ".data\\msrvtt\\videos\\video\\video5450.mp4",
+   "query": "a man plays piano with other musicians in an orchestra"
+  },
+  {
+   "video_id": "video5454",
+   "path": ".data\\msrvtt\\videos\\video\\video5454.mp4",
+   "query": "a man with a white shirt and glasses is in a room"
+  },
+  {
+   "video_id": "video546",
+   "path": ".data\\msrvtt\\videos\\video\\video546.mp4",
+   "query": "someone is cooking something and talking about that"
+  },
+  {
+   "video_id": "video5460",
+   "path": ".data\\msrvtt\\videos\\video\\video5460.mp4",
+   "query": "a man eating food"
+  },
+  {
+   "video_id": "video5477",
+   "path": ".data\\msrvtt\\videos\\video\\video5477.mp4",
+   "query": "a man talking about jail"
+  },
+  {
+   "video_id": "video5495",
+   "path": ".data\\msrvtt\\videos\\video\\video5495.mp4",
+   "query": "in a children park hide and seek play is done joyfully"
+  },
+  {
+   "video_id": "video5502",
+   "path": ".data\\msrvtt\\videos\\video\\video5502.mp4",
+   "query": "many photos zoom together to form the name of a late night talk show"
+  },
+  {
+   "video_id": "video5523",
+   "path": ".data\\msrvtt\\videos\\video\\video5523.mp4",
+   "query": "a gladiator is shot in the back with three to four arrows"
+  },
+  {
+   "video_id": "video5529",
+   "path": ".data\\msrvtt\\videos\\video\\video5529.mp4",
+   "query": "a woman scoops beans from a pot into a glass bowl"
+  },
+  {
+   "video_id": "video5555",
+   "path": ".data\\msrvtt\\videos\\video\\video5555.mp4",
+   "query": "a person using computer art program"
+  },
+  {
+   "video_id": "video5557",
+   "path": ".data\\msrvtt\\videos\\video\\video5557.mp4",
+   "query": "animals eat food on video"
+  },
+  {
+   "video_id": "video5565",
+   "path": ".data\\msrvtt\\videos\\video\\video5565.mp4",
+   "query": "a young woman is explaining hairstyling techniques in a bathroom"
+  },
+  {
+   "video_id": "video5572",
+   "path": ".data\\msrvtt\\videos\\video\\video5572.mp4",
+   "query": "a father and daughter is dancing to music"
+  },
+  {
+   "video_id": "video5600",
+   "path": ".data\\msrvtt\\videos\\video\\video5600.mp4",
+   "query": "a guy demonstrates a snap on strainer for a pan"
+  },
+  {
+   "video_id": "video5603",
+   "path": ".data\\msrvtt\\videos\\video\\video5603.mp4",
+   "query": "two men have a conversation in front of an audience"
+  },
+  {
+   "video_id": "video5604",
+   "path": ".data\\msrvtt\\videos\\video\\video5604.mp4",
+   "query": "a boy is flying an airplane"
+  },
+  {
+   "video_id": "video5607",
+   "path": ".data\\msrvtt\\videos\\video\\video5607.mp4",
+   "query": "movieclips links to other videos"
+  },
+  {
+   "video_id": "video5612",
+   "path": ".data\\msrvtt\\videos\\video\\video5612.mp4",
+   "query": "two man s fighting with each other"
+  },
+  {
+   "video_id": "video5627",
+   "path": ".data\\msrvtt\\videos\\video\\video5627.mp4",
+   "query": "young boy and girl dancing in a kitchen"
+  },
+  {
+   "video_id": "video5629",
+   "path": ".data\\msrvtt\\videos\\video\\video5629.mp4",
+   "query": "models are walking down a runway with various outfits"
+  },
+  {
+   "video_id": "video563",
+   "path": ".data\\msrvtt\\videos\\video\\video563.mp4",
+   "query": "a boy plays with his pig and car toy"
+  },
+  {
+   "video_id": "video5637",
+   "path": ".data\\msrvtt\\videos\\video\\video5637.mp4",
+   "query": "two cartoon characters looking at a horse picture"
+  },
+  {
+   "video_id": "video5662",
+   "path": ".data\\msrvtt\\videos\\video\\video5662.mp4",
+   "query": "some people are standing around"
+  },
+  {
+   "video_id": "video5677",
+   "path": ".data\\msrvtt\\videos\\video\\video5677.mp4",
+   "query": "two man s are talking to each other"
+  },
+  {
+   "video_id": "video568",
+   "path": ".data\\msrvtt\\videos\\video\\video568.mp4",
+   "query": "kids are singing and dancing"
+  },
+  {
+   "video_id": "video5685",
+   "path": ".data\\msrvtt\\videos\\video\\video5685.mp4",
+   "query": "a woman screams at another woman while a man mocks her from a skyscraper across the street"
+  },
+  {
+   "video_id": "video5695",
+   "path": ".data\\msrvtt\\videos\\video\\video5695.mp4",
+   "query": "the grand canyon in arizona is shown"
+  },
+  {
+   "video_id": "video571",
+   "path": ".data\\msrvtt\\videos\\video\\video571.mp4",
+   "query": "a mother cat and her kittens bathing each other in a box"
+  },
+  {
+   "video_id": "video5710",
+   "path": ".data\\msrvtt\\videos\\video\\video5710.mp4",
+   "query": "a woman is dancing in front of mirror"
+  },
+  {
+   "video_id": "video5715",
+   "path": ".data\\msrvtt\\videos\\video\\video5715.mp4",
+   "query": "cats playing with toys"
+  },
+  {
+   "video_id": "video5722",
+   "path": ".data\\msrvtt\\videos\\video\\video5722.mp4",
+   "query": "there is a guy showing a car"
+  },
+  {
+   "video_id": "video5732",
+   "path": ".data\\msrvtt\\videos\\video\\video5732.mp4",
+   "query": "a girl models lululemon sports bras"
+  },
+  {
+   "video_id": "video5736",
+   "path": ".data\\msrvtt\\videos\\video\\video5736.mp4",
+   "query": "a man speaks in german about the internet"
+  },
+  {
+   "video_id": "video5753",
+   "path": ".data\\msrvtt\\videos\\video\\video5753.mp4",
+   "query": "a person doing a cooking show and mixing the ingredients for the recipe"
+  },
+  {
+   "video_id": "video5777",
+   "path": ".data\\msrvtt\\videos\\video\\video5777.mp4",
+   "query": "a man in a dark suit and blue tie is talking about the ebola virus"
+  },
+  {
+   "video_id": "video5780",
+   "path": ".data\\msrvtt\\videos\\video\\video5780.mp4",
+   "query": "a little girl with blonde hair petting a llama"
+  },
+  {
+   "video_id": "video5789",
+   "path": ".data\\msrvtt\\videos\\video\\video5789.mp4",
+   "query": "men s single tale tennis match is taking place and the audience are thrilled to watch the game"
+  },
+  {
+   "video_id": "video58",
+   "path": ".data\\msrvtt\\videos\\video\\video58.mp4",
+   "query": "police is searching in forest"
+  },
+  {
+   "video_id": "video581",
+   "path": ".data\\msrvtt\\videos\\video\\video581.mp4",
+   "query": "there are some books of different types for subscribe"
+  },
+  {
+   "video_id": "video5817",
+   "path": ".data\\msrvtt\\videos\\video\\video5817.mp4",
+   "query": "a female actor finishes her shower to answer a ringing phone"
+  },
+  {
+   "video_id": "video5830",
+   "path": ".data\\msrvtt\\videos\\video\\video5830.mp4",
+   "query": "a man runs onto the baseball field"
+  },
+  {
+   "video_id": "video584",
+   "path": ".data\\msrvtt\\videos\\video\\video584.mp4",
+   "query": "a person repeatedly rubbing squares on a rubik s cube"
+  },
+  {
+   "video_id": "video5840",
+   "path": ".data\\msrvtt\\videos\\video\\video5840.mp4",
+   "query": "a woman sings for the audience and judges on a television show"
+  },
+  {
+   "video_id": "video5841",
+   "path": ".data\\msrvtt\\videos\\video\\video5841.mp4",
+   "query": "a grown man with a white t-shirt and pony tail asks to play with a light saber one is thrown to him and it shows him and another man saber fighting"
+  },
+  {
+   "video_id": "video5861",
+   "path": ".data\\msrvtt\\videos\\video\\video5861.mp4",
+   "query": "a commercial is shown for a phone"
+  },
+  {
+   "video_id": "video5869",
+   "path": ".data\\msrvtt\\videos\\video\\video5869.mp4",
+   "query": "sports plays are shown for a football game and synchronized skydiving"
+  },
+  {
+   "video_id": "video5873",
+   "path": ".data\\msrvtt\\videos\\video\\video5873.mp4",
+   "query": "a person is playing the star craft game"
+  },
+  {
+   "video_id": "video5883",
+   "path": ".data\\msrvtt\\videos\\video\\video5883.mp4",
+   "query": "a family playing in a swimming pool"
+  },
+  {
+   "video_id": "video5884",
+   "path": ".data\\msrvtt\\videos\\video\\video5884.mp4",
+   "query": "people are moving machinery"
+  },
+  {
+   "video_id": "video5899",
+   "path": ".data\\msrvtt\\videos\\video\\video5899.mp4",
+   "query": "a highlight reel shows several sports clips"
+  },
+  {
+   "video_id": "video5900",
+   "path": ".data\\msrvtt\\videos\\video\\video5900.mp4",
+   "query": "cartoon sequence involving a dog and a ball"
+  },
+  {
+   "video_id": "video5902",
+   "path": ".data\\msrvtt\\videos\\video\\video5902.mp4",
+   "query": "a tutorial where a man is showing how to cook"
+  },
+  {
+   "video_id": "video5938",
+   "path": ".data\\msrvtt\\videos\\video\\video5938.mp4",
+   "query": "a view of a river side town with voice narration about fossil fuels"
+  },
+  {
+   "video_id": "video5942",
+   "path": ".data\\msrvtt\\videos\\video\\video5942.mp4",
+   "query": "very expensive red car going really fast down urban road"
+  },
+  {
+   "video_id": "video5959",
+   "path": ".data\\msrvtt\\videos\\video\\video5959.mp4",
+   "query": "a person mixing ingredients into a bowl"
+  },
+  {
+   "video_id": "video596",
+   "path": ".data\\msrvtt\\videos\\video\\video596.mp4",
+   "query": "a lecturer talking about reflex loop with help of a presentation"
+  },
+  {
+   "video_id": "video5970",
+   "path": ".data\\msrvtt\\videos\\video\\video5970.mp4",
+   "query": "a dignified official gives his take on political free trade agreements"
+  },
+  {
+   "video_id": "video5978",
+   "path": ".data\\msrvtt\\videos\\video\\video5978.mp4",
+   "query": "a man in a suit and a woman in a wedding dress dancing together"
+  },
+  {
+   "video_id": "video6020",
+   "path": ".data\\msrvtt\\videos\\video\\video6020.mp4",
+   "query": "a woman showing a makeup stick"
+  },
+  {
+   "video_id": "video6029",
+   "path": ".data\\msrvtt\\videos\\video\\video6029.mp4",
+   "query": "a person is handling a piece of equipment"
+  },
+  {
+   "video_id": "video6032",
+   "path": ".data\\msrvtt\\videos\\video\\video6032.mp4",
+   "query": "children are answering questions about a video"
+  },
+  {
+   "video_id": "video6068",
+   "path": ".data\\msrvtt\\videos\\video\\video6068.mp4",
+   "query": "a girl playing a hand flute"
+  },
+  {
+   "video_id": "video6069",
+   "path": ".data\\msrvtt\\videos\\video\\video6069.mp4",
+   "query": "a clip of boxing telling about the speed and power of hits"
+  },
+  {
+   "video_id": "video6079",
+   "path": ".data\\msrvtt\\videos\\video\\video6079.mp4",
+   "query": "cheer leaders are entertaining audience"
+  },
+  {
+   "video_id": "video6085",
+   "path": ".data\\msrvtt\\videos\\video\\video6085.mp4",
+   "query": "a group of children dancing and singing on cnn"
+  },
+  {
+   "video_id": "video6086",
+   "path": ".data\\msrvtt\\videos\\video\\video6086.mp4",
+   "query": "in an animation a robot talks to a person who is lying on the ground"
+  },
+  {
+   "video_id": "video6089",
+   "path": ".data\\msrvtt\\videos\\video\\video6089.mp4",
+   "query": "guy showing a power point presentation about brain teasers"
+  },
+  {
+   "video_id": "video6094",
+   "path": ".data\\msrvtt\\videos\\video\\video6094.mp4",
+   "query": "a guy receiving a toilet paper roll from the staff"
+  },
+  {
+   "video_id": "video6118",
+   "path": ".data\\msrvtt\\videos\\video\\video6118.mp4",
+   "query": "two wrestlers are competing"
+  },
+  {
+   "video_id": "video6120",
+   "path": ".data\\msrvtt\\videos\\video\\video6120.mp4",
+   "query": "a young indian family holds each other in a sad moment"
+  },
+  {
+   "video_id": "video6121",
+   "path": ".data\\msrvtt\\videos\\video\\video6121.mp4",
+   "query": "a boy gives a girl a coffee mug"
+  },
+  {
+   "video_id": "video6124",
+   "path": ".data\\msrvtt\\videos\\video\\video6124.mp4",
+   "query": "a woman recalls a child getting better after having 300 seizures a week"
+  },
+  {
+   "video_id": "video6142",
+   "path": ".data\\msrvtt\\videos\\video\\video6142.mp4",
+   "query": "some women are talking"
+  },
+  {
+   "video_id": "video6159",
+   "path": ".data\\msrvtt\\videos\\video\\video6159.mp4",
+   "query": "a woman is holding a brush and applying makeup to her eyebrows"
+  },
+  {
+   "video_id": "video616",
+   "path": ".data\\msrvtt\\videos\\video\\video616.mp4",
+   "query": "a deep fry snack is preparing"
+  },
+  {
+   "video_id": "video6177",
+   "path": ".data\\msrvtt\\videos\\video\\video6177.mp4",
+   "query": "a person is preparing a meal at the stovetop"
+  },
+  {
+   "video_id": "video6193",
+   "path": ".data\\msrvtt\\videos\\video\\video6193.mp4",
+   "query": "some man talking to camera and describing some scientific methods"
+  },
+  {
+   "video_id": "video6234",
+   "path": ".data\\msrvtt\\videos\\video\\video6234.mp4",
+   "query": "mark lester kneels next to a white and green snow mobile"
+  },
+  {
+   "video_id": "video6239",
+   "path": ".data\\msrvtt\\videos\\video\\video6239.mp4",
+   "query": "a man talking about integrated circuit design and technology"
+  },
+  {
+   "video_id": "video624",
+   "path": ".data\\msrvtt\\videos\\video\\video624.mp4",
+   "query": "a man is loading various victims of a disaster into a van"
+  },
+  {
+   "video_id": "video6245",
+   "path": ".data\\msrvtt\\videos\\video\\video6245.mp4",
+   "query": "a woman talking to the camera"
+  },
+  {
+   "video_id": "video6246",
+   "path": ".data\\msrvtt\\videos\\video\\video6246.mp4",
+   "query": "different men are shown"
+  },
+  {
+   "video_id": "video6247",
+   "path": ".data\\msrvtt\\videos\\video\\video6247.mp4",
+   "query": "students open trash cans while singing"
+  },
+  {
+   "video_id": "video6251",
+   "path": ".data\\msrvtt\\videos\\video\\video6251.mp4",
+   "query": "brave people extremely skiing down a snowy mountain"
+  },
+  {
+   "video_id": "video6261",
+   "path": ".data\\msrvtt\\videos\\video\\video6261.mp4",
+   "query": "a man is making a roll snacks on the pan"
+  },
+  {
+   "video_id": "video6267",
+   "path": ".data\\msrvtt\\videos\\video\\video6267.mp4",
+   "query": "a giant tornado sweeps through the country side and moves towards a barn as a semi truck goes in the other direction on the highway"
+  },
+  {
+   "video_id": "video6271",
+   "path": ".data\\msrvtt\\videos\\video\\video6271.mp4",
+   "query": "a lady model giving poses to camera in home"
+  },
+  {
+   "video_id": "video6273",
+   "path": ".data\\msrvtt\\videos\\video\\video6273.mp4",
+   "query": "a lady singing the song with her group on stage"
+  },
+  {
+   "video_id": "video6282",
+   "path": ".data\\msrvtt\\videos\\video\\video6282.mp4",
+   "query": "there is something impressing matters goin on"
+  },
+  {
+   "video_id": "video6283",
+   "path": ".data\\msrvtt\\videos\\video\\video6283.mp4",
+   "query": "two persons are travelling in a vehicle along the road"
+  },
+  {
+   "video_id": "video6288",
+   "path": ".data\\msrvtt\\videos\\video\\video6288.mp4",
+   "query": "hockey players showing off their skills and tricks"
+  },
+  {
+   "video_id": "video6291",
+   "path": ".data\\msrvtt\\videos\\video\\video6291.mp4",
+   "query": "a man in a wig"
+  },
+  {
+   "video_id": "video6299",
+   "path": ".data\\msrvtt\\videos\\video\\video6299.mp4",
+   "query": "a cooking tutorial video for a tuna salad with tomatoes and green onions"
+  },
+  {
+   "video_id": "video6320",
+   "path": ".data\\msrvtt\\videos\\video\\video6320.mp4",
+   "query": "a person in the news channel speaks about the terrorism speech given by president"
+  },
+  {
+   "video_id": "video6321",
+   "path": ".data\\msrvtt\\videos\\video\\video6321.mp4",
+   "query": "a trailer for a popular foreign television show"
+  },
+  {
+   "video_id": "video6333",
+   "path": ".data\\msrvtt\\videos\\video\\video6333.mp4",
+   "query": "a man is explaining something"
+  },
+  {
+   "video_id": "video6335",
+   "path": ".data\\msrvtt\\videos\\video\\video6335.mp4",
+   "query": "two men s reactions to a scary video are recorded"
+  },
+  {
+   "video_id": "video6337",
+   "path": ".data\\msrvtt\\videos\\video\\video6337.mp4",
+   "query": "we are shown the engine of a cadillac"
+  },
+  {
+   "video_id": "video6342",
+   "path": ".data\\msrvtt\\videos\\video\\video6342.mp4",
+   "query": "a guy creating a stuffed animal"
+  },
+  {
+   "video_id": "video6347",
+   "path": ".data\\msrvtt\\videos\\video\\video6347.mp4",
+   "query": "a middle aged woman in a red shirt is cooking vegetables on a stovetop"
+  },
+  {
+   "video_id": "video6351",
+   "path": ".data\\msrvtt\\videos\\video\\video6351.mp4",
+   "query": "a person showing a box of toys that they have"
+  },
+  {
+   "video_id": "video6386",
+   "path": ".data\\msrvtt\\videos\\video\\video6386.mp4",
+   "query": "a table tennis match in which a players fight to win and the blue dress player wins the set"
+  },
+  {
+   "video_id": "video6389",
+   "path": ".data\\msrvtt\\videos\\video\\video6389.mp4",
+   "query": "the man hosting a television game show is laughing uncontrollably while two contestants look on"
+  },
+  {
+   "video_id": "video64",
+   "path": ".data\\msrvtt\\videos\\video\\video64.mp4",
+   "query": "a machine is welding and shaping metal sheets"
+  },
+  {
+   "video_id": "video6401",
+   "path": ".data\\msrvtt\\videos\\video\\video6401.mp4",
+   "query": "a boy in blue dress color wearing cloth standing still image photoes music displaying on screen"
+  },
+  {
+   "video_id": "video6420",
+   "path": ".data\\msrvtt\\videos\\video\\video6420.mp4",
+   "query": "a man explaining about to prepare some dish in home"
+  },
+  {
+   "video_id": "video6432",
+   "path": ".data\\msrvtt\\videos\\video\\video6432.mp4",
+   "query": "a man is driving a car"
+  },
+  {
+   "video_id": "video6433",
+   "path": ".data\\msrvtt\\videos\\video\\video6433.mp4",
+   "query": "a kid s video game is depicted"
+  },
+  {
+   "video_id": "video6439",
+   "path": ".data\\msrvtt\\videos\\video\\video6439.mp4",
+   "query": "a man in a plad shirt talking about exercising to a group of woman"
+  },
+  {
+   "video_id": "video644",
+   "path": ".data\\msrvtt\\videos\\video\\video644.mp4",
+   "query": "a clip showing someone sketching up a drawing"
+  },
+  {
+   "video_id": "video6440",
+   "path": ".data\\msrvtt\\videos\\video\\video6440.mp4",
+   "query": "there is a three storied building and coconut trees around them"
+  },
+  {
+   "video_id": "video6441",
+   "path": ".data\\msrvtt\\videos\\video\\video6441.mp4",
+   "query": "video game of a man driving a red car and commentating to it"
+  },
+  {
+   "video_id": "video6442",
+   "path": ".data\\msrvtt\\videos\\video\\video6442.mp4",
+   "query": "an animated child is walking"
+  },
+  {
+   "video_id": "video6446",
+   "path": ".data\\msrvtt\\videos\\video\\video6446.mp4",
+   "query": "a cat and a chicken are fighting"
+  },
+  {
+   "video_id": "video6453",
+   "path": ".data\\msrvtt\\videos\\video\\video6453.mp4",
+   "query": "a boy and a girl are surfing"
+  },
+  {
+   "video_id": "video6463",
+   "path": ".data\\msrvtt\\videos\\video\\video6463.mp4",
+   "query": "person pets their lizard"
+  },
+  {
+   "video_id": "video6466",
+   "path": ".data\\msrvtt\\videos\\video\\video6466.mp4",
+   "query": "a man in a black suit is talking to another man"
+  },
+  {
+   "video_id": "video6487",
+   "path": ".data\\msrvtt\\videos\\video\\video6487.mp4",
+   "query": "people are playing with toy cars"
+  },
+  {
+   "video_id": "video6496",
+   "path": ".data\\msrvtt\\videos\\video\\video6496.mp4",
+   "query": "a man rolls from right to left behind a desk with a computer and a globe on a stand rolls from left to right"
+  },
+  {
+   "video_id": "video6499",
+   "path": ".data\\msrvtt\\videos\\video\\video6499.mp4",
+   "query": "some people are talking in different occasions"
+  },
+  {
+   "video_id": "video6500",
+   "path": ".data\\msrvtt\\videos\\video\\video6500.mp4",
+   "query": "a large menu from the game minecraft"
+  },
+  {
+   "video_id": "video6504",
+   "path": ".data\\msrvtt\\videos\\video\\video6504.mp4",
+   "query": "vines of professional atheletes"
+  },
+  {
+   "video_id": "video652",
+   "path": ".data\\msrvtt\\videos\\video\\video652.mp4",
+   "query": "a man is instructing other how to walk on skates on a rocky field"
+  },
+  {
+   "video_id": "video6526",
+   "path": ".data\\msrvtt\\videos\\video\\video6526.mp4",
+   "query": "both girls are looking with sexy dress"
+  },
+  {
+   "video_id": "video6530",
+   "path": ".data\\msrvtt\\videos\\video\\video6530.mp4",
+   "query": "game play footage of grand theft auto"
+  },
+  {
+   "video_id": "video6540",
+   "path": ".data\\msrvtt\\videos\\video\\video6540.mp4",
+   "query": "a man is standing in costume for a marvel movie"
+  },
+  {
+   "video_id": "video6561",
+   "path": ".data\\msrvtt\\videos\\video\\video6561.mp4",
+   "query": "a man explains how to cook food with a recipe"
+  },
+  {
+   "video_id": "video6565",
+   "path": ".data\\msrvtt\\videos\\video\\video6565.mp4",
+   "query": "a man is on a golf course and doing exercises"
+  },
+  {
+   "video_id": "video6566",
+   "path": ".data\\msrvtt\\videos\\video\\video6566.mp4",
+   "query": "a person is operating a robot"
+  },
+  {
+   "video_id": "video6574",
+   "path": ".data\\msrvtt\\videos\\video\\video6574.mp4",
+   "query": "a woman sing on stage at a large concert"
+  },
+  {
+   "video_id": "video658",
+   "path": ".data\\msrvtt\\videos\\video\\video658.mp4",
+   "query": "two guys in a black room playing ping pong"
+  },
+  {
+   "video_id": "video6586",
+   "path": ".data\\msrvtt\\videos\\video\\video6586.mp4",
+   "query": "a stroller is being advertised"
+  },
+  {
+   "video_id": "video6596",
+   "path": ".data\\msrvtt\\videos\\video\\video6596.mp4",
+   "query": "a video game character is running on a bench with a gun"
+  },
+  {
+   "video_id": "video66",
+   "path": ".data\\msrvtt\\videos\\video\\video66.mp4",
+   "query": "a young girl auditions for the voice"
+  },
+  {
+   "video_id": "video660",
+   "path": ".data\\msrvtt\\videos\\video\\video660.mp4",
+   "query": "an animation of cartoons"
+  },
+  {
+   "video_id": "video6600",
+   "path": ".data\\msrvtt\\videos\\video\\video6600.mp4",
+   "query": "a dirty woman sings"
+  },
+  {
+   "video_id": "video6605",
+   "path": ".data\\msrvtt\\videos\\video\\video6605.mp4",
+   "query": "a young man talks about his site and encourages viewers to subscribe"
+  },
+  {
+   "video_id": "video6609",
+   "path": ".data\\msrvtt\\videos\\video\\video6609.mp4",
+   "query": "steve harvey on family fued"
+  },
+  {
+   "video_id": "video6622",
+   "path": ".data\\msrvtt\\videos\\video\\video6622.mp4",
+   "query": "an animated dog is being pet by an animated human"
+  },
+  {
+   "video_id": "video6628",
+   "path": ".data\\msrvtt\\videos\\video\\video6628.mp4",
+   "query": "woman trying out features of a stroller"
+  },
+  {
+   "video_id": "video6640",
+   "path": ".data\\msrvtt\\videos\\video\\video6640.mp4",
+   "query": "a video shows a cat laying on the floor"
+  },
+  {
+   "video_id": "video6642",
+   "path": ".data\\msrvtt\\videos\\video\\video6642.mp4",
+   "query": "a lady very happily gets up to hug her loved ones in celebration of winnning"
+  },
+  {
+   "video_id": "video6643",
+   "path": ".data\\msrvtt\\videos\\video\\video6643.mp4",
+   "query": "a clip showing a man giving instructions to others"
+  },
+  {
+   "video_id": "video6646",
+   "path": ".data\\msrvtt\\videos\\video\\video6646.mp4",
+   "query": "a man kissing a wommen and hugging sometimes its a part of a movie"
+  },
+  {
+   "video_id": "video6649",
+   "path": ".data\\msrvtt\\videos\\video\\video6649.mp4",
+   "query": "a person is talking about dust mites"
+  },
+  {
+   "video_id": "video665",
+   "path": ".data\\msrvtt\\videos\\video\\video665.mp4",
+   "query": "a wrestler flees from his opponent"
+  },
+  {
+   "video_id": "video6653",
+   "path": ".data\\msrvtt\\videos\\video\\video6653.mp4",
+   "query": "motorbikes race down a street"
+  },
+  {
+   "video_id": "video6654",
+   "path": ".data\\msrvtt\\videos\\video\\video6654.mp4",
+   "query": "a car crashes fastly into the truck that comes from the opposite road"
+  },
+  {
+   "video_id": "video6672",
+   "path": ".data\\msrvtt\\videos\\video\\video6672.mp4",
+   "query": "man in red sweater begins to show how to cook potatoes"
+  },
+  {
+   "video_id": "video6681",
+   "path": ".data\\msrvtt\\videos\\video\\video6681.mp4",
+   "query": "a person shows off various lego soldiers"
+  },
+  {
+   "video_id": "video6684",
+   "path": ".data\\msrvtt\\videos\\video\\video6684.mp4",
+   "query": "a band is performing eye of the tiger and then olivia newton-john is performing let s get physical while a man narrates"
+  },
+  {
+   "video_id": "video6697",
+   "path": ".data\\msrvtt\\videos\\video\\video6697.mp4",
+   "query": "a white dress player hits the ball and black dress player missed it"
+  },
+  {
+   "video_id": "video670",
+   "path": ".data\\msrvtt\\videos\\video\\video670.mp4",
+   "query": "a cartoon car races down a race way"
+  },
+  {
+   "video_id": "video6719",
+   "path": ".data\\msrvtt\\videos\\video\\video6719.mp4",
+   "query": "a man in a uniform and a woman walk down a staircase"
+  },
+  {
+   "video_id": "video6726",
+   "path": ".data\\msrvtt\\videos\\video\\video6726.mp4",
+   "query": "on the highway the vehicles are going through on very speed"
+  },
+  {
+   "video_id": "video6731",
+   "path": ".data\\msrvtt\\videos\\video\\video6731.mp4",
+   "query": "a lot of people are watching golf"
+  },
+  {
+   "video_id": "video6746",
+   "path": ".data\\msrvtt\\videos\\video\\video6746.mp4",
+   "query": "video clip showing covering of vehicle"
+  },
+  {
+   "video_id": "video6747",
+   "path": ".data\\msrvtt\\videos\\video\\video6747.mp4",
+   "query": "a person is playing pokemon for gameboy"
+  },
+  {
+   "video_id": "video6758",
+   "path": ".data\\msrvtt\\videos\\video\\video6758.mp4",
+   "query": "a man is taking photographs with a child and a guitar"
+  },
+  {
+   "video_id": "video676",
+   "path": ".data\\msrvtt\\videos\\video\\video676.mp4",
+   "query": "the president is talking on the phone and in another scene a group of young women are listening and laughing to what he is saying"
+  },
+  {
+   "video_id": "video6767",
+   "path": ".data\\msrvtt\\videos\\video\\video6767.mp4",
+   "query": "two girls talking to each other"
+  },
+  {
+   "video_id": "video6793",
+   "path": ".data\\msrvtt\\videos\\video\\video6793.mp4",
+   "query": "a music video talking about cool kids"
+  },
+  {
+   "video_id": "video6794",
+   "path": ".data\\msrvtt\\videos\\video\\video6794.mp4",
+   "query": "two clips of failed sporting attempts"
+  },
+  {
+   "video_id": "video6798",
+   "path": ".data\\msrvtt\\videos\\video\\video6798.mp4",
+   "query": "two girls are shown in some sort of market"
+  },
+  {
+   "video_id": "video6812",
+   "path": ".data\\msrvtt\\videos\\video\\video6812.mp4",
+   "query": "a horse performs some tricks"
+  },
+  {
+   "video_id": "video6818",
+   "path": ".data\\msrvtt\\videos\\video\\video6818.mp4",
+   "query": "men playing soccer in the field"
+  },
+  {
+   "video_id": "video6823",
+   "path": ".data\\msrvtt\\videos\\video\\video6823.mp4",
+   "query": "a woman wearing a striped dress holding a bag that has some sunglasses inside"
+  },
+  {
+   "video_id": "video6831",
+   "path": ".data\\msrvtt\\videos\\video\\video6831.mp4",
+   "query": "there is a mouse playing with someone"
+  },
+  {
+   "video_id": "video6833",
+   "path": ".data\\msrvtt\\videos\\video\\video6833.mp4",
+   "query": "in american football a pass is thrown and the receiver is hit in american basketball men are playing"
+  },
+  {
+   "video_id": "video6846",
+   "path": ".data\\msrvtt\\videos\\video\\video6846.mp4",
+   "query": "a group of performers putting on a show in costume for a live audience"
+  },
+  {
+   "video_id": "video6847",
+   "path": ".data\\msrvtt\\videos\\video\\video6847.mp4",
+   "query": "a man is giving a comedy speech"
+  },
+  {
+   "video_id": "video6860",
+   "path": ".data\\msrvtt\\videos\\video\\video6860.mp4",
+   "query": "a music video featuring teenagers"
+  },
+  {
+   "video_id": "video6876",
+   "path": ".data\\msrvtt\\videos\\video\\video6876.mp4",
+   "query": "a boy is watching birds"
+  },
+  {
+   "video_id": "video6883",
+   "path": ".data\\msrvtt\\videos\\video\\video6883.mp4",
+   "query": "a person shows a program"
+  },
+  {
+   "video_id": "video6884",
+   "path": ".data\\msrvtt\\videos\\video\\video6884.mp4",
+   "query": "a person is putting a fish into a tank of water"
+  },
+  {
+   "video_id": "video6900",
+   "path": ".data\\msrvtt\\videos\\video\\video6900.mp4",
+   "query": "a girl pressing a machine hand keys stich key adjust"
+  },
+  {
+   "video_id": "video6934",
+   "path": ".data\\msrvtt\\videos\\video\\video6934.mp4",
+   "query": "two women talking on the camera"
+  },
+  {
+   "video_id": "video6939",
+   "path": ".data\\msrvtt\\videos\\video\\video6939.mp4",
+   "query": "someone is playing a video game"
+  },
+  {
+   "video_id": "video6952",
+   "path": ".data\\msrvtt\\videos\\video\\video6952.mp4",
+   "query": "a animation of a cartoon chopping two or three guys talking and cussing in background about whats happening"
+  },
+  {
+   "video_id": "video6954",
+   "path": ".data\\msrvtt\\videos\\video\\video6954.mp4",
+   "query": "a band performing live music for a large audience"
+  },
+  {
+   "video_id": "video6955",
+   "path": ".data\\msrvtt\\videos\\video\\video6955.mp4",
+   "query": "a red jeep is driving down a long road"
+  },
+  {
+   "video_id": "video6956",
+   "path": ".data\\msrvtt\\videos\\video\\video6956.mp4",
+   "query": "there is a lady is riding through the sea waves"
+  },
+  {
+   "video_id": "video6971",
+   "path": ".data\\msrvtt\\videos\\video\\video6971.mp4",
+   "query": "a man narrating while playing a game of pokemon"
+  },
+  {
+   "video_id": "video6974",
+   "path": ".data\\msrvtt\\videos\\video\\video6974.mp4",
+   "query": "a man with glasses"
+  },
+  {
+   "video_id": "video6982",
+   "path": ".data\\msrvtt\\videos\\video\\video6982.mp4",
+   "query": "some monster trucks are driving around in the mud"
+  },
+  {
+   "video_id": "video7007",
+   "path": ".data\\msrvtt\\videos\\video\\video7007.mp4",
+   "query": "two asian women having a discussion"
+  },
+  {
+   "video_id": "video7008",
+   "path": ".data\\msrvtt\\videos\\video\\video7008.mp4",
+   "query": "few people are taking bath in a falls which is very clean and beautiful"
+  },
+  {
+   "video_id": "video7019",
+   "path": ".data\\msrvtt\\videos\\video\\video7019.mp4",
+   "query": "a man in jacket sits in large chair in office room with paintings on wall"
+  },
+  {
+   "video_id": "video7032",
+   "path": ".data\\msrvtt\\videos\\video\\video7032.mp4",
+   "query": "a man talks about machine part cleaning"
+  },
+  {
+   "video_id": "video7039",
+   "path": ".data\\msrvtt\\videos\\video\\video7039.mp4",
+   "query": "a clip from a korean show set to music"
+  },
+  {
+   "video_id": "video7041",
+   "path": ".data\\msrvtt\\videos\\video\\video7041.mp4",
+   "query": "some teens are dancing"
+  },
+  {
+   "video_id": "video7046",
+   "path": ".data\\msrvtt\\videos\\video\\video7046.mp4",
+   "query": "a video showing the lyrics to a song is shown"
+  },
+  {
+   "video_id": "video705",
+   "path": ".data\\msrvtt\\videos\\video\\video705.mp4",
+   "query": "willsmith is looking at an alien coming out and hits on his head"
+  },
+  {
+   "video_id": "video7050",
+   "path": ".data\\msrvtt\\videos\\video\\video7050.mp4",
+   "query": "woman closes a stroller"
+  },
+  {
+   "video_id": "video7053",
+   "path": ".data\\msrvtt\\videos\\video\\video7053.mp4",
+   "query": "a man and a lion cuddling"
+  },
+  {
+   "video_id": "video7059",
+   "path": ".data\\msrvtt\\videos\\video\\video7059.mp4",
+   "query": "the grey bird with the red tail makes cat noises while sitting on top of its cage"
+  },
+  {
+   "video_id": "video7062",
+   "path": ".data\\msrvtt\\videos\\video\\video7062.mp4",
+   "query": "the person is holding an empty change purse"
+  },
+  {
+   "video_id": "video7079",
+   "path": ".data\\msrvtt\\videos\\video\\video7079.mp4",
+   "query": "a rock band plays on stage"
+  },
+  {
+   "video_id": "video7086",
+   "path": ".data\\msrvtt\\videos\\video\\video7086.mp4",
+   "query": "this a kids tv show about what they opinion about things are"
+  },
+  {
+   "video_id": "video7092",
+   "path": ".data\\msrvtt\\videos\\video\\video7092.mp4",
+   "query": "a person is using a hobby knife to point"
+  },
+  {
+   "video_id": "video7104",
+   "path": ".data\\msrvtt\\videos\\video\\video7104.mp4",
+   "query": "musicians on stage performing"
+  },
+  {
+   "video_id": "video7129",
+   "path": ".data\\msrvtt\\videos\\video\\video7129.mp4",
+   "query": "a young girl knocks on her bedroom wall"
+  },
+  {
+   "video_id": "video716",
+   "path": ".data\\msrvtt\\videos\\video\\video716.mp4",
+   "query": "a woman is talking about a man in a band"
+  },
+  {
+   "video_id": "video717",
+   "path": ".data\\msrvtt\\videos\\video\\video717.mp4",
+   "query": "news outlet covers accident with fatalities by drunk driver"
+  },
+  {
+   "video_id": "video7191",
+   "path": ".data\\msrvtt\\videos\\video\\video7191.mp4",
+   "query": "the bald man with cooler talks about how to make your puppy dog to sit down"
+  },
+  {
+   "video_id": "video7198",
+   "path": ".data\\msrvtt\\videos\\video\\video7198.mp4",
+   "query": "a man is showing what lies underneath a layer of turf"
+  },
+  {
+   "video_id": "video7208",
+   "path": ".data\\msrvtt\\videos\\video\\video7208.mp4",
+   "query": "in the kitchen a woman surrounded my ingredients is adding dry ingredients to a large bowl"
+  },
+  {
+   "video_id": "video7226",
+   "path": ".data\\msrvtt\\videos\\video\\video7226.mp4",
+   "query": "a video game of a plane flying"
+  },
+  {
+   "video_id": "video7244",
+   "path": ".data\\msrvtt\\videos\\video\\video7244.mp4",
+   "query": "a politician giving a speech"
+  },
+  {
+   "video_id": "video7246",
+   "path": ".data\\msrvtt\\videos\\video\\video7246.mp4",
+   "query": "a woman is singing on stage"
+  },
+  {
+   "video_id": "video7248",
+   "path": ".data\\msrvtt\\videos\\video\\video7248.mp4",
+   "query": "a man is singing"
+  },
+  {
+   "video_id": "video7250",
+   "path": ".data\\msrvtt\\videos\\video\\video7250.mp4",
+   "query": "two young women are talking in a bedroom and riding a horse outdoors"
+  },
+  {
+   "video_id": "video7251",
+   "path": ".data\\msrvtt\\videos\\video\\video7251.mp4",
+   "query": "a diagram of the immune system being narrated by a man who is speaking to an audience and a large auditorium"
+  },
+  {
+   "video_id": "video7260",
+   "path": ".data\\msrvtt\\videos\\video\\video7260.mp4",
+   "query": "a child speaks to a camera for a video segment"
+  },
+  {
+   "video_id": "video7286",
+   "path": ".data\\msrvtt\\videos\\video\\video7286.mp4",
+   "query": "two men are wrestling in a competition"
+  },
+  {
+   "video_id": "video7320",
+   "path": ".data\\msrvtt\\videos\\video\\video7320.mp4",
+   "query": "a car is shown for sale"
+  },
+  {
+   "video_id": "video7332",
+   "path": ".data\\msrvtt\\videos\\video\\video7332.mp4",
+   "query": "a group dances in a disco"
+  },
+  {
+   "video_id": "video7337",
+   "path": ".data\\msrvtt\\videos\\video\\video7337.mp4",
+   "query": "a msn drives a car in order to conduct an experiment"
+  },
+  {
+   "video_id": "video7344",
+   "path": ".data\\msrvtt\\videos\\video\\video7344.mp4",
+   "query": "two teenaged boys wrestle during practice"
+  },
+  {
+   "video_id": "video7385",
+   "path": ".data\\msrvtt\\videos\\video\\video7385.mp4",
+   "query": "the analysis of a report"
+  },
+  {
+   "video_id": "video7388",
+   "path": ".data\\msrvtt\\videos\\video\\video7388.mp4",
+   "query": "cooking show making masa para churros"
+  },
+  {
+   "video_id": "video739",
+   "path": ".data\\msrvtt\\videos\\video\\video739.mp4",
+   "query": "a video of a girl reading text from her tv"
+  },
+  {
+   "video_id": "video7397",
+   "path": ".data\\msrvtt\\videos\\video\\video7397.mp4",
+   "query": "a slide with graphs explaining drug-disease signature while a womans voice gives an overview"
+  },
+  {
+   "video_id": "video740",
+   "path": ".data\\msrvtt\\videos\\video\\video740.mp4",
+   "query": "people are performing on stage"
+  },
+  {
+   "video_id": "video7426",
+   "path": ".data\\msrvtt\\videos\\video\\video7426.mp4",
+   "query": "an episode of dragon ball z shows the bad guys taking advantage over the main characters"
+  },
+  {
+   "video_id": "video7459",
+   "path": ".data\\msrvtt\\videos\\video\\video7459.mp4",
+   "query": "man showing different aspect of a car"
+  },
+  {
+   "video_id": "video7465",
+   "path": ".data\\msrvtt\\videos\\video\\video7465.mp4",
+   "query": "mltiple people are high fiving into the camera"
+  },
+  {
+   "video_id": "video747",
+   "path": ".data\\msrvtt\\videos\\video\\video747.mp4",
+   "query": "a woman tells the kids to play basketball before cleaning"
+  },
+  {
+   "video_id": "video7484",
+   "path": ".data\\msrvtt\\videos\\video\\video7484.mp4",
+   "query": "a chef cuts up big chunks of meat in a meat grinder"
+  },
+  {
+   "video_id": "video7488",
+   "path": ".data\\msrvtt\\videos\\video\\video7488.mp4",
+   "query": "two men attempting to build a car"
+  },
+  {
+   "video_id": "video7503",
+   "path": ".data\\msrvtt\\videos\\video\\video7503.mp4",
+   "query": "a cartoon doing dance moves"
+  },
+  {
+   "video_id": "video7518",
+   "path": ".data\\msrvtt\\videos\\video\\video7518.mp4",
+   "query": "an animation shows characters from minecraft"
+  },
+  {
+   "video_id": "video7524",
+   "path": ".data\\msrvtt\\videos\\video\\video7524.mp4",
+   "query": "judges listening to girls sing"
+  },
+  {
+   "video_id": "video7529",
+   "path": ".data\\msrvtt\\videos\\video\\video7529.mp4",
+   "query": "a few words in a presentation"
+  },
+  {
+   "video_id": "video753",
+   "path": ".data\\msrvtt\\videos\\video\\video753.mp4",
+   "query": "different bands are shown over music in the background"
+  },
+  {
+   "video_id": "video7536",
+   "path": ".data\\msrvtt\\videos\\video\\video7536.mp4",
+   "query": "a guy with dumb hair is walking around a place"
+  },
+  {
+   "video_id": "video7541",
+   "path": ".data\\msrvtt\\videos\\video\\video7541.mp4",
+   "query": "this reporter from nbc news is going through ted cruz s camp in des moines idaho"
+  },
+  {
+   "video_id": "video7557",
+   "path": ".data\\msrvtt\\videos\\video\\video7557.mp4",
+   "query": "asian girl sings and plays guitar whilst standing on the road"
+  },
+  {
+   "video_id": "video7605",
+   "path": ".data\\msrvtt\\videos\\video\\video7605.mp4",
+   "query": "person commentating on a object"
+  },
+  {
+   "video_id": "video7609",
+   "path": ".data\\msrvtt\\videos\\video\\video7609.mp4",
+   "query": "a band explaining their feelings"
+  },
+  {
+   "video_id": "video761",
+   "path": ".data\\msrvtt\\videos\\video\\video761.mp4",
+   "query": "a woman and man singing in the cafeteria"
+  },
+  {
+   "video_id": "video7621",
+   "path": ".data\\msrvtt\\videos\\video\\video7621.mp4",
+   "query": "a woman sings during an audition on the voice"
+  },
+  {
+   "video_id": "video7634",
+   "path": ".data\\msrvtt\\videos\\video\\video7634.mp4",
+   "query": "a math tutorial session is in progress"
+  },
+  {
+   "video_id": "video7646",
+   "path": ".data\\msrvtt\\videos\\video\\video7646.mp4",
+   "query": "man in white shirt is exiting from a hotel room and walking to the lift"
+  },
+  {
+   "video_id": "video7648",
+   "path": ".data\\msrvtt\\videos\\video\\video7648.mp4",
+   "query": "a man is explaining the part and tools required to perform a plumbing task on some plastic plumbing"
+  },
+  {
+   "video_id": "video7650",
+   "path": ".data\\msrvtt\\videos\\video\\video7650.mp4",
+   "query": "a cartoon woks in an office"
+  },
+  {
+   "video_id": "video7654",
+   "path": ".data\\msrvtt\\videos\\video\\video7654.mp4",
+   "query": "a home cook explains how to prepare a meal"
+  },
+  {
+   "video_id": "video7655",
+   "path": ".data\\msrvtt\\videos\\video\\video7655.mp4",
+   "query": "a guy cooks chicken in a pot with boiling water"
+  },
+  {
+   "video_id": "video7672",
+   "path": ".data\\msrvtt\\videos\\video\\video7672.mp4",
+   "query": "a man doing a livecast of minecraft"
+  },
+  {
+   "video_id": "video7673",
+   "path": ".data\\msrvtt\\videos\\video\\video7673.mp4",
+   "query": "a man is watching a nice movie"
+  },
+  {
+   "video_id": "video7696",
+   "path": ".data\\msrvtt\\videos\\video\\video7696.mp4",
+   "query": "a group of people are dancing in front of a water fountain"
+  },
+  {
+   "video_id": "video7700",
+   "path": ".data\\msrvtt\\videos\\video\\video7700.mp4",
+   "query": "an older man discusses a fish market in a foriegn country"
+  },
+  {
+   "video_id": "video7708",
+   "path": ".data\\msrvtt\\videos\\video\\video7708.mp4",
+   "query": "its a cartoon for kids"
+  },
+  {
+   "video_id": "video7715",
+   "path": ".data\\msrvtt\\videos\\video\\video7715.mp4",
+   "query": "girl in the studio recording"
+  },
+  {
+   "video_id": "video7722",
+   "path": ".data\\msrvtt\\videos\\video\\video7722.mp4",
+   "query": "members of tmz are joking about pregnancy"
+  },
+  {
+   "video_id": "video7737",
+   "path": ".data\\msrvtt\\videos\\video\\video7737.mp4",
+   "query": "a man is speaking while he plays a video game"
+  },
+  {
+   "video_id": "video774",
+   "path": ".data\\msrvtt\\videos\\video\\video774.mp4",
+   "query": "a commercial for a cw tv show"
+  },
+  {
+   "video_id": "video7760",
+   "path": ".data\\msrvtt\\videos\\video\\video7760.mp4",
+   "query": "soft classical music plays as an early morning scene of ancient buildings are protrayed"
+  },
+  {
+   "video_id": "video7777",
+   "path": ".data\\msrvtt\\videos\\video\\video7777.mp4",
+   "query": "a women is peeling the lotus root and cut into the slices and kept aside"
+  },
+  {
+   "video_id": "video781",
+   "path": ".data\\msrvtt\\videos\\video\\video781.mp4",
+   "query": "a woman in a white jacket points at a computer"
+  },
+  {
+   "video_id": "video7814",
+   "path": ".data\\msrvtt\\videos\\video\\video7814.mp4",
+   "query": "someone shows some drawing and talking about that"
+  },
+  {
+   "video_id": "video7819",
+   "path": ".data\\msrvtt\\videos\\video\\video7819.mp4",
+   "query": "a tutorial of installing a stock filter"
+  },
+  {
+   "video_id": "video785",
+   "path": ".data\\msrvtt\\videos\\video\\video785.mp4",
+   "query": "a man is talking about something in a stage in a front of others"
+  },
+  {
+   "video_id": "video7869",
+   "path": ".data\\msrvtt\\videos\\video\\video7869.mp4",
+   "query": "a person holding a rod in hand and top screen shown displaying on screen"
+  },
+  {
+   "video_id": "video7875",
+   "path": ".data\\msrvtt\\videos\\video\\video7875.mp4",
+   "query": "police in riot gear are shooting tear gas"
+  },
+  {
+   "video_id": "video7880",
+   "path": ".data\\msrvtt\\videos\\video\\video7880.mp4",
+   "query": "this is a recipe video showinng numerous vegetables cut and placed in a bowl"
+  },
+  {
+   "video_id": "video7892",
+   "path": ".data\\msrvtt\\videos\\video\\video7892.mp4",
+   "query": "a man is singing"
+  },
+  {
+   "video_id": "video7896",
+   "path": ".data\\msrvtt\\videos\\video\\video7896.mp4",
+   "query": "a fight between two basketball team s supporters"
+  },
+  {
+   "video_id": "video79",
+   "path": ".data\\msrvtt\\videos\\video\\video79.mp4",
+   "query": "a device is shown for the treatment related to the feet"
+  },
+  {
+   "video_id": "video7903",
+   "path": ".data\\msrvtt\\videos\\video\\video7903.mp4",
+   "query": "a man stands near a car and signs autographs then another man stands near a car"
+  },
+  {
+   "video_id": "video793",
+   "path": ".data\\msrvtt\\videos\\video\\video793.mp4",
+   "query": "captain jack why do we let him go"
+  },
+  {
+   "video_id": "video7933",
+   "path": ".data\\msrvtt\\videos\\video\\video7933.mp4",
+   "query": "the credits of an old teaching film"
+  },
+  {
+   "video_id": "video7948",
+   "path": ".data\\msrvtt\\videos\\video\\video7948.mp4",
+   "query": "a lady is preparing a meal with red beans and rice on the bottom and lettuce and cheese on top"
+  },
+  {
+   "video_id": "video7956",
+   "path": ".data\\msrvtt\\videos\\video\\video7956.mp4",
+   "query": "scene from a movie"
+  },
+  {
+   "video_id": "video7982",
+   "path": ".data\\msrvtt\\videos\\video\\video7982.mp4",
+   "query": "a man is walking through his house looking for something and then walks outside toward his car"
+  },
+  {
+   "video_id": "video7987",
+   "path": ".data\\msrvtt\\videos\\video\\video7987.mp4",
+   "query": "a man and a woman are spending time together and having fun"
+  },
+  {
+   "video_id": "video799",
+   "path": ".data\\msrvtt\\videos\\video\\video799.mp4",
+   "query": "the confidence level of fighting in stage"
+  },
+  {
+   "video_id": "video8019",
+   "path": ".data\\msrvtt\\videos\\video\\video8019.mp4",
+   "query": "very detailed architecture being shown from multiple angles"
+  },
+  {
+   "video_id": "video802",
+   "path": ".data\\msrvtt\\videos\\video\\video802.mp4",
+   "query": "the odometer and dash of a vehicle"
+  },
+  {
+   "video_id": "video8023",
+   "path": ".data\\msrvtt\\videos\\video\\video8023.mp4",
+   "query": "a woman is cooking a chicken"
+  },
+  {
+   "video_id": "video8028",
+   "path": ".data\\msrvtt\\videos\\video\\video8028.mp4",
+   "query": "two people next to each other are talking about thigns"
+  },
+  {
+   "video_id": "video8086",
+   "path": ".data\\msrvtt\\videos\\video\\video8086.mp4",
+   "query": "a girl is audtioning on the voice"
+  },
+  {
+   "video_id": "video8100",
+   "path": ".data\\msrvtt\\videos\\video\\video8100.mp4",
+   "query": "a person in suite talking with a man who seated on wheel chair where small computer attached to the wheelchair"
+  },
+  {
+   "video_id": "video8127",
+   "path": ".data\\msrvtt\\videos\\video\\video8127.mp4",
+   "query": "woman is sitting on the table and working on her computer"
+  },
+  {
+   "video_id": "video8130",
+   "path": ".data\\msrvtt\\videos\\video\\video8130.mp4",
+   "query": "iranian men in suits look at an array of electronic devices manufactured entirely in their country"
+  },
+  {
+   "video_id": "video8134",
+   "path": ".data\\msrvtt\\videos\\video\\video8134.mp4",
+   "query": "big boats are sailing in the big sea"
+  },
+  {
+   "video_id": "video8137",
+   "path": ".data\\msrvtt\\videos\\video\\video8137.mp4",
+   "query": "men in prisoner uniforms performing on stage"
+  },
+  {
+   "video_id": "video818",
+   "path": ".data\\msrvtt\\videos\\video\\video818.mp4",
+   "query": "man is waving his hands"
+  },
+  {
+   "video_id": "video8186",
+   "path": ".data\\msrvtt\\videos\\video\\video8186.mp4",
+   "query": "a small white dog is panting with its mouth open while its owners are talking to it"
+  },
+  {
+   "video_id": "video8214",
+   "path": ".data\\msrvtt\\videos\\video\\video8214.mp4",
+   "query": "a juice product is being discussed"
+  },
+  {
+   "video_id": "video824",
+   "path": ".data\\msrvtt\\videos\\video\\video824.mp4",
+   "query": "a group of animated knights are attacking a siege weapon in a video game"
+  },
+  {
+   "video_id": "video8297",
+   "path": ".data\\msrvtt\\videos\\video\\video8297.mp4",
+   "query": "a man is enjoying his hot dog and french fries he is licking his fingers after eating"
+  },
+  {
+   "video_id": "video837",
+   "path": ".data\\msrvtt\\videos\\video\\video837.mp4",
+   "query": "groups of people dancing w stagehen music plays on the"
+  },
+  {
+   "video_id": "video8376",
+   "path": ".data\\msrvtt\\videos\\video\\video8376.mp4",
+   "query": "two kids talk in a classroom"
+  },
+  {
+   "video_id": "video8382",
+   "path": ".data\\msrvtt\\videos\\video\\video8382.mp4",
+   "query": "a man is running around and drinking out of a tub"
+  },
+  {
+   "video_id": "video8390",
+   "path": ".data\\msrvtt\\videos\\video\\video8390.mp4",
+   "query": "a girl is talking about fangirls"
+  },
+  {
+   "video_id": "video8391",
+   "path": ".data\\msrvtt\\videos\\video\\video8391.mp4",
+   "query": "people are buying and showing what items they have on a video game"
+  },
+  {
+   "video_id": "video8400",
+   "path": ".data\\msrvtt\\videos\\video\\video8400.mp4",
+   "query": "three people are having a conversation while sitting"
+  },
+  {
+   "video_id": "video8402",
+   "path": ".data\\msrvtt\\videos\\video\\video8402.mp4",
+   "query": "a man is playing the guitar"
+  },
+  {
+   "video_id": "video8414",
+   "path": ".data\\msrvtt\\videos\\video\\video8414.mp4",
+   "query": "a man in a cowboy hat talks on a couch"
+  },
+  {
+   "video_id": "video8415",
+   "path": ".data\\msrvtt\\videos\\video\\video8415.mp4",
+   "query": "video tour of a rustic campsite"
+  },
+  {
+   "video_id": "video8421",
+   "path": ".data\\msrvtt\\videos\\video\\video8421.mp4",
+   "query": "highlights of swimmers are shown in a pool"
+  },
+  {
+   "video_id": "video8436",
+   "path": ".data\\msrvtt\\videos\\video\\video8436.mp4",
+   "query": "a children s toy from the show paw patrol is being reviewed"
+  },
+  {
+   "video_id": "video8510",
+   "path": ".data\\msrvtt\\videos\\video\\video8510.mp4",
+   "query": "a police man caught the chaser"
+  },
+  {
+   "video_id": "video8512",
+   "path": ".data\\msrvtt\\videos\\video\\video8512.mp4",
+   "query": "man speaking about exercise"
+  },
+  {
+   "video_id": "video8526",
+   "path": ".data\\msrvtt\\videos\\video\\video8526.mp4",
+   "query": "a group of people dressed as animal are attacking a man"
+  },
+  {
+   "video_id": "video8533",
+   "path": ".data\\msrvtt\\videos\\video\\video8533.mp4",
+   "query": "a woman is talking"
+  },
+  {
+   "video_id": "video8548",
+   "path": ".data\\msrvtt\\videos\\video\\video8548.mp4",
+   "query": "a band is singing in front of an audience"
+  },
+  {
+   "video_id": "video8551",
+   "path": ".data\\msrvtt\\videos\\video\\video8551.mp4",
+   "query": "man commenting on people fighting"
+  },
+  {
+   "video_id": "video8563",
+   "path": ".data\\msrvtt\\videos\\video\\video8563.mp4",
+   "query": "a man on a motorcycle"
+  },
+  {
+   "video_id": "video8570",
+   "path": ".data\\msrvtt\\videos\\video\\video8570.mp4",
+   "query": "many dogs in white and black barking snow land and person standing speaking in black dress displaying on screen"
+  },
+  {
+   "video_id": "video858",
+   "path": ".data\\msrvtt\\videos\\video\\video858.mp4",
+   "query": "a sepia colored video clip with the musician adele getting ready to perform a music video"
+  },
+  {
+   "video_id": "video8586",
+   "path": ".data\\msrvtt\\videos\\video\\video8586.mp4",
+   "query": "a person is speaking about egyptian history in a program"
+  },
+  {
+   "video_id": "video8587",
+   "path": ".data\\msrvtt\\videos\\video\\video8587.mp4",
+   "query": "a man speaks to the camera for a video interview"
+  },
+  {
+   "video_id": "video86",
+   "path": ".data\\msrvtt\\videos\\video\\video86.mp4",
+   "query": "it is a video of car wheels"
+  },
+  {
+   "video_id": "video8602",
+   "path": ".data\\msrvtt\\videos\\video\\video8602.mp4",
+   "query": "some pictures are shown of celebrity"
+  },
+  {
+   "video_id": "video8624",
+   "path": ".data\\msrvtt\\videos\\video\\video8624.mp4",
+   "query": "a person is playing a video game"
+  },
+  {
+   "video_id": "video8644",
+   "path": ".data\\msrvtt\\videos\\video\\video8644.mp4",
+   "query": "a man discusses satellite patents"
+  },
+  {
+   "video_id": "video869",
+   "path": ".data\\msrvtt\\videos\\video\\video869.mp4",
+   "query": "a man is singing"
+  },
+  {
+   "video_id": "video8692",
+   "path": ".data\\msrvtt\\videos\\video\\video8692.mp4",
+   "query": "this is a cooking video"
+  },
+  {
+   "video_id": "video8705",
+   "path": ".data\\msrvtt\\videos\\video\\video8705.mp4",
+   "query": "a boy is telling about subscription"
+  },
+  {
+   "video_id": "video8707",
+   "path": ".data\\msrvtt\\videos\\video\\video8707.mp4",
+   "query": "the video game was entertaining"
+  },
+  {
+   "video_id": "video8708",
+   "path": ".data\\msrvtt\\videos\\video\\video8708.mp4",
+   "query": "a girl with blond hair is singing while other are showing fashion on a fashion show"
+  },
+  {
+   "video_id": "video8715",
+   "path": ".data\\msrvtt\\videos\\video\\video8715.mp4",
+   "query": "several groups of people playing basketball including two teams a kid and guy on a bike"
+  },
+  {
+   "video_id": "video8725",
+   "path": ".data\\msrvtt\\videos\\video\\video8725.mp4",
+   "query": "a four person band performing on stage"
+  },
+  {
+   "video_id": "video8732",
+   "path": ".data\\msrvtt\\videos\\video\\video8732.mp4",
+   "query": "a man trying to explain how easy it would be to assemble a boat with extra parts connected"
+  },
+  {
+   "video_id": "video8747",
+   "path": ".data\\msrvtt\\videos\\video\\video8747.mp4",
+   "query": "a yellow starburst spins out rays before a bowl of diced chicken appears"
+  },
+  {
+   "video_id": "video8759",
+   "path": ".data\\msrvtt\\videos\\video\\video8759.mp4",
+   "query": "a woman in egyptian attire with gold jewelry in her hair talks to a camera about the next scene in her movie where she meets someone ina tomb"
+  },
+  {
+   "video_id": "video8760",
+   "path": ".data\\msrvtt\\videos\\video\\video8760.mp4",
+   "query": "different kinds of dogs rolling over on the floor"
+  },
+  {
+   "video_id": "video8766",
+   "path": ".data\\msrvtt\\videos\\video\\video8766.mp4",
+   "query": "a camera going slowly down a hallway"
+  },
+  {
+   "video_id": "video8773",
+   "path": ".data\\msrvtt\\videos\\video\\video8773.mp4",
+   "query": "a girl is playing with her toy animals"
+  },
+  {
+   "video_id": "video8793",
+   "path": ".data\\msrvtt\\videos\\video\\video8793.mp4",
+   "query": "a person is preparing a rice with meat in a kitchen"
+  },
+  {
+   "video_id": "video8809",
+   "path": ".data\\msrvtt\\videos\\video\\video8809.mp4",
+   "query": "a man in a red and blue plaid shirt holds a plastic pitcher full of tortilla soup and discusses adding tortillas to it"
+  },
+  {
+   "video_id": "video8872",
+   "path": ".data\\msrvtt\\videos\\video\\video8872.mp4",
+   "query": "a man is sitting in a chair and talking"
+  },
+  {
+   "video_id": "video8897",
+   "path": ".data\\msrvtt\\videos\\video\\video8897.mp4",
+   "query": "a girl asks her parents if they have seen her hamster while they try to hide the fact that the hamster is dead"
+  },
+  {
+   "video_id": "video8941",
+   "path": ".data\\msrvtt\\videos\\video\\video8941.mp4",
+   "query": "a boy is exploring files on his computer"
+  },
+  {
+   "video_id": "video8943",
+   "path": ".data\\msrvtt\\videos\\video\\video8943.mp4",
+   "query": "a girl is working on a vehicle at a shop"
+  },
+  {
+   "video_id": "video8957",
+   "path": ".data\\msrvtt\\videos\\video\\video8957.mp4",
+   "query": "this is a series of sports clip on tv"
+  },
+  {
+   "video_id": "video8964",
+   "path": ".data\\msrvtt\\videos\\video\\video8964.mp4",
+   "query": "clip of tv show"
+  },
+  {
+   "video_id": "video8965",
+   "path": ".data\\msrvtt\\videos\\video\\video8965.mp4",
+   "query": "blonde lady shows how to train a car with a clicker"
+  },
+  {
+   "video_id": "video8968",
+   "path": ".data\\msrvtt\\videos\\video\\video8968.mp4",
+   "query": "a car is shown"
+  },
+  {
+   "video_id": "video8969",
+   "path": ".data\\msrvtt\\videos\\video\\video8969.mp4",
+   "query": "two phones on a table"
+  },
+  {
+   "video_id": "video8976",
+   "path": ".data\\msrvtt\\videos\\video\\video8976.mp4",
+   "query": "a solemn man wearing a blue shirt with white long sleeves and a backpack walks away from a house"
+  },
+  {
+   "video_id": "video8991",
+   "path": ".data\\msrvtt\\videos\\video\\video8991.mp4",
+   "query": "video showing different types of toys"
+  },
+  {
+   "video_id": "video9000",
+   "path": ".data\\msrvtt\\videos\\video\\video9000.mp4",
+   "query": "a woman gives step by step instructions on how to operate a spray tan booth"
+  },
+  {
+   "video_id": "video9005",
+   "path": ".data\\msrvtt\\videos\\video\\video9005.mp4",
+   "query": "electronic dance music song"
+  },
+  {
+   "video_id": "video9054",
+   "path": ".data\\msrvtt\\videos\\video\\video9054.mp4",
+   "query": "a man is driving a car while there are mountains in the background"
+  },
+  {
+   "video_id": "video9065",
+   "path": ".data\\msrvtt\\videos\\video\\video9065.mp4",
+   "query": "people walking in a hallway of a building and one went outside and started talking"
+  },
+  {
+   "video_id": "video9074",
+   "path": ".data\\msrvtt\\videos\\video\\video9074.mp4",
+   "query": "a video game character is running around"
+  },
+  {
+   "video_id": "video9084",
+   "path": ".data\\msrvtt\\videos\\video\\video9084.mp4",
+   "query": "kids are being interviewed in a classroom"
+  },
+  {
+   "video_id": "video9091",
+   "path": ".data\\msrvtt\\videos\\video\\video9091.mp4",
+   "query": "a wrestler receives an award"
+  },
+  {
+   "video_id": "video91",
+   "path": ".data\\msrvtt\\videos\\video\\video91.mp4",
+   "query": "home made video with comments on a movie preview"
+  },
+  {
+   "video_id": "video910",
+   "path": ".data\\msrvtt\\videos\\video\\video910.mp4",
+   "query": "two man talk to each other"
+  },
+  {
+   "video_id": "video9106",
+   "path": ".data\\msrvtt\\videos\\video\\video9106.mp4",
+   "query": "as video showing magnetic balls"
+  },
+  {
+   "video_id": "video9112",
+   "path": ".data\\msrvtt\\videos\\video\\video9112.mp4",
+   "query": "a man is dropping an egg on the table which is not breaking"
+  },
+  {
+   "video_id": "video9115",
+   "path": ".data\\msrvtt\\videos\\video\\video9115.mp4",
+   "query": "a man is making a potato dish"
+  },
+  {
+   "video_id": "video9118",
+   "path": ".data\\msrvtt\\videos\\video\\video9118.mp4",
+   "query": "the player in white shirt is winning the race"
+  },
+  {
+   "video_id": "video9129",
+   "path": ".data\\msrvtt\\videos\\video\\video9129.mp4",
+   "query": "a girl is singing a song in a stage"
+  },
+  {
+   "video_id": "video9137",
+   "path": ".data\\msrvtt\\videos\\video\\video9137.mp4",
+   "query": "a woman is boiling a vegetable in a kitchen"
+  },
+  {
+   "video_id": "video9143",
+   "path": ".data\\msrvtt\\videos\\video\\video9143.mp4",
+   "query": "video of a girl demonstrating how to use a toy"
+  },
+  {
+   "video_id": "video9144",
+   "path": ".data\\msrvtt\\videos\\video\\video9144.mp4",
+   "query": "female giving commentary for a new feature television show"
+  },
+  {
+   "video_id": "video9156",
+   "path": ".data\\msrvtt\\videos\\video\\video9156.mp4",
+   "query": "a man in a blue shirt and tie talking with an image of a syringe and cow in the background"
+  },
+  {
+   "video_id": "video9157",
+   "path": ".data\\msrvtt\\videos\\video\\video9157.mp4",
+   "query": "an animated characters giving such interesting performance on the stage"
+  },
+  {
+   "video_id": "video9160",
+   "path": ".data\\msrvtt\\videos\\video\\video9160.mp4",
+   "query": "a woman is making decoration to apply to her fingernails"
+  },
+  {
+   "video_id": "video9161",
+   "path": ".data\\msrvtt\\videos\\video\\video9161.mp4",
+   "query": "someone is demonstrating some stickers from the movie cars"
+  },
+  {
+   "video_id": "video9171",
+   "path": ".data\\msrvtt\\videos\\video\\video9171.mp4",
+   "query": "a man is applying weather watch to a roof"
+  },
+  {
+   "video_id": "video9180",
+   "path": ".data\\msrvtt\\videos\\video\\video9180.mp4",
+   "query": "a man in a bar wears a gray and black jacket and speaks with a friend"
+  },
+  {
+   "video_id": "video9182",
+   "path": ".data\\msrvtt\\videos\\video\\video9182.mp4",
+   "query": "practicing foot ball requires good stamina and high physical and mental endurance"
+  },
+  {
+   "video_id": "video9183",
+   "path": ".data\\msrvtt\\videos\\video\\video9183.mp4",
+   "query": "a sports montage to loud music"
+  },
+  {
+   "video_id": "video9196",
+   "path": ".data\\msrvtt\\videos\\video\\video9196.mp4",
+   "query": "very excited news reporters"
+  },
+  {
+   "video_id": "video9212",
+   "path": ".data\\msrvtt\\videos\\video\\video9212.mp4",
+   "query": "a girl is performing for a group of judges"
+  },
+  {
+   "video_id": "video923",
+   "path": ".data\\msrvtt\\videos\\video\\video923.mp4",
+   "query": "a japanese anime tv show"
+  },
+  {
+   "video_id": "video9267",
+   "path": ".data\\msrvtt\\videos\\video\\video9267.mp4",
+   "query": "a woman in a kitchen shows the camera packages of food and then washes her hands"
+  },
+  {
+   "video_id": "video9270",
+   "path": ".data\\msrvtt\\videos\\video\\video9270.mp4",
+   "query": "a little girl opening a giant egg"
+  },
+  {
+   "video_id": "video9276",
+   "path": ".data\\msrvtt\\videos\\video\\video9276.mp4",
+   "query": "a man is jumping on a trampoline"
+  },
+  {
+   "video_id": "video9278",
+   "path": ".data\\msrvtt\\videos\\video\\video9278.mp4",
+   "query": "the man moves his arms weirdly"
+  },
+  {
+   "video_id": "video9289",
+   "path": ".data\\msrvtt\\videos\\video\\video9289.mp4",
+   "query": "a lady wearing red color dress is on the stage"
+  },
+  {
+   "video_id": "video9364",
+   "path": ".data\\msrvtt\\videos\\video\\video9364.mp4",
+   "query": "there is a man in black is working with a computer"
+  },
+  {
+   "video_id": "video9372",
+   "path": ".data\\msrvtt\\videos\\video\\video9372.mp4",
+   "query": "a person preparing some dish"
+  },
+  {
+   "video_id": "video9387",
+   "path": ".data\\msrvtt\\videos\\video\\video9387.mp4",
+   "query": "a girl playing with dolls"
+  },
+  {
+   "video_id": "video939",
+   "path": ".data\\msrvtt\\videos\\video\\video939.mp4",
+   "query": "a car drifts around a corner on a racetrack"
+  },
+  {
+   "video_id": "video94",
+   "path": ".data\\msrvtt\\videos\\video\\video94.mp4",
+   "query": "a young woman is talking to the camera about an exercise routine"
+  },
+  {
+   "video_id": "video9402",
+   "path": ".data\\msrvtt\\videos\\video\\video9402.mp4",
+   "query": "a man and a baby lay down on a bed"
+  },
+  {
+   "video_id": "video9433",
+   "path": ".data\\msrvtt\\videos\\video\\video9433.mp4",
+   "query": "a man and woman scream into their phone"
+  },
+  {
+   "video_id": "video9434",
+   "path": ".data\\msrvtt\\videos\\video\\video9434.mp4",
+   "query": "a group of people talk to each other as they play a video game"
+  },
+  {
+   "video_id": "video9444",
+   "path": ".data\\msrvtt\\videos\\video\\video9444.mp4",
+   "query": "a woman is crossing the street while recording another man"
+  },
+  {
+   "video_id": "video9448",
+   "path": ".data\\msrvtt\\videos\\video\\video9448.mp4",
+   "query": "a man remembers seeing something on his arm in a dream sequence"
+  },
+  {
+   "video_id": "video9453",
+   "path": ".data\\msrvtt\\videos\\video\\video9453.mp4",
+   "query": "a kid plays a pokemon game"
+  },
+  {
+   "video_id": "video9473",
+   "path": ".data\\msrvtt\\videos\\video\\video9473.mp4",
+   "query": "hockey players playing hockey"
+  },
+  {
+   "video_id": "video9492",
+   "path": ".data\\msrvtt\\videos\\video\\video9492.mp4",
+   "query": "a boy is hooking something up"
+  },
+  {
+   "video_id": "video9500",
+   "path": ".data\\msrvtt\\videos\\video\\video9500.mp4",
+   "query": "a man walks some cihldren through a fire station"
+  },
+  {
+   "video_id": "video9501",
+   "path": ".data\\msrvtt\\videos\\video\\video9501.mp4",
+   "query": "a woman gives cooking instruction while preparing food"
+  },
+  {
+   "video_id": "video9504",
+   "path": ".data\\msrvtt\\videos\\video\\video9504.mp4",
+   "query": "a small choir of girls in uniform are standing on a gymnasium floor singing a song together"
+  },
+  {
+   "video_id": "video9525",
+   "path": ".data\\msrvtt\\videos\\video\\video9525.mp4",
+   "query": "a man is cutting open a fish while a person is explaining the parts of the fish"
+  },
+  {
+   "video_id": "video9531",
+   "path": ".data\\msrvtt\\videos\\video\\video9531.mp4",
+   "query": "a man is talking"
+  },
+  {
+   "video_id": "video9543",
+   "path": ".data\\msrvtt\\videos\\video\\video9543.mp4",
+   "query": "a football quarterback throws the ball"
+  },
+  {
+   "video_id": "video9557",
+   "path": ".data\\msrvtt\\videos\\video\\video9557.mp4",
+   "query": "a newsfeed about finding out the identity of celebrity terrorist jihad john is displayed"
+  },
+  {
+   "video_id": "video956",
+   "path": ".data\\msrvtt\\videos\\video\\video956.mp4",
+   "query": "a hand holding a toy"
+  },
+  {
+   "video_id": "video9566",
+   "path": ".data\\msrvtt\\videos\\video\\video9566.mp4",
+   "query": "a woman is singing into a microphone"
+  },
+  {
+   "video_id": "video9567",
+   "path": ".data\\msrvtt\\videos\\video\\video9567.mp4",
+   "query": "there is a man serving a dish in to the plate"
+  },
+  {
+   "video_id": "video9570",
+   "path": ".data\\msrvtt\\videos\\video\\video9570.mp4",
+   "query": "a video game is being shown"
+  },
+  {
+   "video_id": "video9573",
+   "path": ".data\\msrvtt\\videos\\video\\video9573.mp4",
+   "query": "group of kids singing on stage"
+  },
+  {
+   "video_id": "video9595",
+   "path": ".data\\msrvtt\\videos\\video\\video9595.mp4",
+   "query": "a man standing in from of audience and talking in from of them"
+  },
+  {
+   "video_id": "video9599",
+   "path": ".data\\msrvtt\\videos\\video\\video9599.mp4",
+   "query": "the video shows highlights from different sports"
+  },
+  {
+   "video_id": "video9613",
+   "path": ".data\\msrvtt\\videos\\video\\video9613.mp4",
+   "query": "a mechanic is working on car breaks"
+  },
+  {
+   "video_id": "video9617",
+   "path": ".data\\msrvtt\\videos\\video\\video9617.mp4",
+   "query": "two children are laughing and sitting on the floor"
+  },
+  {
+   "video_id": "video9618",
+   "path": ".data\\msrvtt\\videos\\video\\video9618.mp4",
+   "query": "a woman in red hair is traveling in to the city"
+  },
+  {
+   "video_id": "video9621",
+   "path": ".data\\msrvtt\\videos\\video\\video9621.mp4",
+   "query": "a person is talking"
+  },
+  {
+   "video_id": "video9627",
+   "path": ".data\\msrvtt\\videos\\video\\video9627.mp4",
+   "query": "a short clip of a military men featuring german soldiers"
+  },
+  {
+   "video_id": "video965",
+   "path": ".data\\msrvtt\\videos\\video\\video965.mp4",
+   "query": "a woman is operating a system in her car"
+  },
+  {
+   "video_id": "video9667",
+   "path": ".data\\msrvtt\\videos\\video\\video9667.mp4",
+   "query": "sports clips and highlights"
+  },
+  {
+   "video_id": "video967",
+   "path": ".data\\msrvtt\\videos\\video\\video967.mp4",
+   "query": "a man sings at a stadium"
+  },
+  {
+   "video_id": "video9675",
+   "path": ".data\\msrvtt\\videos\\video\\video9675.mp4",
+   "query": "someone is shooting blue fire at others in game"
+  },
+  {
+   "video_id": "video9706",
+   "path": ".data\\msrvtt\\videos\\video\\video9706.mp4",
+   "query": "a car is driving down the street while colors flash around"
+  },
+  {
+   "video_id": "video9708",
+   "path": ".data\\msrvtt\\videos\\video\\video9708.mp4",
+   "query": "person talking of apps"
+  },
+  {
+   "video_id": "video9714",
+   "path": ".data\\msrvtt\\videos\\video\\video9714.mp4",
+   "query": "my little pony animated character"
+  },
+  {
+   "video_id": "video9737",
+   "path": ".data\\msrvtt\\videos\\video\\video9737.mp4",
+   "query": "the two doctors who travelled with bbc states that sudden increase in causalities is over whelming"
+  },
+  {
+   "video_id": "video9746",
+   "path": ".data\\msrvtt\\videos\\video\\video9746.mp4",
+   "query": "a scene of people trying to push a heavy cart"
+  },
+  {
+   "video_id": "video9751",
+   "path": ".data\\msrvtt\\videos\\video\\video9751.mp4",
+   "query": "the lady explain the polymers monomers and cells"
+  },
+  {
+   "video_id": "video9753",
+   "path": ".data\\msrvtt\\videos\\video\\video9753.mp4",
+   "query": "this video is about giving the first aid"
+  },
+  {
+   "video_id": "video9757",
+   "path": ".data\\msrvtt\\videos\\video\\video9757.mp4",
+   "query": "a video about odd people"
+  },
+  {
+   "video_id": "video9792",
+   "path": ".data\\msrvtt\\videos\\video\\video9792.mp4",
+   "query": "women in black dress explaining about beautician care"
+  },
+  {
+   "video_id": "video9850",
+   "path": ".data\\msrvtt\\videos\\video\\video9850.mp4",
+   "query": "a piece of copper pipe sticking out of a machine being turned and cut off at an angle"
+  },
+  {
+   "video_id": "video9855",
+   "path": ".data\\msrvtt\\videos\\video\\video9855.mp4",
+   "query": "a child is spoken to by her family and a nanny"
+  },
+  {
+   "video_id": "video9859",
+   "path": ".data\\msrvtt\\videos\\video\\video9859.mp4",
+   "query": "a man is dancing"
+  },
+  {
+   "video_id": "video9868",
+   "path": ".data\\msrvtt\\videos\\video\\video9868.mp4",
+   "query": "a boy is singing"
+  },
+  {
+   "video_id": "video9883",
+   "path": ".data\\msrvtt\\videos\\video\\video9883.mp4",
+   "query": "footage from a computer game in which a monster addresses a small crowd"
+  },
+  {
+   "video_id": "video9884",
+   "path": ".data\\msrvtt\\videos\\video\\video9884.mp4",
+   "query": "a group of men are racing down a track in competition"
+  },
+  {
+   "video_id": "video9887",
+   "path": ".data\\msrvtt\\videos\\video\\video9887.mp4",
+   "query": "someone playing a video game aimed at young children"
+  },
+  {
+   "video_id": "video9892",
+   "path": ".data\\msrvtt\\videos\\video\\video9892.mp4",
+   "query": "a black and white music video"
+  },
+  {
+   "video_id": "video990",
+   "path": ".data\\msrvtt\\videos\\video\\video990.mp4",
+   "query": "a video game is being played"
+  },
+  {
+   "video_id": "video9906",
+   "path": ".data\\msrvtt\\videos\\video\\video9906.mp4",
+   "query": "cartoons with cat characters"
+  },
+  {
+   "video_id": "video9914",
+   "path": ".data\\msrvtt\\videos\\video\\video9914.mp4",
+   "query": "craft work by woman in the show"
+  },
+  {
+   "video_id": "video9923",
+   "path": ".data\\msrvtt\\videos\\video\\video9923.mp4",
+   "query": "man with long hair walking around the shop and speaking"
+  },
+  {
+   "video_id": "video9934",
+   "path": ".data\\msrvtt\\videos\\video\\video9934.mp4",
+   "query": "winner of the wrestling greets the audience"
+  },
+  {
+   "video_id": "video9943",
+   "path": ".data\\msrvtt\\videos\\video\\video9943.mp4",
+   "query": "an old man makes an announcement on tv"
+  },
+  {
+   "video_id": "video9944",
+   "path": ".data\\msrvtt\\videos\\video\\video9944.mp4",
+   "query": "a video of a man in black shirt talking about a box"
+  },
+  {
+   "video_id": "video9947",
+   "path": ".data\\msrvtt\\videos\\video\\video9947.mp4",
+   "query": "men are singing and playing instruments on a stage"
+  },
+  {
+   "video_id": "video9954",
+   "path": ".data\\msrvtt\\videos\\video\\video9954.mp4",
+   "query": "a guy with headphones around his neck sits in a chair and talks about video games"
+  },
+  {
+   "video_id": "video9960",
+   "path": ".data\\msrvtt\\videos\\video\\video9960.mp4",
+   "query": "man playing with phone application"
+  },
+  {
+   "video_id": "video9965",
+   "path": ".data\\msrvtt\\videos\\video\\video9965.mp4",
+   "query": "a animated movie showing many kids watching and a kid sneezes and santa claus playing a piano shoo away other kids"
+  },
+  {
+   "video_id": "video9973",
+   "path": ".data\\msrvtt\\videos\\video\\video9973.mp4",
+   "query": "there is a horse race on a grass track with a british announcer describing the race"
+  },
+  {
+   "video_id": "video9974",
+   "path": ".data\\msrvtt\\videos\\video\\video9974.mp4",
+   "query": "a boy is singing on a scene in front of the crowd"
+  },
+  {
+   "video_id": "video9996",
+   "path": ".data\\msrvtt\\videos\\video\\video9996.mp4",
+   "query": "an upper angle of a motercylcle"
+  }
+ ]
+}
